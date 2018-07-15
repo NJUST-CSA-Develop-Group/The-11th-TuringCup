@@ -1,0 +1,635 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995438498, guid: 68c7e4565cde54155bb78d8e935f1dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 5
+  lastUpdatedAtString: 2018-07-15T16:06:39.197+08:00
+  initializedAtString: 2018-07-15T16:06:39.197+08:00
+  entries:
+  - path: Assets\Maps.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Maps.meta
+    projectPath: Assets\Maps.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Maps\01.csv
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Maps\01.csv
+    projectPath: Assets\Maps\01.csv
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Maps\01.csv.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Maps\01.csv.meta
+    projectPath: Assets\Maps\01.csv.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Material.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Material.meta
+    projectPath: Assets\Material.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Material\Bomb.mat
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Material\Bomb.mat
+    projectPath: Assets\Material\Bomb.mat
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Material\Bomb.mat.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Material\Bomb.mat.meta
+    projectPath: Assets\Material\Bomb.mat.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Material\boom.mat
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Material\boom.mat
+    projectPath: Assets\Material\boom.mat
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Material\boom.mat.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Material\boom.mat.meta
+    projectPath: Assets\Material\boom.mat.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Material\unboom.mat
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Material\unboom.mat
+    projectPath: Assets\Material\unboom.mat
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Material\unboom.mat.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Material\unboom.mat.meta
+    projectPath: Assets\Material\unboom.mat.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins.meta
+    projectPath: Assets\Plugins.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub.meta
+    projectPath: Assets\Plugins\GitHub.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor.meta
+    projectPath: Assets\Plugins\GitHub\Editor.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+    projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\big-logo@2x.png
+    projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+    projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\credits.txt
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\credits.txt
+    projectPath: Assets\Plugins\GitHub\Editor\credits.txt
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\credits.txt.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\credits.txt.meta
+    projectPath: Assets\Plugins\GitHub\Editor\credits.txt.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\eula.txt
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\eula.txt
+    projectPath: Assets\Plugins\GitHub\Editor\eula.txt
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\eula.txt.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\eula.txt.meta
+    projectPath: Assets\Plugins\GitHub\Editor\eula.txt.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
+    projectPath: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\libsfw.bundle
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\libsfw.bundle
+    projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+    projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\libsfw.so
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\libsfw.so
+    projectPath: Assets\Plugins\GitHub\Editor\libsfw.so
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\libsfw.so.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\libsfw.so.meta
+    projectPath: Assets\Plugins\GitHub\Editor\libsfw.so.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+    projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+    projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+    projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+    projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\sfw.net.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\sfw.net.dll
+    projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\System.Threading.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\System.Threading.dll
+    projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x64.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x64.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x64.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+    projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+    projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x86.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x86.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x86.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+    projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+    projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+    projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Pref.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Pref.meta
+    projectPath: Assets\Pref.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Pref\Booming.prefab
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Pref\Booming.prefab
+    projectPath: Assets\Pref\Booming.prefab
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Pref\Booming.prefab.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Pref\Booming.prefab.meta
+    projectPath: Assets\Pref\Booming.prefab.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Pref\ray.mat
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Pref\ray.mat
+    projectPath: Assets\Pref\ray.mat
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Pref\ray.mat.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Pref\ray.mat.meta
+    projectPath: Assets\Pref\ray.mat.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Pref\shootFire.mat
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Pref\shootFire.mat
+    projectPath: Assets\Pref\shootFire.mat
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Pref\shootFire.mat.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Pref\shootFire.mat.meta
+    projectPath: Assets\Pref\shootFire.mat.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Prefabs.meta
+    projectPath: Assets\Prefabs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Bomb.prefab
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Prefabs\Bomb.prefab
+    projectPath: Assets\Prefabs\Bomb.prefab
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\Bomb.prefab.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Prefabs\Bomb.prefab.meta
+    projectPath: Assets\Prefabs\Bomb.prefab.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\boomCube.prefab
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Prefabs\boomCube.prefab
+    projectPath: Assets\Prefabs\boomCube.prefab
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\boomCube.prefab.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Prefabs\boomCube.prefab.meta
+    projectPath: Assets\Prefabs\boomCube.prefab.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\unboomcube.prefab
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Prefabs\unboomcube.prefab
+    projectPath: Assets\Prefabs\unboomcube.prefab
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Prefabs\unboomcube.prefab.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Prefabs\unboomcube.prefab.meta
+    projectPath: Assets\Prefabs\unboomcube.prefab.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\SampleScene.unity
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\SampleScene.unity
+    projectPath: Assets\SampleScene.unity
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\SampleScene.unity.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\SampleScene.unity.meta
+    projectPath: Assets\SampleScene.unity.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Scenes.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Scenes.meta
+    projectPath: Assets\Scenes.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Script.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Script.meta
+    projectPath: Assets\Script.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Script\BombManager.cs
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Script\BombManager.cs
+    projectPath: Assets\Script\BombManager.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Script\BombManager.cs.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Script\BombManager.cs.meta
+    projectPath: Assets\Script\BombManager.cs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Script\BoxManager.cs
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Script\BoxManager.cs
+    projectPath: Assets\Script\BoxManager.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Script\BoxManager.cs.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Script\BoxManager.cs.meta
+    projectPath: Assets\Script\BoxManager.cs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Script\MapManager.cs
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Script\MapManager.cs
+    projectPath: Assets\Script\MapManager.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Script\MapManager.cs.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Script\MapManager.cs.meta
+    projectPath: Assets\Script\MapManager.cs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Script\readCSV.cs
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Script\readCSV.cs
+    projectPath: Assets\Script\readCSV.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Script\readCSV.cs.meta
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Assets\Script\readCSV.cs.meta
+    projectPath: Assets\Script\readCSV.cs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Packages\manifest.json
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\Packages\manifest.json
+    projectPath: Packages\manifest.json
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\AudioManager.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\AudioManager.asset
+    projectPath: ProjectSettings\AudioManager.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\ClusterInputManager.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\ClusterInputManager.asset
+    projectPath: ProjectSettings\ClusterInputManager.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\DynamicsManager.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\DynamicsManager.asset
+    projectPath: ProjectSettings\DynamicsManager.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\EditorBuildSettings.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\EditorBuildSettings.asset
+    projectPath: ProjectSettings\EditorBuildSettings.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\EditorSettings.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\EditorSettings.asset
+    projectPath: ProjectSettings\EditorSettings.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\GraphicsSettings.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\GraphicsSettings.asset
+    projectPath: ProjectSettings\GraphicsSettings.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\InputManager.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\InputManager.asset
+    projectPath: ProjectSettings\InputManager.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\NavMeshAreas.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\NavMeshAreas.asset
+    projectPath: ProjectSettings\NavMeshAreas.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\NetworkManager.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\NetworkManager.asset
+    projectPath: ProjectSettings\NetworkManager.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\Physics2DSettings.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\Physics2DSettings.asset
+    projectPath: ProjectSettings\Physics2DSettings.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\PresetManager.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\PresetManager.asset
+    projectPath: ProjectSettings\PresetManager.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\ProjectSettings.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\ProjectSettings.asset
+    projectPath: ProjectSettings\ProjectSettings.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\ProjectVersion.txt
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\ProjectVersion.txt
+    projectPath: ProjectSettings\ProjectVersion.txt
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\QualitySettings.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\QualitySettings.asset
+    projectPath: ProjectSettings\QualitySettings.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\TagManager.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\TagManager.asset
+    projectPath: ProjectSettings\TagManager.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\TimeManager.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\TimeManager.asset
+    projectPath: ProjectSettings\TimeManager.asset
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: ProjectSettings\UnityConnectSettings.asset
+    fullPath: C:\Users\JyunmauChan\Documents\GitHub\The-11th-TuringCup\src\Unity Project\ProjectSettings\UnityConnectSettings.asset
+    projectPath: ProjectSettings\UnityConnectSettings.asset
+    originalPath: 
+    status: 1
+    staged: 0
