@@ -11,7 +11,7 @@ public class QuitScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))//ESC键退出，暂时用于调试
         {
             Application.Quit();
         }
