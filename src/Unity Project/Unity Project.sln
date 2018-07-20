@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity Project", "Assembly-CSharp.csproj", "{BDBCE7D3-139D-3EDB-816D-FB1D73476D25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerInterface", "..\..\..\The-11th-TuringCup-back\src\PlayerInterface\PlayerInterface.csproj", "{58045D08-C051-46AC-AB0D-D37B56B454FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerInterface", "..\PlayerInterface\PlayerInterface.csproj", "{58045D08-C051-46AC-AB0D-D37B56B454FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
