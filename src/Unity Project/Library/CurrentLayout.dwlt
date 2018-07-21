@@ -44,7 +44,11 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 1
+<<<<<<< HEAD
   controlID: 53
+=======
+  controlID: 32
+>>>>>>> dd44c5dd1fe3c4e623db1c8501efe206f11e0738
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,7 +140,11 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 54
+=======
+  controlID: 33
+>>>>>>> dd44c5dd1fe3c4e623db1c8501efe206f11e0738
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,7 +188,11 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 55
+=======
+  controlID: 34
+>>>>>>> dd44c5dd1fe3c4e623db1c8501efe206f11e0738
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -333,9 +345,15 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 302c0000
     m_LastClickedID: 0
     m_ExpandedIDs: e4fbffff00000000
+=======
+    m_SelectedIDs: 342b0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: f0fbffff00000000
+>>>>>>> dd44c5dd1fe3c4e623db1c8501efe206f11e0738
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -442,9 +460,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 802b0000
     m_LastClickedID: 11136
     m_ExpandedIDs: 0000000088290000c82c000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: 72290000
+    m_LastClickedID: 10610
+    m_ExpandedIDs: 000000007229000000ca9a3bffffff7f
+>>>>>>> dd44c5dd1fe3c4e623db1c8501efe206f11e0738
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -472,7 +496,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000088290000c82c0000
+=======
+    m_ExpandedIDs: 0000000072290000
+>>>>>>> dd44c5dd1fe3c4e623db1c8501efe206f11e0738
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -524,7 +552,11 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
+<<<<<<< HEAD
     m_ScrollPosition: {x: 0, y: 0}
+=======
+    m_ScrollPosition: {x: 0, y: 185}
+>>>>>>> dd44c5dd1fe3c4e623db1c8501efe206f11e0738
     m_GridSize: 64
   m_DirectoriesAreaWidth: 110
 --- !u!114 &17

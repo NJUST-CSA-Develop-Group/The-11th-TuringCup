@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity Project", "Assembly-CSharp.csproj", "{BDBCE7D3-139D-3EDB-816D-FB1D73476D25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerInterface", "..\PlayerInterface\PlayerInterface.csproj", "{58045D08-C051-46AC-AB0D-D37B56B454FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{BDBCE7D3-139D-3EDB-816D-FB1D73476D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDBCE7D3-139D-3EDB-816D-FB1D73476D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDBCE7D3-139D-3EDB-816D-FB1D73476D25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58045D08-C051-46AC-AB0D-D37B56B454FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58045D08-C051-46AC-AB0D-D37B56B454FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58045D08-C051-46AC-AB0D-D37B56B454FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58045D08-C051-46AC-AB0D-D37B56B454FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

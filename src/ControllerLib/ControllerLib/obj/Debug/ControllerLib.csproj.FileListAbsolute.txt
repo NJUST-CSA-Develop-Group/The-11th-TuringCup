@@ -1,0 +1,8 @@
+E:\Projects\GitHub\The-11th-TuringCup\src\ControllerLib\ControllerLib\bin\Debug\ControllerLib.dll
+E:\Projects\GitHub\The-11th-TuringCup\src\ControllerLib\ControllerLib\bin\Debug\ControllerLib.pdb
+E:\Projects\GitHub\The-11th-TuringCup\src\ControllerLib\ControllerLib\bin\Debug\PlayerInterface.dll
+E:\Projects\GitHub\The-11th-TuringCup\src\ControllerLib\ControllerLib\obj\Debug\ControllerLib.csprojResolveAssemblyReference.cache
+E:\Projects\GitHub\The-11th-TuringCup\src\ControllerLib\ControllerLib\obj\Debug\ControllerLib.csproj.CoreCompileInputs.cache
+E:\Projects\GitHub\The-11th-TuringCup\src\ControllerLib\ControllerLib\obj\Debug\ControllerLib.csproj.CopyComplete
+E:\Projects\GitHub\The-11th-TuringCup\src\ControllerLib\ControllerLib\obj\Debug\ControllerLib.dll
+E:\Projects\GitHub\The-11th-TuringCup\src\ControllerLib\ControllerLib\obj\Debug\ControllerLib.pdb

@@ -63,9 +63,13 @@
   <ItemGroup>
     <Compile Include="Assets\Script\BombManager.cs" />
     <Compile Include="Assets\Script\BoxManager.cs" />
+    <Compile Include="Assets\Script\ControlLoader.cs" />
+    <Compile Include="Assets\Script\Loader.cs" />
     <Compile Include="Assets\Script\MapManager.cs" />
+    <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\PlayerHealth.cs" />
     <Compile Include="Assets\Script\PlayerInfo.cs" />
+    <Compile Include="Assets\Script\PlayerMovement.cs" />
     <Compile Include="Assets\Script\PlayerShoot.cs" />
     <Compile Include="Assets\Script\PlayerStatus.cs" />
     <Compile Include="Assets\Script\Prize.cs" />
@@ -273,6 +277,9 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayerInterface">
+      <HintPath>E:/Projects/GitHub/The-11th-TuringCup/src/Unity Project/Assets/Plugins/PlayerInterface.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/JyunmauChan/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
