@@ -18,7 +18,7 @@ public class PlayerInfo : MonoBehaviour
         prefabInstantiate = Instantiate(prefab, transform);// 实例化预制
         m_avatar = prefabInstantiate.transform.Find("avatar").GetComponent<UnityEngine.UI.RawImage>();
         m_team_name = prefabInstantiate.transform.Find("Text").GetComponent<UnityEngine.UI.Text>();
-        SetInfo();//此句用于调试，请在设置好队伍相关信息后调用SetInfo()
+        //SetInfo();//此句用于调试，请在设置好队伍相关信息后调用SetInfo()
     }
 
     // Update is called once per frame

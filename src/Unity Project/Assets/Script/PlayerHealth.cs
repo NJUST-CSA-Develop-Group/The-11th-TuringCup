@@ -7,11 +7,12 @@ public class PlayerHealth : MonoBehaviour
     public bool IsAlive { get; private set; }
     public GameObject prefab;// 射击模型预制
     public AudioClip hurtAudio;// 音频源
+    public int health { get; private set; }// 血量
 
     GameObject prefabInstantiate;// 射击模型实例
     Light m_hurt;// 伤害效果
     AudioSource m_audio;// 音频效果
-    int health;// 血量
+    //int health;// 血量
     int tick = -1;// 受伤动画的时序
     const int ALL_TICKS = 20;// 动画总tick数
     // Use this for initialization
@@ -73,11 +74,13 @@ public class PlayerHealth : MonoBehaviour
     private void Die()// 设置死亡
     {
         IsAlive = false;
-        // TODO: 在此处对UI死亡状态设置（如果需要）
+        // 在此处对UI死亡状态设置（如果需要）
+        GetComponent<PlayerUIBind>().Die();
     }
 
     private void SetUIHealth()// 设置UI对应血条
     {
-        // TODO: 在此处对UI血量进行设置
+        // 在此处对UI血量进行设置
+        GetComponent<PlayerUIBind>().SetHealth(health);
     }
 }

@@ -32,11 +32,12 @@ public class PlayerStatus : MonoBehaviour
         m_skill1.texture = skill1Texture;
         m_skill2.texture = skill2Texture;
         m_skill3.texture = skill3Texture;
+        m_avatar.material = null;
         blood = prefabInstantiate.transform.Find("bloodBar").Find("blood");
         m_skill1.enabled = false;
         m_skill2.enabled = false;
         m_skill3.enabled = false;
-        SetInfo();//此句用于调试，请在设置好队伍相关信息后调用SetInfo()
+        //SetInfo();//此句用于调试，请在设置好队伍相关信息后调用SetInfo()
     }
 
     // Update is called once per frame

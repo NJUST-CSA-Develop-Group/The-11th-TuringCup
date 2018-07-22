@@ -3,8 +3,18 @@ guid: 6765edf91c166284f8c251a824afcbf3
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: cartridge
-  externalObjects: {}
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default
+    second: {fileID: 2100000, guid: 72dc3a11b4924174aabca3a9b0e18112, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
