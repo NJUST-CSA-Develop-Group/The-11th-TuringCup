@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0526db24fe68bba4dafb96c32c003a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1315936554743140, guid: 2dca0e77077dbbd45b927c66f6195863, type: 2}
+  prefab: {fileID: 1541896701199182, guid: 1e313039c3fa6644fb930fac5f67e4f4, type: 2}
   deadMaterial: {fileID: 2100000, guid: 3b6e2b50d4dbf4c4fa37acb25cb2d3bc, type: 2}
   team_name: 
   avatar: {fileID: 0}
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0526db24fe68bba4dafb96c32c003a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1668599510121520, guid: 14d4bdd9f55e47847ae3530f8d5ca9c6, type: 2}
+  prefab: {fileID: 1617605333690596, guid: 14d4bdd9f55e47847ae3530f8d5ca9c6, type: 2}
   deadMaterial: {fileID: 2100000, guid: 3b6e2b50d4dbf4c4fa37acb25cb2d3bc, type: 2}
   team_name: 
   avatar: {fileID: 0}
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0526db24fe68bba4dafb96c32c003a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1668599510121520, guid: 14d4bdd9f55e47847ae3530f8d5ca9c6, type: 2}
+  prefab: {fileID: 1617605333690596, guid: 14d4bdd9f55e47847ae3530f8d5ca9c6, type: 2}
   deadMaterial: {fileID: 2100000, guid: 3b6e2b50d4dbf4c4fa37acb25cb2d3bc, type: 2}
   team_name: 
   avatar: {fileID: 0}
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0526db24fe68bba4dafb96c32c003a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1315936554743140, guid: 2dca0e77077dbbd45b927c66f6195863, type: 2}
+  prefab: {fileID: 1541896701199182, guid: 1e313039c3fa6644fb930fac5f67e4f4, type: 2}
   deadMaterial: {fileID: 2100000, guid: 3b6e2b50d4dbf4c4fa37acb25cb2d3bc, type: 2}
   team_name: 
   avatar: {fileID: 0}
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0526db24fe68bba4dafb96c32c003a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1668599510121520, guid: 14d4bdd9f55e47847ae3530f8d5ca9c6, type: 2}
+  prefab: {fileID: 1617605333690596, guid: 14d4bdd9f55e47847ae3530f8d5ca9c6, type: 2}
   deadMaterial: {fileID: 2100000, guid: 3b6e2b50d4dbf4c4fa37acb25cb2d3bc, type: 2}
   team_name: 
   avatar: {fileID: 0}
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0526db24fe68bba4dafb96c32c003a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1668599510121520, guid: 14d4bdd9f55e47847ae3530f8d5ca9c6, type: 2}
+  prefab: {fileID: 1617605333690596, guid: 14d4bdd9f55e47847ae3530f8d5ca9c6, type: 2}
   deadMaterial: {fileID: 2100000, guid: 3b6e2b50d4dbf4c4fa37acb25cb2d3bc, type: 2}
   team_name: 
   avatar: {fileID: 0}
@@ -1766,7 +1766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0526db24fe68bba4dafb96c32c003a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1315936554743140, guid: 2dca0e77077dbbd45b927c66f6195863, type: 2}
+  prefab: {fileID: 1541896701199182, guid: 1e313039c3fa6644fb930fac5f67e4f4, type: 2}
   deadMaterial: {fileID: 2100000, guid: 3b6e2b50d4dbf4c4fa37acb25cb2d3bc, type: 2}
   team_name: 
   avatar: {fileID: 0}
@@ -1878,7 +1878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0526db24fe68bba4dafb96c32c003a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1315936554743140, guid: 2dca0e77077dbbd45b927c66f6195863, type: 2}
+  prefab: {fileID: 1541896701199182, guid: 1e313039c3fa6644fb930fac5f67e4f4, type: 2}
   deadMaterial: {fileID: 2100000, guid: 3b6e2b50d4dbf4c4fa37acb25cb2d3bc, type: 2}
   team_name: 
   avatar: {fileID: 0}

@@ -18,3 +18,4 @@
 + `void SetHealth(int health)`:更新血量显示
 + `void Die(bool dead = true)`:更新死亡状态显示
 + `void SetSkill(int index, bool type)`:更新技能状态显示，index取1,2,3
++ `void SetScore(int score)`:更新得分

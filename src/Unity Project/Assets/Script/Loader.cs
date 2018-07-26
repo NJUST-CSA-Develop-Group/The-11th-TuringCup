@@ -9,6 +9,8 @@ public class Loader : MonoBehaviour
     // 此脚本用于在StartScene阶段进行加载工作，目前加载控制器
     public string dll_path;// dll文件在运行期的目录
 
+    bool inited = false;
+
     // Use this for initialization
     void Start()
     {
@@ -40,14 +42,21 @@ public class Loader : MonoBehaviour
             {
                 infos[i].team_name = "人类";
             }
-            infos[i].SetInfo();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (!inited)//SetInfo需在确保playerInfo已经start后调用
+        {
+            inited = true;
+            PlayerInfo[] infos = GameObject.Find("playerList").GetComponentsInChildren<PlayerInfo>();
+            for (int i = 0; i < 4; i++)
+            {
+                infos[i].SetInfo();
+            }
+        }
     }
 
     string[] GetControllersName()// 提供Dll文件的文件名

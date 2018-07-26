@@ -19,6 +19,7 @@ public class PlayerStatus : MonoBehaviour
     UnityEngine.UI.RawImage m_skill2;
     UnityEngine.UI.RawImage m_skill3;
     Transform blood;
+    UnityEngine.UI.Text m_score;
     // Use this for initialization
     void Start()
     {
@@ -34,6 +35,7 @@ public class PlayerStatus : MonoBehaviour
         m_skill3.texture = skill3Texture;
         m_avatar.material = null;
         blood = prefabInstantiate.transform.Find("bloodBar").Find("blood");
+        m_score = prefabInstantiate.transform.Find("Score").GetComponent<UnityEngine.UI.Text>();
         m_skill1.enabled = false;
         m_skill2.enabled = false;
         m_skill3.enabled = false;
@@ -83,5 +85,10 @@ public class PlayerStatus : MonoBehaviour
                 m_skill3.enabled = type;
                 break;
         }
+    }
+
+    public void SetScore(int score)
+    {
+        m_score.text = "得分:\n" + score.ToString();
     }
 }

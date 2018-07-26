@@ -52,4 +52,10 @@ public class PlayerUIBind : MonoBehaviour
         m_status.SetSkill(index, type);
         m_statusCurrent.SetSkill(index, type);
     }
+
+    public void SetScore(int score)
+    {
+        m_status.SetScore(score);
+        m_statusCurrent.SetScore(score);
+    }
 }
