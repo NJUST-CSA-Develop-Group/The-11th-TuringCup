@@ -8,47 +8,47 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1022931273837214}
-  m_IsPrefabParent: 1
---- !u!1 &1022931273837214
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1750101513233904}
+  m_IsPrefabAsset: 1
+--- !u!1 &1750101513233904
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
-  - component: {fileID: 4619583054379774}
-  - component: {fileID: 33346798501164514}
-  - component: {fileID: 23796643966653022}
-  - component: {fileID: 65476849627727320}
-  - component: {fileID: 114232834189202376}
-  m_Layer: 0
-  m_Name: boomCube
+  - component: {fileID: 4455402391289608}
+  - component: {fileID: 33994006180911426}
+  - component: {fileID: 23088427920953078}
+  - component: {fileID: 65752823650313558}
+  - component: {fileID: 114971157107662290}
+  m_Layer: 8
+  m_Name: BoomCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4619583054379774
+--- !u!4 &4455402391289608
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1022931273837214}
+  m_GameObject: {fileID: 1750101513233904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 0, z: 3.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23796643966653022
+--- !u!23 &23088427920953078
 MeshRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1022931273837214}
+  m_GameObject: {fileID: 1750101513233904}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 2170729dfb323804db7c57ba38f2db83, type: 2}
+  - {fileID: 2100000, guid: 125b64239b166fc4b915351a114ce8e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,36 +78,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33346798501164514
+--- !u!33 &33994006180911426
 MeshFilter:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1022931273837214}
+  m_GameObject: {fileID: 1750101513233904}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65476849627727320
+--- !u!65 &65752823650313558
 BoxCollider:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1022931273837214}
+  m_GameObject: {fileID: 1750101513233904}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114232834189202376
+--- !u!114 &114971157107662290
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1022931273837214}
+  m_GameObject: {fileID: 1750101513233904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d863442667387a744a7f707ac265dfb6, type: 3}
+  m_Script: {fileID: 11500000, guid: 827371cdfdf04674dbadadb0aa8f1138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boomPS: {fileID: 1075580016900018, guid: e8b9aba3ddbcba14e8861e17643cf8b4, type: 2}
-  particleSystem: {fileID: 198058485235896334, guid: e8b9aba3ddbcba14e8861e17643cf8b4,
-    type: 2}
+  BoxType: 0
