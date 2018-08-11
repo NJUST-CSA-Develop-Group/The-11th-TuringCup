@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23088427920953078}
   - component: {fileID: 65752823650313558}
   - component: {fileID: 114971157107662290}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: BoomCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,4 +108,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 827371cdfdf04674dbadadb0aa8f1138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoxType: 0
