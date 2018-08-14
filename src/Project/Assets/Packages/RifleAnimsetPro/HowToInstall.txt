@@ -1,0 +1,8 @@
+INSTALLATION NOTES
+
+1. Import to a new, fresh Unity Project
+2. Download and Import fresh version of Playmaker
+3. Import Rifle Animset Pro
+4. Unzip the Assets\RifleAnimsetPro\InputManager_Replace\ProjectSettings.zip
+5. Replace your existing InputManager.asset and TagManager.asset (it's in ProjectSettings\ folder) with the new files you just unzipped.
+6. Enjoy

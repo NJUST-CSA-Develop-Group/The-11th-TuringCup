@@ -3081,31 +3081,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.92
+      value: 11.7
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.92
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -6.126
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.43298087
+      value: -0.4866376
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.42577457
+      value: 0.4383805
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.6169954
+      value: -0.5046318
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.50056
+      value: 0.56245273
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_RootOrder
@@ -3125,15 +3125,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 74.716
+      value: 81.79
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 5.275
+      value: -6.026
       objectReference: {fileID: 0}
     - target: {fileID: 4596257977174836, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -97.868
+      value: -89.017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d76735a04644bf4db01739a1f694f30, type: 2}
@@ -3724,8 +3724,8 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 385659009c9ab0d4da5b1eb78527aa0c, type: 3}
   m_Controller: {fileID: 9100000, guid: 86299744ad7aec84fbe42cda203f7373, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 1
+  m_CullingMode: 2
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
