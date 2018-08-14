@@ -42,7 +42,7 @@ public class BoxManager : MonoBehaviour, TListener {
         GetComponent<MeshRenderer>().enabled = false;
         ExplosionSmoke.Play();
         GetComponent<BoxCollider>().enabled = false;
-        Destroy(gameObject,5f);
+        Destroy(gameObject,2.5f);
 
          
     }
@@ -54,7 +54,13 @@ public class BoxManager : MonoBehaviour, TListener {
             case (EVENT_TYPE.BOMB_EXPLODE): //指定事件发生时
                 InExplode(); //执行爆炸函数
                 //发送方块被摧毁事件
-                EventManager.Instance.PostNotification(EVENT_TYPE.BOX_DESTROY, this, null, value); 
+                EventManager.Instance.PostNotification(EVENT_TYPE.BOX_DESTROY, this, null, value);
+                Dictionary<string, object> TempDic = new Dictionary<string, object>();
+                TempDic.Add("MapCol", (int)transform.position.x);
+                TempDic.Add("MapRow", (int)transform.position.z);
+                TempDic.Add("MapType", 0);
+                EventManager.Instance.PostNotification(EVENT_TYPE.MAP_UPDATE_INFO, this, null, TempDic);
+                TempDic.Clear();
                 return true; 
             default: return false;
         }

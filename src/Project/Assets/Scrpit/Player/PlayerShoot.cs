@@ -145,8 +145,9 @@ public class PlayerShoot : MonoBehaviour,TListener {
         switch (Event_Type)
         {
             case EVENT_TYPE.TURING_FIRE: //选手操作：射击
-                if (ShootAvaliable)//如果当前可射击
+                if (ShootAvaliable && !GetComponent<PlayerMovement>().IsMoving())//如果当前可射击
                 {
+                    GetComponent<Animator>().SetTrigger("Shoot");
                     Shoot();
                     return true;
                 }

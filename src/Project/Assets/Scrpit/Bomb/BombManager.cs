@@ -42,6 +42,12 @@ public class BombManager : MonoBehaviour, TListener {
         HadSetInfo = false;
         ExplosionSmoke = GetComponent<ParticleSystem>();
         PlayerFirstExit = true;
+        Dictionary<string, object> TempDic = new Dictionary<string, object>();
+        TempDic.Add("MapCol", (int)(transform.position.x + 0.5));
+        TempDic.Add("MapRow", (int)(transform.position.z + 0.5));
+        TempDic.Add("MapType", 3);
+        EventManager.Instance.PostNotification(EVENT_TYPE.MAP_UPDATE_INFO, this, null, TempDic);
+        TempDic.Clear();
     }
 
     private void FixedUpdate()
@@ -100,13 +106,17 @@ public class BombManager : MonoBehaviour, TListener {
         ExplosionSmoke.Play();
         TempDic.Add("PlayerID", BombOwner);
         TempDic.Add("BombPower", BombPower);
+        TempDic.Add("MapCol", (int)(transform.position.x + 0.5));
+        TempDic.Add("MapRow", (int)(transform.position.z + 0.5));
+        TempDic.Add("MapType", 0);
+        EventManager.Instance.PostNotification(EVENT_TYPE.MAP_UPDATE_INFO, this, null, TempDic);
         foreach (Collider hit in colliders)
         {
             //向在Attackable层内的 在爆炸范围内的每个实例发送事件（指定了特定对象）
             EventManager.Instance.PostNotification(EVENT_TYPE.BOMB_EXPLODE, this, hit.gameObject, TempDic);
         }
         TempDic.Clear();
-        Destroy(gameObject, 4f);//延迟销毁 播放动画
+        Destroy(gameObject, 1.5f);//延迟销毁 播放动画
 
     }
 

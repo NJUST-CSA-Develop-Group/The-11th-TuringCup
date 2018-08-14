@@ -1,0 +1,1128 @@
+fileFormatVersion: 2
+guid: 5e34e8fb7da5546e68cace672f0ed5e6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: SciFi:Alpha:Head
+    100004: SciFi:Alpha:HeadTop_End
+    100006: SciFi:Alpha:Hips
+    100008: SciFi:Alpha:LeftArm
+    100010: SciFi:Alpha:LeftFoot
+    100012: SciFi:Alpha:LeftFootToeBase_End
+    100014: SciFi:Alpha:LeftForeArm
+    100016: SciFi:Alpha:LeftHand
+    100018: SciFi:Alpha:LeftHandIndex1
+    100020: SciFi:Alpha:LeftHandIndex2
+    100022: SciFi:Alpha:LeftHandIndex3
+    100024: SciFi:Alpha:LeftHandIndex4
+    100026: SciFi:Alpha:LeftHandIndex5
+    100028: SciFi:Alpha:LeftHandMiddle1
+    100030: SciFi:Alpha:LeftHandMiddle2
+    100032: SciFi:Alpha:LeftHandMiddle3
+    100034: SciFi:Alpha:LeftHandMiddle4
+    100036: SciFi:Alpha:LeftHandMiddle5
+    100038: SciFi:Alpha:LeftHandPinky1
+    100040: SciFi:Alpha:LeftHandPinky2
+    100042: SciFi:Alpha:LeftHandPinky3
+    100044: SciFi:Alpha:LeftHandPinky4
+    100046: SciFi:Alpha:LeftHandPinky5
+    100048: SciFi:Alpha:LeftHandRing1
+    100050: SciFi:Alpha:LeftHandRing2
+    100052: SciFi:Alpha:LeftHandRing3
+    100054: SciFi:Alpha:LeftHandRing4
+    100056: SciFi:Alpha:LeftHandRing5
+    100058: SciFi:Alpha:LeftHandThumb1
+    100060: SciFi:Alpha:LeftHandThumb2
+    100062: SciFi:Alpha:LeftHandThumb3
+    100064: SciFi:Alpha:LeftHandThumb4
+    100066: SciFi:Alpha:LeftHandThumb5
+    100068: SciFi:Alpha:LeftLeg
+    100070: SciFi:Alpha:LeftShoulder
+    100072: SciFi:Alpha:LeftToeBase
+    100074: SciFi:Alpha:LeftUpLeg
+    100076: SciFi:Alpha:Neck
+    100078: SciFi:Alpha:Neck1
+    100080: SciFi:Alpha:RightArm
+    100082: SciFi:Alpha:RightFoot
+    100084: SciFi:Alpha:RightFootToeBase_End
+    100086: SciFi:Alpha:RightForeArm
+    100088: SciFi:Alpha:RightHand
+    100090: SciFi:Alpha:RightHandIndex1
+    100092: SciFi:Alpha:RightHandIndex2
+    100094: SciFi:Alpha:RightHandIndex3
+    100096: SciFi:Alpha:RightHandIndex4
+    100098: SciFi:Alpha:RightHandIndex5
+    100100: SciFi:Alpha:RightHandMiddle1
+    100102: SciFi:Alpha:RightHandMiddle2
+    100104: SciFi:Alpha:RightHandMiddle3
+    100106: SciFi:Alpha:RightHandMiddle4
+    100108: SciFi:Alpha:RightHandMiddle5
+    100110: SciFi:Alpha:RightHandPinky1
+    100112: SciFi:Alpha:RightHandPinky2
+    100114: SciFi:Alpha:RightHandPinky3
+    100116: SciFi:Alpha:RightHandPinky4
+    100118: SciFi:Alpha:RightHandPinky5
+    100120: SciFi:Alpha:RightHandRing1
+    100122: SciFi:Alpha:RightHandRing2
+    100124: SciFi:Alpha:RightHandRing3
+    100126: SciFi:Alpha:RightHandRing4
+    100128: SciFi:Alpha:RightHandRing5
+    100130: SciFi:Alpha:RightHandThumb1
+    100132: SciFi:Alpha:RightHandThumb2
+    100134: SciFi:Alpha:RightHandThumb3
+    100136: SciFi:Alpha:RightHandThumb4
+    100138: SciFi:Alpha:RightHandThumb5
+    100140: SciFi:Alpha:RightLeg
+    100142: SciFi:Alpha:RightShoulder
+    100144: SciFi:Alpha:RightToeBase
+    100146: SciFi:Alpha:RightUpLeg
+    100148: SciFi:Alpha:Spine
+    100150: SciFi:Alpha:Spine1
+    100152: SciFi:Alpha:Spine2
+    400000: //RootNode
+    400002: SciFi:Alpha:Head
+    400004: SciFi:Alpha:HeadTop_End
+    400006: SciFi:Alpha:Hips
+    400008: SciFi:Alpha:LeftArm
+    400010: SciFi:Alpha:LeftFoot
+    400012: SciFi:Alpha:LeftFootToeBase_End
+    400014: SciFi:Alpha:LeftForeArm
+    400016: SciFi:Alpha:LeftHand
+    400018: SciFi:Alpha:LeftHandIndex1
+    400020: SciFi:Alpha:LeftHandIndex2
+    400022: SciFi:Alpha:LeftHandIndex3
+    400024: SciFi:Alpha:LeftHandIndex4
+    400026: SciFi:Alpha:LeftHandIndex5
+    400028: SciFi:Alpha:LeftHandMiddle1
+    400030: SciFi:Alpha:LeftHandMiddle2
+    400032: SciFi:Alpha:LeftHandMiddle3
+    400034: SciFi:Alpha:LeftHandMiddle4
+    400036: SciFi:Alpha:LeftHandMiddle5
+    400038: SciFi:Alpha:LeftHandPinky1
+    400040: SciFi:Alpha:LeftHandPinky2
+    400042: SciFi:Alpha:LeftHandPinky3
+    400044: SciFi:Alpha:LeftHandPinky4
+    400046: SciFi:Alpha:LeftHandPinky5
+    400048: SciFi:Alpha:LeftHandRing1
+    400050: SciFi:Alpha:LeftHandRing2
+    400052: SciFi:Alpha:LeftHandRing3
+    400054: SciFi:Alpha:LeftHandRing4
+    400056: SciFi:Alpha:LeftHandRing5
+    400058: SciFi:Alpha:LeftHandThumb1
+    400060: SciFi:Alpha:LeftHandThumb2
+    400062: SciFi:Alpha:LeftHandThumb3
+    400064: SciFi:Alpha:LeftHandThumb4
+    400066: SciFi:Alpha:LeftHandThumb5
+    400068: SciFi:Alpha:LeftLeg
+    400070: SciFi:Alpha:LeftShoulder
+    400072: SciFi:Alpha:LeftToeBase
+    400074: SciFi:Alpha:LeftUpLeg
+    400076: SciFi:Alpha:Neck
+    400078: SciFi:Alpha:Neck1
+    400080: SciFi:Alpha:RightArm
+    400082: SciFi:Alpha:RightFoot
+    400084: SciFi:Alpha:RightFootToeBase_End
+    400086: SciFi:Alpha:RightForeArm
+    400088: SciFi:Alpha:RightHand
+    400090: SciFi:Alpha:RightHandIndex1
+    400092: SciFi:Alpha:RightHandIndex2
+    400094: SciFi:Alpha:RightHandIndex3
+    400096: SciFi:Alpha:RightHandIndex4
+    400098: SciFi:Alpha:RightHandIndex5
+    400100: SciFi:Alpha:RightHandMiddle1
+    400102: SciFi:Alpha:RightHandMiddle2
+    400104: SciFi:Alpha:RightHandMiddle3
+    400106: SciFi:Alpha:RightHandMiddle4
+    400108: SciFi:Alpha:RightHandMiddle5
+    400110: SciFi:Alpha:RightHandPinky1
+    400112: SciFi:Alpha:RightHandPinky2
+    400114: SciFi:Alpha:RightHandPinky3
+    400116: SciFi:Alpha:RightHandPinky4
+    400118: SciFi:Alpha:RightHandPinky5
+    400120: SciFi:Alpha:RightHandRing1
+    400122: SciFi:Alpha:RightHandRing2
+    400124: SciFi:Alpha:RightHandRing3
+    400126: SciFi:Alpha:RightHandRing4
+    400128: SciFi:Alpha:RightHandRing5
+    400130: SciFi:Alpha:RightHandThumb1
+    400132: SciFi:Alpha:RightHandThumb2
+    400134: SciFi:Alpha:RightHandThumb3
+    400136: SciFi:Alpha:RightHandThumb4
+    400138: SciFi:Alpha:RightHandThumb5
+    400140: SciFi:Alpha:RightLeg
+    400142: SciFi:Alpha:RightShoulder
+    400144: SciFi:Alpha:RightToeBase
+    400146: SciFi:Alpha:RightUpLeg
+    400148: SciFi:Alpha:Spine
+    400150: SciFi:Alpha:Spine1
+    400152: SciFi:Alpha:Spine2
+    7400000: Head_Impact[Pistol]
+    7400002: Stomach_Impact[Pistol]
+    7400004: Back_Impact[Pistol]
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'SciFi:Alpha:Spine2' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'SciFi:Alpha:Neck1' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Head_Impact[Pistol]
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Stomach_Impact[Pistol]
+      takeName: Take 001
+      firstFrame: 52
+      lastFrame: 98
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Back_Impact[Pistol]
+      takeName: Take 001
+      firstFrame: 102
+      lastFrame: 148
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: SciFi:Alpha:Hips
+      humanName: Hips
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.07488114, y: 0, z: 0.03744057}
+        length: 0.09360146
+        modified: 1
+    - boneName: SciFi:Alpha:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: -60.000004, y: -60.000004, z: -90}
+        max: {x: 60.000004, y: 60.000004, z: 50}
+        value: {x: 0.3341268, y: 0, z: 0.1670634}
+        length: 0.41765866
+        modified: 1
+    - boneName: SciFi:Alpha:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: -60.000004, y: -60.000004, z: -90}
+        max: {x: 60.000004, y: 60.000004, z: 50}
+        value: {x: 0.33412644, y: 0, z: 0.16706322}
+        length: 0.41765818
+        modified: 1
+    - boneName: SciFi:Alpha:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 0.31359285, y: 0, z: 0.15679643}
+        length: 0.3919912
+        modified: 1
+    - boneName: SciFi:Alpha:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 0.31359315, y: 0, z: 0.15679657}
+        length: 0.3919916
+        modified: 1
+    - boneName: SciFi:Alpha:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: -30.000002, z: -50}
+        max: {x: 0, y: 30.000002, z: 50}
+        value: {x: 0.10791244, y: 0, z: 0.05395622}
+        length: 0.13489059
+        modified: 1
+    - boneName: SciFi:Alpha:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: -30.000002, z: -50}
+        max: {x: 0, y: 30.000002, z: 50}
+        value: {x: 0.117460005, y: 0, z: 0.058730002}
+        length: 0.14682505
+        modified: 1
+    - boneName: SciFi:Alpha:Spine
+      humanName: Spine
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.13003895, y: 0, z: 0.06501947}
+        length: 0.16254875
+        modified: 1
+    - boneName: SciFi:Alpha:Spine1
+      humanName: Chest
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.22535211, y: 0, z: 0.112676054}
+        length: 0.2816902
+        modified: 1
+    - boneName: SciFi:Alpha:Neck
+      humanName: Neck
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.06829626, y: 0, z: 0.03414813}
+        length: 0.08537036
+        modified: 1
+    - boneName: SciFi:Alpha:Head
+      humanName: Head
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.06829626, y: 0, z: 0.03414813}
+        length: 0.08537036
+        modified: 1
+    - boneName: SciFi:Alpha:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: -15.000001, z: -15.000001}
+        max: {x: 0, y: 15.000001, z: 30.000002}
+        value: {x: 0.09998896, y: 0, z: 0.04999448}
+        length: 0.12498623
+        modified: 1
+    - boneName: SciFi:Alpha:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: -15.000001, z: -15.000001}
+        max: {x: 0, y: 15.000001, z: 30.000002}
+        value: {x: 0.10002067, y: 0, z: 0.050010335}
+        length: 0.12502587
+        modified: 1
+    - boneName: SciFi:Alpha:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: -90, y: -100, z: -60.000004}
+        max: {x: 90, y: 100, z: 100}
+        value: {x: 0.22149597, y: 0, z: 0.110747986}
+        length: 0.27687004
+        modified: 1
+    - boneName: SciFi:Alpha:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: -90, y: -100, z: -60.000004}
+        max: {x: 90, y: 100, z: 100}
+        value: {x: 0.22149593, y: 0, z: 0.11074796}
+        length: 0.27686998
+        modified: 1
+    - boneName: SciFi:Alpha:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 0.22299021, y: 0, z: 0.11149511}
+        length: 0.27873784
+        modified: 1
+    - boneName: SciFi:Alpha:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 0.22299026, y: 0, z: 0.11149513}
+        length: 0.2787379
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: -40, z: -80}
+        max: {x: 0, y: 40, z: 80}
+        value: {x: 0.11149511, y: 0, z: 0.055747554}
+        length: 0.13936892
+        modified: 1
+    - boneName: SciFi:Alpha:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: -40, z: -80}
+        max: {x: 0, y: 40, z: 80}
+        value: {x: 0.11149513, y: 0, z: 0.055747565}
+        length: 0.13936895
+        modified: 1
+    - boneName: SciFi:Alpha:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: -50}
+        max: {x: 0, y: 0, z: 50}
+        value: {x: 0.058964506, y: 0, z: 0.029482253}
+        length: 0.07370565
+        modified: 1
+    - boneName: SciFi:Alpha:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: -50}
+        max: {x: 0, y: 0, z: 50}
+        value: {x: 0.058964543, y: 0, z: 0.029482272}
+        length: 0.073705696
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: -25, z: -20}
+        max: {x: 0, y: 25, z: 20}
+        value: {x: 0.036111463, y: 0, z: 0.018055731}
+        length: 0.045139346
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -40}
+        max: {x: 0, y: 0, z: 35}
+        value: {x: 0.041429367, y: 0, z: 0.020714683}
+        length: 0.051786724
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: -40}
+        max: {x: 0, y: 0, z: 35}
+        value: {x: 0.031072028, y: 0, z: 0.015536014}
+        length: 0.038840044
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 0.044394284, y: 0, z: 0.022197142}
+        length: 0.055492874
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.027128957, y: 0, z: 0.013564479}
+        length: 0.033911206
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.020346716, y: 0, z: 0.010173358}
+        length: 0.025433404
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: -7.5000005, z: -50}
+        max: {x: 0, y: 7.5000005, z: 50}
+        value: {x: 0.046336673, y: 0, z: 0.023168337}
+        length: 0.05792086
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.029705333, y: 0, z: 0.014852666}
+        length: 0.037131675
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.022278998, y: 0, z: 0.011139499}
+        length: 0.027848756
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: -7.5000005, z: -50}
+        max: {x: 0, y: 7.5000005, z: 50}
+        value: {x: 0.043561857, y: 0, z: 0.021780929}
+        length: 0.05445234
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.029705362, y: 0, z: 0.014852681}
+        length: 0.03713171
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.02227902, y: 0, z: 0.01113951}
+        length: 0.027848784
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 0.029409988, y: 0, z: 0.014704994}
+        length: 0.036762495
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.022490663, y: 0, z: 0.011245332}
+        length: 0.028113337
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.016867995, y: 0, z: 0.008433998}
+        length: 0.021085003
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: -25, z: -20}
+        max: {x: 0, y: 25, z: 20}
+        value: {x: 0.036341622, y: 0, z: 0.018170811}
+        length: 0.045427047
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -40}
+        max: {x: 0, y: 0, z: 35}
+        value: {x: 0.040746327, y: 0, z: 0.020373164}
+        length: 0.050932925
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: -40}
+        max: {x: 0, y: 0, z: 35}
+        value: {x: 0.030559747, y: 0, z: 0.015279873}
+        length: 0.038199693
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 0.04301411, y: 0, z: 0.021507055}
+        length: 0.053767655
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.027083792, y: 0, z: 0.013541896}
+        length: 0.03385475
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.020312842, y: 0, z: 0.010156421}
+        length: 0.02539106
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: -7.5000005, z: -50}
+        max: {x: 0, y: 7.5000005, z: 50}
+        value: {x: 0.044934124, y: 0, z: 0.022467062}
+        length: 0.056167673
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.029890783, y: 0, z: 0.014945392}
+        length: 0.03736349
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.022418087, y: 0, z: 0.011209044}
+        length: 0.028022617
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: -7.5000005, z: -50}
+        max: {x: 0, y: 7.5000005, z: 50}
+        value: {x: 0.04321021, y: 0, z: 0.021605104}
+        length: 0.05401278
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.027132742, y: 0, z: 0.013566371}
+        length: 0.033915937
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.020349555, y: 0, z: 0.010174777}
+        length: 0.025436953
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 0.02922204, y: 0, z: 0.01461102}
+        length: 0.03652756
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.022256238, y: 0, z: 0.011128119}
+        length: 0.027820308
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.016692178, y: 0, z: 0.008346089}
+        length: 0.020865232
+        modified: 1
+    skeleton:
+    - name: 10_HitReactions_Pistol
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:Hips
+      parentName: 
+      position: {x: 0.0065205013, y: 0.9276292, z: 0.015994318}
+      rotation: {x: 0.017948138, y: 0.0087845065, z: 0.02083641, w: 0.9995831}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: SciFi:Alpha:LeftUpLeg
+      parentName: 
+      position: {x: -0.09633794, y: -0.03273258, z: -0.000000046289706}
+      rotation: {x: -0.14710325, y: -0.0825538, z: -0.0859804, w: 0.9819128}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: SciFi:Alpha:LeftLeg
+      parentName: 
+      position: {x: 0.000020590482, y: -0.41730064, z: -0.017286459}
+      rotation: {x: 0.3437238, y: -0.018785726, z: 0.016138826, w: 0.93874407}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: SciFi:Alpha:LeftFoot
+      parentName: 
+      position: {x: -0.0001261936, y: -0.39189968, z: -0.008477121}
+      rotation: {x: -0.26364678, y: -0.048021328, z: 0.020029346, w: 0.96321493}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999998}
+    - name: SciFi:Alpha:LeftToeBase
+      parentName: 
+      position: {x: 0.0018328767, y: -0.12193094, z: 0.082822606}
+      rotation: {x: -0.00001957422, y: 0.00603653, z: 0.000017459362, w: 0.99998176}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:LeftFootToeBase_End
+      parentName: 
+      position: {x: -0, y: 8.673617e-21, z: 0.12699999}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightUpLeg
+      parentName: 
+      position: {x: 0.09633794, y: -0.0327325, z: -0.000000014157349}
+      rotation: {x: -0.15307891, y: 0.0907783, z: 0.04792865, w: 0.9828677}
+      scale: {x: 0.9999997, y: 0.99999964, z: 0.99999976}
+    - name: SciFi:Alpha:RightLeg
+      parentName: 
+      position: {x: -0.0000048744178, y: -0.41729975, z: -0.017304672}
+      rotation: {x: 0.35775027, y: 0.042189963, z: -0.005303663, w: 0.9328486}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: SciFi:Alpha:RightFoot
+      parentName: 
+      position: {x: -0.0001259311, y: -0.3919, z: -0.008474343}
+      rotation: {x: -0.23422956, y: 0.050364602, z: -0.12551275, w: 0.9627286}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: SciFi:Alpha:RightToeBase
+      parentName: 
+      position: {x: 0.0018330744, y: -0.12193096, z: 0.08282267}
+      rotation: {x: -0.00001906859, y: -0.006315683, z: 0.000018017272, w: 0.99998003}
+      scale: {x: 0.9999995, y: 0.9999995, z: 0.9999995}
+    - name: SciFi:Alpha:RightFootToeBase_End
+      parentName: 
+      position: {x: -0.00003194809, y: -1.7347234e-20, z: 0.12699999}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:Spine
+      parentName: 
+      position: {x: 0.000000008163756, y: 0.09226325, z: 0.01577132}
+      rotation: {x: 0.01705149, y: -0.0045354627, z: -0.009381826, w: 0.99980026}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.9999999}
+    - name: SciFi:Alpha:Spine1
+      parentName: 
+      position: {x: 0.0000000023477982, y: 0.16254026, z: -0.0016560619}
+      rotation: {x: 0.034096222, y: -0.009069122, z: -0.018759841, w: 0.9992013}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: SciFi:Alpha:Spine2
+      parentName: 
+      position: {x: -0.000000009064749, y: 0.1363965, z: -0.01292304}
+      rotation: {x: 0.034096185, y: -0.009069227, z: -0.018759856, w: 0.9992013}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: SciFi:Alpha:LeftShoulder
+      parentName: 
+      position: {x: -0.061442263, y: 0.10186999, z: -0.037932444}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:LeftArm
+      parentName: 
+      position: {x: -0.12319104, y: -0.011129713, z: -0.017934697}
+      rotation: {x: -0.19829561, y: 0.01590496, z: 0.035554837, w: 0.979368}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: SciFi:Alpha:LeftForeArm
+      parentName: 
+      position: {x: -0.27687013, y: 0.0000033915974, z: -0.0000129565315}
+      rotation: {x: -0.23273605, y: 0.006339601, z: -0.009205467, w: 0.97247565}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: SciFi:Alpha:LeftHand
+      parentName: 
+      position: {x: -0.2787378, y: -0.00000036110802, z: 0.0000018869055}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999964}
+    - name: SciFi:Alpha:LeftHandIndex1
+      parentName: 
+      position: {x: -0.10394531, y: 0.006147592, z: 0.027054919}
+      rotation: {x: 0.12490628, y: 0.0065392125, z: 0.031528015, w: 0.9916459}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: SciFi:Alpha:LeftHandIndex2
+      parentName: 
+      position: {x: -0.055492915, y: 0.000000031005953, z: -0.00000003249613}
+      rotation: {x: -0.008547032, y: -0.00000050663937, z: 0.027656816, w: 0.99958086}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: SciFi:Alpha:LeftHandIndex3
+      parentName: 
+      position: {x: -0.033911195, y: 0.000000009810144, z: -0.00000006310613}
+      rotation: {x: -0.003296125, y: -0.0046082144, z: 0.2650532, w: 0.96421707}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: SciFi:Alpha:LeftHandIndex4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:LeftHandIndex5
+      parentName: 
+      position: {x: -0.02499999, y: -0.0000000023874127, z: -0.000000005482432}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:LeftHandMiddle1
+      parentName: 
+      position: {x: -0.10463905, y: 0.0061476706, z: 0.0042978274}
+      rotation: {x: 0.006372829, y: 0.016488418, z: 0.02390922, w: 0.9995578}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: SciFi:Alpha:LeftHandMiddle2
+      parentName: 
+      position: {x: -0.05792089, y: 0.000000007957569, z: -0.000000023281581}
+      rotation: {x: 0.00000005285255, y: 0.0006180554, z: 0.03024128, w: 0.9995424}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: SciFi:Alpha:LeftHandMiddle3
+      parentName: 
+      position: {x: -0.037131693, y: 0.0000000084110345, z: -0.00000003657683}
+      rotation: {x: -0.00000006483402, y: -0.0040894332, z: 0.17319252, w: 0.98487943}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: SciFi:Alpha:LeftHandMiddle4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:LeftHandMiddle5
+      parentName: 
+      position: {x: -0.02300004, y: -0.0000000071948434, z: -0.000000013443108}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: SciFi:Alpha:LeftHandPinky1
+      parentName: 
+      position: {x: -0.10012995, y: -0.00078340276, z: -0.039671365}
+      rotation: {x: -0.2838755, y: 0.00824058, z: 0.02857893, w: 0.9583997}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: SciFi:Alpha:LeftHandPinky2
+      parentName: 
+      position: {x: -0.03676249, y: 0.000000021852903, z: -0.000000034536605}
+      rotation: {x: -0.0030253232, y: -0.0000046007326, z: 0.027415182, w: 0.9996195}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: SciFi:Alpha:LeftHandPinky3
+      parentName: 
+      position: {x: -0.028113356, y: 0.000000011034677, z: -0.00000003528765}
+      rotation: {x: 0.00000007560912, y: 0.0030213534, z: 0.12784213, w: 0.9917899}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: SciFi:Alpha:LeftHandPinky4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:LeftHandPinky5
+      parentName: 
+      position: {x: -0.029000007, y: -0.000000005866307, z: -0.00000002828633}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999998}
+    - name: SciFi:Alpha:LeftHandRing1
+      parentName: 
+      position: {x: -0.10325166, y: 0.0032113027, z: -0.01875538}
+      rotation: {x: -0.10049796, y: 0.015740061, z: 0.026481189, w: 0.99446017}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: SciFi:Alpha:LeftHandRing2
+      parentName: 
+      position: {x: -0.05445232, y: -0.000000017126409, z: 0.000000035621756}
+      rotation: {x: 0.015883911, y: 0.0013196352, z: 0.03148826, w: 0.99937695}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: SciFi:Alpha:LeftHandRing3
+      parentName: 
+      position: {x: -0.037131738, y: 0.000000001966465, z: -0.0000000017019669}
+      rotation: {x: -0.012817737, y: -0.0038758586, z: 0.2117069, w: 0.9772414}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: SciFi:Alpha:LeftHandRing4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:LeftHandRing5
+      parentName: 
+      position: {x: -0.020000026, y: 0.0000000028092002, z: 0.000000014452391}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:LeftHandThumb1
+      parentName: 
+      position: {x: -0.02378511, y: -0.010029027, z: 0.026209405}
+      rotation: {x: 0.21008457, y: 0.09357742, z: -0.15400058, w: 0.9609326}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: SciFi:Alpha:LeftHandThumb2
+      parentName: 
+      position: {x: -0.033623736, y: -0.010028955, z: 0.028397696}
+      rotation: {x: 0.18615821, y: 0.1563459, z: -0.13283281, w: 0.96086234}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: SciFi:Alpha:LeftHandThumb3
+      parentName: 
+      position: {x: -0.045017928, y: -0.013444982, z: 0.021782676}
+      rotation: {x: 0.09140077, y: -0.13833831, z: 0.04915896, w: 0.98493236}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: SciFi:Alpha:LeftHandThumb4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:LeftHandThumb5
+      parentName: 
+      position: {x: -0.025999993, y: -0.009999961, z: 0.009999996}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:Neck
+      parentName: 
+      position: {x: 0.000000017447016, y: 0.13877422, z: -0.043541897}
+      rotation: {x: 0.012033021, y: -0.03327922, z: 0.016798299, w: 0.9992324}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: SciFi:Alpha:Neck1
+      parentName: 
+      position: {x: -0.0000000010567855, y: 0.043400254, z: 0.009268959}
+      rotation: {x: 0.060764488, y: -0.030822562, z: 0.017039267, w: 0.9975306}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:Head
+      parentName: 
+      position: {x: -0.000000003559615, y: 0.040266093, z: 0.008585248}
+      rotation: {x: -0.08065607, y: -0.17031248, z: 0.09732175, w: 0.9772495}
+      scale: {x: 0.9999997, y: 0.9999997, z: 0.99999976}
+    - name: SciFi:Alpha:HeadTop_End
+      parentName: 
+      position: {x: -5.1704583e-18, y: 0.24809258, z: 0.0012312889}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightShoulder
+      parentName: 
+      position: {x: 0.06140199, y: 0.101869926, z: -0.03793245}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightArm
+      parentName: 
+      position: {x: 0.123231284, y: -0.011129781, z: -0.017934496}
+      rotation: {x: -0.2227517, y: 0.0055671344, z: 0.027369875, w: 0.97447497}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: SciFi:Alpha:RightForeArm
+      parentName: 
+      position: {x: 0.27687004, y: 0.00000818314, z: -0.0000014819562}
+      rotation: {x: -0.119917884, y: -0.015914159, z: -0.00035087817, w: 0.9926562}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightHand
+      parentName: 
+      position: {x: 0.27873793, y: 0.00000047060686, z: -0.0000008899746}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999997}
+    - name: SciFi:Alpha:RightHandIndex1
+      parentName: 
+      position: {x: 0.10466505, y: 0.0048959274, z: 0.027119622}
+      rotation: {x: 0.18874234, y: 0.001333782, z: -0.018089155, w: 0.9818591}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightHandIndex2
+      parentName: 
+      position: {x: 0.053767636, y: 0.0000000027596678, z: -0.00000003064814}
+      rotation: {x: -0.011349407, y: -0.0000680098, z: -0.0025714703, w: 0.9999322}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: SciFi:Alpha:RightHandIndex3
+      parentName: 
+      position: {x: 0.033854757, y: -0.0000000061192793, z: -0.000000005778121}
+      rotation: {x: -0.038832586, y: -0.010368032, z: -0.35442743, w: 0.93421924}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: SciFi:Alpha:RightHandIndex4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightHandIndex5
+      parentName: 
+      position: {x: 0.026000008, y: 0.000000008434944, z: -0.00000006346689}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightHandMiddle1
+      parentName: 
+      position: {x: 0.107596025, y: 0.0048959255, z: 0.00427799}
+      rotation: {x: 0.010488659, y: -0.0047935285, z: -0.030498121, w: 0.99946827}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: SciFi:Alpha:RightHandMiddle2
+      parentName: 
+      position: {x: 0.05616769, y: 7.413831e-10, z: -0.00000005517232}
+      rotation: {x: 0.0000001570442, y: -0.0001136213, z: -0.02064118, w: 0.9997869}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: SciFi:Alpha:RightHandMiddle3
+      parentName: 
+      position: {x: 0.037363492, y: -0.0000000028559073, z: 0.0000000132469085}
+      rotation: {x: -0.00000022326685, y: 0.0020139767, z: -0.25949878, w: 0.9657413}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: SciFi:Alpha:RightHandMiddle4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightHandMiddle5
+      parentName: 
+      position: {x: 0.023000054, y: 0.0000000032379681, z: -0.000000063209356}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightHandPinky1
+      parentName: 
+      position: {x: 0.09971459, y: -0.0011913956, z: -0.03953998}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: SciFi:Alpha:RightHandPinky2
+      parentName: 
+      position: {x: 0.036527578, y: -0.0000000146361, z: 0.000000042982446}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: SciFi:Alpha:RightHandPinky3
+      parentName: 
+      position: {x: 0.027820325, y: 0.000000003931642, z: -0.000000027347722}
+      rotation: {x: 0.19116828, y: -0.06347841, z: 0.9198888, w: -0.3364961}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.9999997}
+    - name: SciFi:Alpha:RightHandPinky4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightHandPinky5
+      parentName: 
+      position: {x: 0.029000012, y: 0.0000000127706095, z: 0.000000033352425}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: SciFi:Alpha:RightHandRing1
+      parentName: 
+      position: {x: 0.10470214, y: 0.0038787804, z: -0.019362759}
+      rotation: {x: -0.06771272, y: -0.007744971, z: -0.03330277, w: 0.9971188}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: SciFi:Alpha:RightHandRing2
+      parentName: 
+      position: {x: 0.05401275, y: -0.000000008695949, z: -0.000000074161136}
+      rotation: {x: 0.0064881044, y: 0.0016627037, z: -0.021914227, w: 0.9997374}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999976}
+    - name: SciFi:Alpha:RightHandRing3
+      parentName: 
+      position: {x: 0.03391594, y: 0.000000009135718, z: -0.000000048826685}
+      rotation: {x: -0.005157723, y: -0.0034182079, z: -0.4057437, w: 0.9139659}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: SciFi:Alpha:RightHandRing4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightHandRing5
+      parentName: 
+      position: {x: 0.022000033, y: 0.0000000029116864, z: 0.0000000070704766}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999998}
+    - name: SciFi:Alpha:RightHandThumb1
+      parentName: 
+      position: {x: 0.025177691, y: -0.009366605, z: 0.025136689}
+      rotation: {x: 0.48007137, y: -0.19241908, z: 0.3377036, w: 0.7864239}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: SciFi:Alpha:RightHandThumb2
+      parentName: 
+      position: {x: 0.03263787, y: -0.010869605, z: 0.029668778}
+      rotation: {x: 0.023804273, y: -0.13338207, z: 0.027425725, w: 0.9903991}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.9999999}
+    - name: SciFi:Alpha:RightHandThumb3
+      parentName: 
+      position: {x: 0.04416526, y: -0.01370267, z: 0.021350252}
+      rotation: {x: -0.024669887, y: 0.388487, z: -0.06049725, w: 0.91913503}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: SciFi:Alpha:RightHandThumb4
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SciFi:Alpha:RightHandThumb5
+      parentName: 
+      position: {x: 0.02599999, y: -0.009999964, z: 0.009999999}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

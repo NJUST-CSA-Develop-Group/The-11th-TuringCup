@@ -2,35 +2,130 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour,TListener {
+public class PlayerMovement : MonoBehaviour, TListener
+{
     public float moveSpeed;//角色移动的速度
 
-    private Rigidbody playerRigid;//角色刚体
-    private Vector3 Position;//玩家现在所处位置
-    
+    private bool isMoving; //角色目前是否在移动
+    private Vector3 StartPosition; //角色移动的初始位置
+    private Vector3 TargetPosition; //角色移动的目标位置
 
+    private GameObject Global; //全局脚本绑定的GameObject引用
+    private MapManager Map; //地图脚本引用
+
+    private Animator Anim;
+    //玩家目前移动状态的只读接口
+    public bool IsMoving()
+    {
+        return isMoving;
+    }
     private void Start()
     {
-        playerRigid = GetComponent<Rigidbody>(); //获取玩家刚体以操控角色
-        EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE, this); //注册监听器 监听 选手操作：移动 事件
+        Anim = GetComponent<Animator>();
+        Global = GameObject.FindGameObjectWithTag("Global");//此处Tag后期注意修改
+        Map = Global.GetComponent<MapManager>(); //获取MapManager的引用
+        isMoving = false;
+        StartPosition = new Vector3();
+        TargetPosition = new Vector3();
+        //注册四个移动方向的监听器
+        EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_NORTH, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_SOUTH, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_WEST, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_EAST, this);
     }
 
-    //角色移动,h控制东西，v控制南北
-    private void Move(float h, float v)
+    private void FixedUpdate()
     {
-        Vector3 movement = new Vector3();
-        movement.Set(h, 0f, v);
-        movement = movement.normalized * moveSpeed * Time.deltaTime; //一般化移动
-        playerRigid.MovePosition(transform.position + movement); //移动角色位置
+        //如果正在移动
+        if (isMoving)
+        {
+            Move();
+        }
+    }
+
+
+    private void Move()
+    {
+        if (transform.position == TargetPosition)
+        {
+            isMoving = false;
+            Anim.SetBool("isMoving", false);
+            return;
+        }
+        if (Map.GetBoxType((int)TargetPosition.x, (int)TargetPosition.z) != 0) //判断目标位置是否可用
+        {
+            
+            if(transform.position != StartPosition)
+            {
+                TargetPosition = StartPosition;
+                //TODO 如果初始位置也被占用的情况
+            }
+            else
+            {
+                isMoving = false;
+                Anim.SetBool("isMoving", false);
+                return;
+            }
+        }
+        transform.position = Vector3.MoveTowards(transform.position, TargetPosition, moveSpeed * Time.deltaTime);
     }
 
     public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param, Dictionary<string, object> value)
     {
         switch (Event_Type)
         {
-            case EVENT_TYPE.TURING_MOVE://检测到玩家移动事件
-                Move((float)value["Horizontal"], (float)value["Vertical"]); //将移动参数传递至移动函数
-                return true;
+            case EVENT_TYPE.TURING_MOVE_NORTH:
+                if (!isMoving && (int)(transform.position.z + 0.5) < 14)
+                {
+                    StartPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
+                    TargetPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5) + 1);
+                    isMoving = true;
+                    Anim.SetBool("isMoving", true);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case EVENT_TYPE.TURING_MOVE_SOUTH:
+                if (!isMoving && (int)(transform.position.z + 0.5) > 0)
+                {
+                    StartPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
+                    TargetPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5) - 1);
+                    isMoving = true;
+                    Anim.SetBool("isMoving", true);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case EVENT_TYPE.TURING_MOVE_WEST:
+                if (!isMoving && (int)(transform.position.x + 0.5) > 0)
+                {
+                    StartPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
+                    TargetPosition.Set((int)(transform.position.x + 0.5) - 1, 0f, (int)(transform.position.z + 0.5));
+                    isMoving = true;
+                    Anim.SetBool("isMoving", true);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case EVENT_TYPE.TURING_MOVE_EAST:
+                if (!isMoving && (int)(transform.position.z + 0.5) < 14)
+                {
+                    StartPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
+                    TargetPosition.Set((int)(transform.position.x + 0.5) + 1, 0f, (int)(transform.position.z + 0.5));
+                    isMoving = true;
+                    Anim.SetBool("isMoving", true);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             default: return false;
         }
     }

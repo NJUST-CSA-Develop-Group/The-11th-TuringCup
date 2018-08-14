@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class MapManager : MonoBehaviour {
+public class MapManager : MonoBehaviour, TListener {
 
     /*
      * 本脚本去掉了之前地图坐标对Position的换算
@@ -18,29 +18,23 @@ public class MapManager : MonoBehaviour {
     public float ReduceGameAreaBeginTime; //缩圈开始时的游戏剩余时间
     public float ReduceGameAreaTime; //缩圈时间 仅供测试
 
-    private List<string[]> map; //地图信息作为string数组存储在List内（变相二维数组）
+    private List<string[]> Map; //地图信息作为string数组存储在List内（变相二维数组）
     private float ReduceTiming; //缩圈计时器
 
-    public List<string[]> Map //对Map的只读访问
-    {
-        get
-        {
-            return map;
-        }
-
-    }
 
     //先于Start执行 以便后面其他类在Start初始化时获取地图信息
     private void Awake()
     {
 
-        map = new List<string[]>();
+        Map = new List<string[]>();
         //TODO 多地图加载
         LoadFile(Application.dataPath + "/Maps", "01.csv");
         Debug.Log("MapFile loaded");
 
-        LoadMap(map);
+        LoadMap(Map);
         Debug.Log("Map loaded");
+
+        EventManager.Instance.AddListener(EVENT_TYPE.MAP_UPDATE_INFO, this);
 
     }
 
@@ -90,13 +84,22 @@ public class MapManager : MonoBehaviour {
     //返回请求的方块的类型
     public int GetBoxType(int row, int col)
     {
-        return int.Parse(map[row][col]);
+        return int.Parse(Map[row][col]);
     }
 
+
     //更新地图数组信息（不更新地图 更新地图工作交由事件驱动的实现类）
-    private void MapUpgrade(int row, int col, int type)
+    private bool MapUpdate(int row, int col, int type)
     {
-        map[row][col] = type.ToString();
+        if(Map[row][col] != null)
+        {
+            Map[row][col] = type.ToString();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private void ReduceGameArea(int circle)
@@ -104,6 +107,18 @@ public class MapManager : MonoBehaviour {
         //TODO 实现缩圈
     }
 
+    public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param, Dictionary<string, object> value)
+    {
+        switch (Event_Type)
+        {
+            case EVENT_TYPE.MAP_UPDATE_INFO:
+                return MapUpdate((int)value["MapCol"], (int)value["MapRow"], (int)value["MapType"]);
+            default:return false;
+        }
+    }
 
-
+    public Object getGameObject()
+    {
+        return gameObject;
+    }
 }
