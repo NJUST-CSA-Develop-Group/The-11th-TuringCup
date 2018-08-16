@@ -18,12 +18,18 @@ public class PlayerBomb : MonoBehaviour, TListener {
     private bool isBuffing = false; //当前是否加强
     private float buffTiming; //加强计时器
 
-    public bool IsBuffing()
+    public float? getBuffing()
     {
-        return isBuffing;
+        if (isBuffing)
+        {
+            return buffTiming;
+        }
+        else
+        {
+            return null;
+        }
     }
-
-	void Start () {
+    void Start () {
         bombAvaliable = true;
         isBuffing = false;
         setBombTiming = 0;

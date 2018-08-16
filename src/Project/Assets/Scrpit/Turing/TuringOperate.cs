@@ -37,7 +37,7 @@ public class TuringOperate : MonoBehaviour {
         }
         SetBomb(); //选手操作：放置炸弹
         Shoot();
-        Buff(); //选手操作：加强
+        Buff(); //选手操作：加强o
     }
 
     //四个方向的移动函数

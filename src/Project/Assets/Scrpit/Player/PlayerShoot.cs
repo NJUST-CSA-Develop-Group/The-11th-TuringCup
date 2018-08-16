@@ -37,9 +37,16 @@ public class PlayerShoot : MonoBehaviour,TListener {
     ParticleSystem m_ps;// 粒子系统，用于火焰效果
     AudioSource m_audio;// 音频效果
 
-    public bool IsBuffing()
+    public float? getBuffing()
     {
-        return isBuffing;
+        if (isBuffing)
+        {
+            return BuffTiming;
+        }
+        else
+        {
+            return null;
+        }
     }
 
     // Use this for initialization
@@ -102,7 +109,7 @@ public class PlayerShoot : MonoBehaviour,TListener {
             if (hit.transform.GetComponent<PlayerHealth>())//随意获取一定会在玩家上的脚本，用来确定命中的是玩家
             {
                 Dictionary<string, object> args = new Dictionary<string, object>();
-                args.Add("AttackerID", GetComponent<PlayerScoreManager>().PlayerID);
+                args.Add("AttackerID", GetComponent<PlayerScoreManager>().playerID);
                 args.Add("ShootPower", Damage);
                 EventManager.Instance.PostNotification(EVENT_TYPE.SHOOT_HIT_PLAYER, this, hit.transform.gameObject, args);
                 args.Clear();

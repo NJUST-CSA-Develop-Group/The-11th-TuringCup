@@ -24,9 +24,16 @@ public class PlayerMovement : MonoBehaviour, TListener
     {
         return isMoving;
     }
-    public bool IsBuffing()
+    public float? getBuffing()
     {
-        return isBuffing;
+        if (isBuffing)
+        {
+            return buffTiming;
+        }
+        else
+        {
+            return null;
+        }
     }
     private void Start()
     {

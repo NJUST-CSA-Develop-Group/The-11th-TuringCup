@@ -13,34 +13,34 @@ public class MapManager : MonoBehaviour, TListener {
      * 后期可以根据需要转换为int数组
      */
 
-    public GameObject BoomCubePrefab;     // 可炸方块
-    public GameObject UnboomCubePrefab;   // 不可炸方块
-    public GameObject BlockCube; //缩圈阻挡方块
-    public float ReduceGameAreaBeginTime; //缩圈开始时的游戏剩余时间
-    public float ReduceGameAreaTime; //缩圈时间 仅供测试
+    public GameObject boomCubePrefab;     // 可炸方块
+    public GameObject unboomCubePrefab;   // 不可炸方块
+    public GameObject blockCube; //缩圈阻挡方块
+    public float reduceGameAreaBeginTime; //缩圈开始时的游戏剩余时间
+    public float reduceGameAreaTime; //缩圈时间 仅供测试
 
-    private List<string[]> Map; //地图信息作为string数组存储在List内（变相二维数组）
-    private float ReduceTiming; //缩圈计时器
-    private int Circle; //缩圈序号
+    private List<string[]> map; //地图信息作为string数组存储在List内（变相二维数组）
+    private float reduceTiming; //缩圈计时器
+    private int circle; //缩圈序号
 
     Collider[] colliders;
-    Vector3 BoxPosition;
+    Vector3 boxPosition;
 
 
 
     //先于Start执行 以便后面其他类在Start初始化时获取地图信息
     private void Awake()
     {
-        ReduceTiming = 0;
-        Circle = 0;
-        BoxPosition = new Vector3(); 
-        Map = new List<string[]>();
+        reduceTiming = 0;
+        circle = 0;
+        boxPosition = new Vector3(); 
+        map = new List<string[]>();
 
         //TODO 多地图加载
         LoadFile(Application.dataPath + "/Maps", "01.csv");
         Debug.Log("MapFile loaded");
 
-        LoadMap(Map);
+        LoadMap(map);
         Debug.Log("Map loaded");
 
         EventManager.Instance.AddListener(EVENT_TYPE.MAP_UPDATE_INFO, this);
@@ -63,11 +63,11 @@ public class MapManager : MonoBehaviour, TListener {
                 BoxType = GetBoxType(i, j);
                 if (BoxType == 1)      // 1表示可炸块
                 {
-                    GameObject.Instantiate(BoomCubePrefab, new Vector3(i, 0, j), gameObject.transform.rotation);
+                    GameObject.Instantiate(boomCubePrefab, new Vector3(i, 0, j), gameObject.transform.rotation);
                 }
                 else if (BoxType == 2)        // 2表示不可炸块
                 {
-                    GameObject.Instantiate(UnboomCubePrefab, new Vector3(i, 0, j), gameObject.transform.rotation);
+                    GameObject.Instantiate(unboomCubePrefab, new Vector3(i, 0, j), gameObject.transform.rotation);
                 }
             }
         }
@@ -76,7 +76,7 @@ public class MapManager : MonoBehaviour, TListener {
     //读取地图文件
     private void LoadFile(string path, string fileName)
     {
-        Map.Clear();
+        map.Clear();
         Debug.Log("afterClear"); StreamReader sr = null;
         try
         {
@@ -89,7 +89,7 @@ public class MapManager : MonoBehaviour, TListener {
         string line;
         while ((line = sr.ReadLine()) != null)
         {
-            Map.Add(line.Split(','));
+            map.Add(line.Split(','));
         }
         sr.Close();
         sr.Dispose();
@@ -98,16 +98,16 @@ public class MapManager : MonoBehaviour, TListener {
     //返回请求的方块的类型
     public int GetBoxType(int row, int col)
     {
-        return int.Parse(Map[row][col]);
+        return int.Parse(map[row][col]);
     }
 
 
     //更新地图数组信息（不更新地图 更新地图工作交由事件驱动的实现类）
     private bool MapUpdate(int row, int col, int type)
     {
-        if(Map[row][col] != null)
+        if(map[row][col] != null)
         {
-            Map[row][col] = type.ToString();
+            map[row][col] = type.ToString();
             return true;
         }
         else
@@ -119,52 +119,52 @@ public class MapManager : MonoBehaviour, TListener {
     //缩圈
     private void ReduceGameArea()
     {
-        if(GameManager.GetRemainTime() <= ReduceGameAreaBeginTime) //如果进入缩圈时间
+        if(GameManager.GetRemainTime() <= reduceGameAreaBeginTime) //如果进入缩圈时间
         {
-            ReduceTiming += Time.deltaTime; 
-            if (ReduceTiming >= ReduceGameAreaTime) //如果到达缩圈时刻
+            reduceTiming += Time.deltaTime; 
+            if (reduceTiming >= reduceGameAreaTime) //如果到达缩圈时刻
             {
-                ReduceTiming = 0;
-                for(int i = Circle; i <= 13 - Circle; i++) //正方形边框区域进行处理
+                reduceTiming = 0;
+                for(int i = circle; i <= 13 - circle; i++) //正方形边框区域进行处理
                 {
-                    BoxPosition.Set(i, 0, Circle); //修改当前位置
-                    colliders = Physics.OverlapSphere(BoxPosition, 0.1f);
+                    boxPosition.Set(i, 0, circle); //修改当前位置
+                    colliders = Physics.OverlapSphere(boxPosition, 0.1f);
                     foreach (Collider collider in colliders)
                     {
                         Destroy(collider.gameObject); //销毁原有的方块
                     }
-                    Instantiate(BlockCube, BoxPosition, transform.rotation); //创建阻挡方块
-                    MapUpdate(i, Circle, -1); //更新地图信息
+                    Instantiate(blockCube, boxPosition, transform.rotation); //创建阻挡方块
+                    MapUpdate(i, circle, -1); //更新地图信息
 
-                    BoxPosition.Set(13 - i, 0, 13 - Circle);
-                    colliders = Physics.OverlapSphere(BoxPosition, 0.1f);
+                    boxPosition.Set(13 - i, 0, 13 - circle);
+                    colliders = Physics.OverlapSphere(boxPosition, 0.1f);
                     foreach (Collider collider in colliders)
                     {
                         Destroy(collider.gameObject);
                         
                     }
-                    Instantiate(BlockCube, BoxPosition, transform.rotation);
-                    MapUpdate(13 - i, 13 - Circle, -1);
+                    Instantiate(blockCube, boxPosition, transform.rotation);
+                    MapUpdate(13 - i, 13 - circle, -1);
 
-                    BoxPosition.Set(Circle, 0, i);
-                    colliders = Physics.OverlapSphere(BoxPosition, 0.1f);
+                    boxPosition.Set(circle, 0, i);
+                    colliders = Physics.OverlapSphere(boxPosition, 0.1f);
                     foreach (Collider collider in colliders)
                     {
                         Destroy(collider.gameObject);
                     }
-                    Instantiate(BlockCube, new Vector3(Circle, 0, i), transform.rotation);
-                    MapUpdate(Circle, i, -1);
+                    Instantiate(blockCube, new Vector3(circle, 0, i), transform.rotation);
+                    MapUpdate(circle, i, -1);
 
-                    BoxPosition.Set(13 - Circle, 0, 13 - i);
-                    colliders = Physics.OverlapSphere(BoxPosition, 0.1f);
+                    boxPosition.Set(13 - circle, 0, 13 - i);
+                    colliders = Physics.OverlapSphere(boxPosition, 0.1f);
                     foreach (Collider collider in colliders)
                     {
                         Destroy(collider.gameObject);
                     }
-                    Instantiate(BlockCube, BoxPosition, transform.rotation);
-                    MapUpdate(13 - Circle, 13 - i, -1);
+                    Instantiate(blockCube, boxPosition, transform.rotation);
+                    MapUpdate(13 - circle, 13 - i, -1);
                 }
-                Circle++;
+                circle++;
             }
         }
         //TODO 实现缩圈
