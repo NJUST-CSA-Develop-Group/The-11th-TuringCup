@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 这个类是选手们书写代买的父类
+/// 这个类是选手们书写代码的父类
 /// 绑定在四个游戏角色上
 /// 通过事件驱动模式操作角色
 /// 通过只读接口获取数据
@@ -40,8 +40,7 @@ public class TuringOperate : MonoBehaviour {
         Buff(); //选手操作：加强
     }
 
-    // TODO 拆分Movement成四个方向的移动函数
-
+    //四个方向的移动函数
     private bool MoveNorth()
     {
         bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_MOVE_NORTH, this, gameObject);

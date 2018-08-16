@@ -9,6 +9,7 @@ using UnityEngine;
  * 也可以为其他基本类型
  */
 public enum EVENT_TYPE {
+    GAME_START, //游戏开始
     GAME_OVER, //游戏结束
     //--------------------
     TURING_MOVE,//仅供测试
@@ -48,7 +49,7 @@ public interface TListener
     /// </summary>
     /// <param name="Event_Type">事件类型</param>
     /// <param name="Sender">发送事件的游戏组件</param>
-    /// <param name="param">可选参数 可传递游戏中的各种对象</param>
+    /// <param name="param">可选参数 可指定事件的处理对象</param>
     /// <param name="value">可选参数 Dictionary类型 可传递游戏数值</param>
     bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param = null, Dictionary<string, object> value = null);
 

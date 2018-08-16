@@ -15,17 +15,20 @@ public class MapManager : MonoBehaviour, TListener {
 
     public GameObject BoomCubePrefab;     // 可炸方块
     public GameObject UnboomCubePrefab;   // 不可炸方块
+    public GameObject BlockCube; //缩圈阻挡方块
     public float ReduceGameAreaBeginTime; //缩圈开始时的游戏剩余时间
     public float ReduceGameAreaTime; //缩圈时间 仅供测试
 
     private List<string[]> Map; //地图信息作为string数组存储在List内（变相二维数组）
     private float ReduceTiming; //缩圈计时器
+    private int Circle; //缩圈序号
 
 
     //先于Start执行 以便后面其他类在Start初始化时获取地图信息
     private void Awake()
     {
-
+        ReduceTiming = 0;
+        Circle = 0;
         Map = new List<string[]>();
         //TODO 多地图加载
         LoadFile(Application.dataPath + "/Maps", "01.csv");
@@ -102,9 +105,30 @@ public class MapManager : MonoBehaviour, TListener {
         }
     }
 
-    private void ReduceGameArea(int circle)
+    private void ReduceGameArea()
     {
+        if(GameManager.GerRemainTime() <= ReduceGameAreaBeginTime)
+        {
+            ReduceTiming += Time.deltaTime;
+            if(ReduceTiming >= ReduceGameAreaTime)
+            {
+                ReduceTiming = 0;
+                Circle++;
+                for(int i = 0; i< Circle; i++)
+                {
+                    for(int j = 0; j< Circle; j++)
+                    {
+                        Collider[] colliders = Physics.OverlapSphere(new Vector3(i,0,j), 0.5f);
+                        foreach (Collider collider in colliders)
+                        {
+                            Destroy(collider.gameObject);
+                        }
+                    }
+                }
+            }
+        }
         //TODO 实现缩圈
+
     }
 
     public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param, Dictionary<string, object> value)
