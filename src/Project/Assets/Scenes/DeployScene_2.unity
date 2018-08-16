@@ -455,17 +455,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerID: 2
-  Prefab: {fileID: 1180954582266706, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
+  Player: {fileID: 0}
+  Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
   OriginHealth: 0
   Images:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 82f751f139597914cb4977ca7ad1a22b, type: 3}
+  - {fileID: 2800000, guid: 030a0281a3866bc4eb8ea55fd335dcb9, type: 3}
+  - {fileID: 2800000, guid: 769a1b3f7df7dcd4ca3149a3a09286c2, type: 3}
+  - {fileID: 2800000, guid: d0d8e2764cde741488407df2e52d319d, type: 3}
   GreyShader: {fileID: 4800000, guid: c4f5b446e9442404886c9ae159262454, type: 3}
+  PartColorShader: {fileID: 4800000, guid: 17073de14fa35ca428ccc4fc5339e00e, type: 3}
+  TreatEffectTicks: 60
 --- !u!114 &41578926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,17 +1466,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerID: 1
-  Prefab: {fileID: 1180954582266706, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
+  Player: {fileID: 0}
+  Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
   OriginHealth: 0
   Images:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 82f751f139597914cb4977ca7ad1a22b, type: 3}
+  - {fileID: 2800000, guid: 030a0281a3866bc4eb8ea55fd335dcb9, type: 3}
+  - {fileID: 2800000, guid: 769a1b3f7df7dcd4ca3149a3a09286c2, type: 3}
+  - {fileID: 2800000, guid: d0d8e2764cde741488407df2e52d319d, type: 3}
   GreyShader: {fileID: 4800000, guid: c4f5b446e9442404886c9ae159262454, type: 3}
+  PartColorShader: {fileID: 4800000, guid: 17073de14fa35ca428ccc4fc5339e00e, type: 3}
+  TreatEffectTicks: 60
 --- !u!114 &345575759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2610,17 +2614,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerID: 3
-  Prefab: {fileID: 1180954582266706, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
+  Player: {fileID: 0}
+  Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
   OriginHealth: 0
   Images:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 82f751f139597914cb4977ca7ad1a22b, type: 3}
+  - {fileID: 2800000, guid: 030a0281a3866bc4eb8ea55fd335dcb9, type: 3}
+  - {fileID: 2800000, guid: 769a1b3f7df7dcd4ca3149a3a09286c2, type: 3}
+  - {fileID: 2800000, guid: d0d8e2764cde741488407df2e52d319d, type: 3}
   GreyShader: {fileID: 4800000, guid: c4f5b446e9442404886c9ae159262454, type: 3}
+  PartColorShader: {fileID: 0}
+  TreatEffectTicks: 60
 --- !u!114 &692032325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4236,13 +4242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152859e4420c7834fac78a1d63570d16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoomCubePrefab: {fileID: 1273266453685616, guid: 190126bd1eda5204ca3f56a17e837e24,
-    type: 2}
-  UnboomCubePrefab: {fileID: 1831690970624404, guid: 11634b843f856af4f85acb1e7ca7cc61,
-    type: 2}
-  BlockCube: {fileID: 1539557796849592, guid: 4ff68a34ebff4404a9e5f214baa59a20, type: 2}
-  ReduceGameAreaBeginTime: 120
-  ReduceGameAreaTime: 5
+  boomCubePrefab: {fileID: 0}
+  unboomCubePrefab: {fileID: 0}
+  blockCube: {fileID: 0}
+  reduceGameAreaBeginTime: 0
+  reduceGameAreaTime: 0
 --- !u!4 &1018399024
 Transform:
   m_ObjectHideFlags: 0
@@ -6820,11 +6824,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1a495176689d64aa65e1f64900ad38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerID: 2
-  SkillScore: 30
-  BoxDestroyScore: 5
-  KillPlayerScore: 30
-  RequireTime: 10
+  playerID: 0
+  skillScore: 0
+  boxDestroyScore: 0
+  killPlayerScore: 0
+  requireTime: 0
 --- !u!114 &1811192861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6837,6 +6841,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  buffSpeed: 0
+  buffTime: 0
 --- !u!114 &1811192862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6848,7 +6854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2231edb89dbf41f46b2758387a1c9eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncreaseHPValue: 30
+  increaseHPValue: 0
 --- !u!114 &1811192863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6860,12 +6866,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8238b8603f386e4a878df019fa74074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bomb: {fileID: 1853085357938030, guid: eaaabe7c67db3cf469e6081d3a6a44a7, type: 2}
-  BombCD: 2
-  PlayerID: 2
-  CurrentBombArea: 0.7
-  BuffTime: 5
-  BuffValue: 0.7
+  bomb: {fileID: 0}
+  bombCD: 0
+  playerID: 0
+  currentBombArea: 0
+  buffTime: 0
+  buffValue: 0
 --- !u!114 &1811192864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7080,17 +7086,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerID: 4
-  Prefab: {fileID: 1180954582266706, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
+  Player: {fileID: 0}
+  Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
   OriginHealth: 0
   Images:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 82f751f139597914cb4977ca7ad1a22b, type: 3}
+  - {fileID: 2800000, guid: 030a0281a3866bc4eb8ea55fd335dcb9, type: 3}
+  - {fileID: 2800000, guid: 769a1b3f7df7dcd4ca3149a3a09286c2, type: 3}
+  - {fileID: 2800000, guid: d0d8e2764cde741488407df2e52d319d, type: 3}
   GreyShader: {fileID: 4800000, guid: c4f5b446e9442404886c9ae159262454, type: 3}
+  PartColorShader: {fileID: 0}
+  TreatEffectTicks: 60
 --- !u!114 &1840167574
 MonoBehaviour:
   m_ObjectHideFlags: 0

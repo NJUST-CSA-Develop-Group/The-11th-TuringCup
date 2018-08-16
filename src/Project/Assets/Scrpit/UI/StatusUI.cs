@@ -6,39 +6,41 @@ using UnityEngine.UI;
 public class StatusUI : MonoBehaviour, TListener
 {
     public int PlayerID;//1-4
+    public GameObject Player;//对玩家的引用
     public GameObject Prefab;
     public Texture2D Avatar;//头像贴图
     public string TeamName;//队名
     public int OriginHealth;//初始血量
     public Texture2D[] Images;//按需存放技能贴图
     public Shader GreyShader;//灰度效果
+    public Shader PartColorShader;//部分彩色效果
+    public int TreatEffectTicks = 60;
 
     private GameObject _instantiate;
     private RawImage _avatar;
     private Text _teamName;
     private Text _hp;
     private Text _score;
-    private Icon _shoot;
-    private Icon _bomb;
     private Icon[] _skill;
+    private int _treatTick = -1;
     // Use this for initialization
     void Start()
     {
-        Vector2 pos = GetComponent<RectTransform>().anchoredPosition;
-        GetComponent<RectTransform>().anchoredPosition = new Vector2((PlayerID - 1) * Screen.width / 4, pos.y);//自动调整位置
+        transform.localPosition += new Vector3((PlayerID - 1) * Screen.width / 4, 0, 0);//自动调整位置
         _instantiate = Instantiate(Prefab, transform);//初始化UI
         _instantiate.transform.localScale = new Vector3(Screen.width / 1920f, Screen.width / 1920f, 1f);//按照屏幕尺寸进行缩放
         _avatar = _instantiate.transform.Find("Avatar").GetComponent<RawImage>();
         _teamName = _instantiate.transform.Find("TeamName").GetComponent<Text>();
         _hp = _instantiate.transform.Find("Health").GetComponent<Text>();
-        _shoot = new Icon(_instantiate.transform.Find("attack/shoot"), GreyShader);
-        _bomb = new Icon(_instantiate.transform.Find("attack/bomb"), GreyShader);
-        _skill = new Icon[3];
-        _skill[0] = new Icon(_instantiate.transform.Find("skill/skill0"), GreyShader);
-        _skill[1] = new Icon(_instantiate.transform.Find("skill/skill1"), GreyShader);
-        _skill[2] = new Icon(_instantiate.transform.Find("skill/skill2"), GreyShader);
+        _score = _instantiate.transform.Find("Score").GetComponent<Text>();
+        _skill = new Icon[Images.Length];
+        _skill[0] = new Icon(_instantiate.transform.Find("skill/skill0"), Images[0], GreyShader);
+        _skill[1] = new Icon(_instantiate.transform.Find("skill/skill1"), Images[1], GreyShader);
+        _skill[2] = new Icon(_instantiate.transform.Find("skill/skill2"), Images[2], GreyShader);
+        _skill[3] = new Icon(_instantiate.transform.Find("skill/skill3"), Images[3], GreyShader, PartColorShader);
 
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.PLAYER_DEAD, this);
     }
 
     // Update is called once per frame
@@ -47,12 +49,53 @@ public class StatusUI : MonoBehaviour, TListener
 
     }
 
+    void LateUpdate()
+    {
+        if (Player == null)
+        {
+            return;
+        }
+        SetHealth(Player.GetComponent<PlayerHealth>().GetHP().ToString());
+        SetScore(Player.GetComponent<PlayerScoreManager>().GetScore());
+        SetSkillCD(0, Player.GetComponent<PlayerMovement>().getBuffing());
+        SetSkillCD(1, Player.GetComponent<PlayerShoot>().getBuffing());
+        SetSkillCD(2, Player.GetComponent<PlayerBomb>().getBuffing());
+        if (Player.GetComponent<PlayerHealth>().HadTreat())
+        {
+            _treatTick = 0;
+        }
+        if (_treatTick >= 0)
+        {
+            _treatTick++;
+            _skill[_skill.Length - 1].SetMaterialAttr("_Part", 1.0f - _treatTick / (float)TreatEffectTicks);
+            _skill[_skill.Length - 1].SetGrey(false);
+        }
+        else
+        {
+            _skill[_skill.Length - 1].SetGrey(true);
+        }
+        if (_treatTick >= TreatEffectTicks)
+        {
+            _treatTick = -1;
+        }
+    }
+
     public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param = null, Dictionary<string, object> value = null)
     {
-        if (Event_Type == EVENT_TYPE.GAME_OVER)
+        switch (Event_Type)
         {
-            transform.parent.gameObject.SetActive(false);// 游戏结束时，隐藏Status的list
-            return true;
+            case EVENT_TYPE.GAME_OVER:
+                transform.parent.gameObject.SetActive(false);// 游戏结束时，隐藏Status的list
+                return true;
+            case EVENT_TYPE.PLAYER_DEAD:
+                if (Sender.gameObject == Player)
+                {
+                    Die();//对应玩家死亡
+                    return true;
+                }
+                break;
+            default:
+                break;
         }
         return false;
     }
@@ -63,7 +106,7 @@ public class StatusUI : MonoBehaviour, TListener
         _teamName.text = TeamName;
         SetHealth(OriginHealth.ToString());
         SetScore(0);
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < _skill.Length; i++)
         {
             _skill[i].SetGrey(true);
         }
@@ -84,21 +127,9 @@ public class StatusUI : MonoBehaviour, TListener
         _score.text = "得分: " + score;
     }
 
-    public void SetShootCD(string cd)
+    public void SetSkillCD(int index, float? cd)
     {
-        _shoot.SetGrey(cd != null);
-        _shoot.SetCD(cd);
-    }
-
-    public void SetBombCD(string cd)
-    {
-        _bomb.SetGrey(cd != null);
-        _bomb.SetCD(cd);
-    }
-
-    public void SetSkillCD(int index, string cd)
-    {
-        if (index < 0 || index > 2)
+        if (index < 0 || index > _skill.Length - 1)
         {
             Debug.Log("error skill index");
             return;
@@ -116,12 +147,18 @@ public class StatusUI : MonoBehaviour, TListener
     {
         private Transform _image;
         private Transform _cd;
-        private Shader _shader;
-        public Icon(Transform transform, Shader shader)
+        private Material _shader;
+        private Material _defaultShader;
+        public Icon(Transform transform, Texture2D image, Shader shader, Shader _default = null)
         {
             _image = transform.Find("image");
             _cd = transform.Find("cd");
-            _shader = shader;
+            _image.GetComponent<RawImage>().texture = image;
+            _shader = new Material(shader);
+            if (_default != null)
+            {
+                _defaultShader = new Material(_default);
+            }
         }
 
         public void SetImg(Texture2D img)
@@ -129,7 +166,7 @@ public class StatusUI : MonoBehaviour, TListener
             _image.GetComponent<RawImage>().texture = img;
         }
 
-        public void SetCD(string cd)
+        public void SetCD(float? cd)
         {
             if (cd == null)
             {
@@ -138,13 +175,19 @@ public class StatusUI : MonoBehaviour, TListener
             else
             {
                 _cd.GetComponent<Text>().enabled = true;
-                _cd.GetComponent<Text>().text = cd;
+                _cd.GetComponent<Text>().text = cd.Value.ToString();
             }
         }
 
         public void SetGrey(bool grey = true)
         {
-            _image.GetComponent<RawImage>().material.shader = grey ? _shader : null;
+            _image.GetComponent<RawImage>().material = grey ? _shader : _defaultShader;
+        }
+
+        public void SetMaterialAttr(string name, float value)
+        {
+            Debug.Log(value);
+            _image.GetComponent<RawImage>().material.SetFloat(name, value);
         }
     }
 }

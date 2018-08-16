@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour,TListener {
     public int increaseHPValue;//仅供测试 技能增加的血量数值
+    private bool hadTreat = false;
 
     private int currentHP;//当前角色血量
     private bool isDead;
@@ -18,10 +19,11 @@ public class PlayerHealth : MonoBehaviour,TListener {
 
     private void FixedUpdate()
     {
-        if(GameObject.FindGameObjectWithTag("Global").GetComponent<MapManager>().
+        if (GameObject.FindGameObjectWithTag("Global").GetComponent<MapManager>().
             GetBoxType((int)(transform.position.x + 0.5), (int)(transform.position.z + 0.5)) == -1 && !isDead
-            ){
-            PlayerDeath( -1 );
+            )
+        {
+            PlayerDeath(-1);
         }
     }
     //血量的只读接口
@@ -45,7 +47,15 @@ public class PlayerHealth : MonoBehaviour,TListener {
     private bool IncreaseHP()
     {
         currentHP += increaseHPValue;
+        hadTreat = true;
         return true;
+    }
+
+    public bool HadTreat()
+    {
+        bool _hadtreat = hadTreat;
+        hadTreat = false;
+        return _hadtreat;
     }
 
     private void PlayerDeath(int Attacker)
@@ -72,10 +82,10 @@ public class PlayerHealth : MonoBehaviour,TListener {
         switch (Event_Type)
         {
             case EVENT_TYPE.BOMB_EXPLODE: //炸弹爆炸事件
-                TakeDamage((int)value["BombPower"],(int)value["AttackerID"]); //造成伤害并传递炸弹威力数值
+                TakeDamage((int)value["BombPower"], (int)value["AttackerID"]); //造成伤害并传递炸弹威力数值
                 return true;
             case EVENT_TYPE.PLAYER_INCREASE_HP: //角色回血（具体操作事件）
-                return IncreaseHP(); 
+                return IncreaseHP();
             default: return false;
         }
     }
