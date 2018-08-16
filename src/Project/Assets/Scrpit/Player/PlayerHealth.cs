@@ -15,6 +15,14 @@ public class PlayerHealth : MonoBehaviour,TListener {
         EventManager.Instance.AddListener(EVENT_TYPE.PLAYER_INCREASE_HP, this);
     }
 
+    private void FixedUpdate()
+    {
+        if(GameObject.FindGameObjectWithTag("Global").GetComponent<MapManager>().
+            GetBoxType((int)(transform.position.x + 0.5), (int)(transform.position.z + 0.5)) == -1
+            || CurrentHP <= 0){
+            PlayerDeath();
+        }
+    }
     //血量的只读接口
     public int GetHP()
     {
@@ -41,6 +49,13 @@ public class PlayerHealth : MonoBehaviour,TListener {
 
     private void PlayerDeath()
     {
+        GetComponent<Animator>().SetTrigger("Die");
+        GetComponent<TuringOperate>().enabled = false;
+        GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<PlayerBomb>().enabled = false;
+        GetComponent<PlayerShoot>().enabled = false;
+
+        EventManager.Instance.PostNotification(EVENT_TYPE.PLAYER_DEAD, this);
         // TODO 角色死亡 设置动画 禁用脚本 传递分数
     }
 

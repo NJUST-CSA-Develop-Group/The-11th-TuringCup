@@ -12,7 +12,7 @@ public class BombManager : MonoBehaviour, TListener {
 
     private float BombRadius; //炸弹爆炸范围 
 
-    private bool PlayerFirstExit;
+    private bool PlayerFirstExit; //
 
     private ParticleSystem ExplosionSmoke;
 

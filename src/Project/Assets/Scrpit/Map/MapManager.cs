@@ -23,13 +23,19 @@ public class MapManager : MonoBehaviour, TListener {
     private float ReduceTiming; //缩圈计时器
     private int Circle; //缩圈序号
 
+    Collider[] colliders;
+    Vector3 BoxPosition;
+
+
 
     //先于Start执行 以便后面其他类在Start初始化时获取地图信息
     private void Awake()
     {
         ReduceTiming = 0;
         Circle = 0;
+        BoxPosition = new Vector3(); 
         Map = new List<string[]>();
+
         //TODO 多地图加载
         LoadFile(Application.dataPath + "/Maps", "01.csv");
         Debug.Log("MapFile loaded");
@@ -39,6 +45,11 @@ public class MapManager : MonoBehaviour, TListener {
 
         EventManager.Instance.AddListener(EVENT_TYPE.MAP_UPDATE_INFO, this);
 
+    }
+
+    private void FixedUpdate()
+    {
+        ReduceGameArea();
     }
 
     private void LoadMap(List<string[]> map)
@@ -105,26 +116,55 @@ public class MapManager : MonoBehaviour, TListener {
         }
     }
 
+    //缩圈
     private void ReduceGameArea()
     {
-        if(GameManager.GerRemainTime() <= ReduceGameAreaBeginTime)
+        if(GameManager.GetRemainTime() <= ReduceGameAreaBeginTime) //如果进入缩圈时间
         {
-            ReduceTiming += Time.deltaTime;
-            if(ReduceTiming >= ReduceGameAreaTime)
+            ReduceTiming += Time.deltaTime; 
+            if (ReduceTiming >= ReduceGameAreaTime) //如果到达缩圈时刻
             {
                 ReduceTiming = 0;
-                Circle++;
-                for(int i = 0; i< Circle; i++)
+                for(int i = Circle; i <= 13 - Circle; i++) //正方形边框区域进行处理
                 {
-                    for(int j = 0; j< Circle; j++)
+                    BoxPosition.Set(i, 0, Circle); //修改当前位置
+                    colliders = Physics.OverlapSphere(BoxPosition, 0.1f);
+                    foreach (Collider collider in colliders)
                     {
-                        Collider[] colliders = Physics.OverlapSphere(new Vector3(i,0,j), 0.5f);
-                        foreach (Collider collider in colliders)
-                        {
-                            Destroy(collider.gameObject);
-                        }
+                        Destroy(collider.gameObject); //销毁原有的方块
                     }
+                    Instantiate(BlockCube, BoxPosition, transform.rotation); //创建阻挡方块
+                    MapUpdate(i, Circle, -1); //更新地图信息
+
+                    BoxPosition.Set(13 - i, 0, 13 - Circle);
+                    colliders = Physics.OverlapSphere(BoxPosition, 0.1f);
+                    foreach (Collider collider in colliders)
+                    {
+                        Destroy(collider.gameObject);
+                        
+                    }
+                    Instantiate(BlockCube, BoxPosition, transform.rotation);
+                    MapUpdate(13 - i, 13 - Circle, -1);
+
+                    BoxPosition.Set(Circle, 0, i);
+                    colliders = Physics.OverlapSphere(BoxPosition, 0.1f);
+                    foreach (Collider collider in colliders)
+                    {
+                        Destroy(collider.gameObject);
+                    }
+                    Instantiate(BlockCube, new Vector3(Circle, 0, i), transform.rotation);
+                    MapUpdate(Circle, i, -1);
+
+                    BoxPosition.Set(13 - Circle, 0, 13 - i);
+                    colliders = Physics.OverlapSphere(BoxPosition, 0.1f);
+                    foreach (Collider collider in colliders)
+                    {
+                        Destroy(collider.gameObject);
+                    }
+                    Instantiate(BlockCube, BoxPosition, transform.rotation);
+                    MapUpdate(13 - Circle, 13 - i, -1);
                 }
+                Circle++;
             }
         }
         //TODO 实现缩圈

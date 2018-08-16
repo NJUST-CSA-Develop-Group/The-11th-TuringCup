@@ -1615,6 +1615,10 @@ Prefab:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1549187452460714, guid: 3035a5d48569d0246adb3ac2417277b4, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95496276021988578, guid: 3035a5d48569d0246adb3ac2417277b4, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3035a5d48569d0246adb3ac2417277b4, type: 2}
@@ -4236,8 +4240,9 @@ MonoBehaviour:
     type: 2}
   UnboomCubePrefab: {fileID: 1831690970624404, guid: 11634b843f856af4f85acb1e7ca7cc61,
     type: 2}
-  ReduceGameAreaBeginTime: 0
-  ReduceGameAreaTime: 2
+  BlockCube: {fileID: 1539557796849592, guid: 4ff68a34ebff4404a9e5f214baa59a20, type: 2}
+  ReduceGameAreaBeginTime: 120
+  ReduceGameAreaTime: 5
 --- !u!4 &1018399024
 Transform:
   m_ObjectHideFlags: 0
@@ -6787,7 +6792,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1811192857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd180c56c231f144ba28ee062ccf2be, type: 3}
   m_Name: 
@@ -6826,7 +6831,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1811192857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 420346f0e7787cc4eb1e9c6763323ef7, type: 3}
   m_Name: 
@@ -6850,7 +6855,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1811192857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8238b8603f386e4a878df019fa74074, type: 3}
   m_Name: 
@@ -6867,7 +6872,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1811192857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8900befa90d1cc046b3b419db45c0e90, type: 3}
   m_Name: 

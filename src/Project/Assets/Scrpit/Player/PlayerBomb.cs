@@ -12,7 +12,6 @@ public class PlayerBomb : MonoBehaviour, TListener {
     public float BuffTime; //加强时间
     public float BuffValue; //加强数值（此处为爆炸范围）
 
-
     private bool BombAvaliable = false; //当前是否允许放置炸弹
     private float SetBombTiming; //放置炸弹计时器
 
@@ -41,10 +40,15 @@ public class PlayerBomb : MonoBehaviour, TListener {
         GameObject newBomb = Instantiate(Bomb, new Vector3((transform.position.x), -0.15f, (transform.position.z)), gameObject.transform.rotation);
         BombAvaliable = false;
         //发送炸弹设置事件
+        //发送地图更新事件
         Dictionary<string, object> TempDic = new Dictionary<string, object>();
         TempDic.Add("PlayerID", PlayerID);
         TempDic.Add("BombArea", CurrentBombArea);
+        TempDic.Add("MapCol", (int)(transform.position.x + 0.5));
+        TempDic.Add("MapRow", (int)(transform.position.z + 0.5));
+        TempDic.Add("MapType", 3);
         EventManager.Instance.PostNotification(EVENT_TYPE.BOMB_SET_INFO, this, newBomb, TempDic);
+        EventManager.Instance.PostNotification(EVENT_TYPE.MAP_UPDATE_INFO, this, null, TempDic);
         TempDic.Clear(); //及时清理TempDic以释放内存
     }
 

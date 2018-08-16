@@ -12,17 +12,11 @@ public class StartButton : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(Click);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void Click()
     {
         GameObject.Find("Main Camera").GetComponent<CameraEffect>().enabled = false;
         transform.parent.gameObject.SetActive(false);
         transform.parent.parent.Find("Status").gameObject.SetActive(true);// 显示状态UI
-        // TODO: Start game
+        EventManager.Instance.PostNotification(EVENT_TYPE.GAME_START, this);
     }
 }

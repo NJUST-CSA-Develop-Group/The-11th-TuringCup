@@ -12,7 +12,6 @@ public class SelectMap : MonoBehaviour
     private Transform[] options;
     public int _curindex { get; private set; }
 
-    // Use this for initialization
     void Start()
     {
         _curindex = -1;
@@ -26,12 +25,6 @@ public class SelectMap : MonoBehaviour
             options[i].Find("selector").GetComponent<RawImage>().texture = Selector;//加载selector
             options[i].Find("image").GetComponent<Button>().onClick.AddListener(delegate { Click(index); });
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void Click(int index)
