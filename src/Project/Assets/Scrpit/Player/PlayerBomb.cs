@@ -4,25 +4,30 @@ using UnityEngine;
 
 public class PlayerBomb : MonoBehaviour, TListener {
 
-    public GameObject Bomb;//将要放置的炸弹Prefab
+    public GameObject bomb;//将要放置的炸弹Prefab
 
-    public float BombCD; //炸弹放置冷却时间
-    public int PlayerID; //玩家ID
-    public float CurrentBombArea; //当前炸弹爆炸范围
-    public float BuffTime; //加强时间
-    public float BuffValue; //加强数值（此处为爆炸范围）
+    public float bombCD; //炸弹放置冷却时间
+    public int playerID; //玩家ID
+    public float currentBombArea; //当前炸弹爆炸范围
+    public float buffTime; //加强时间
+    public float buffValue; //加强数值（此处为爆炸范围）
 
-    private bool BombAvaliable = false; //当前是否允许放置炸弹
-    private float SetBombTiming; //放置炸弹计时器
+    private bool bombAvaliable = false; //当前是否允许放置炸弹
+    private float setBombTiming; //放置炸弹计时器
 
-    private bool IsBuffing = false; //当前是否加强
-    private float BuffTiming; //加强计时器
+    private bool isBuffing = false; //当前是否加强
+    private float buffTiming; //加强计时器
+
+    public bool IsBuffing()
+    {
+        return isBuffing;
+    }
 
 	void Start () {
-        BombAvaliable = true;
-        IsBuffing = false;
-        SetBombTiming = 0;
-        BuffTiming = 0f;
+        bombAvaliable = true;
+        isBuffing = false;
+        setBombTiming = 0;
+        buffTiming = 0f;
 
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_SET_BOMB, this); //注册监听器 监听放置炸弹
         EventManager.Instance.AddListener(EVENT_TYPE.BOMB_BUFF, this); //注册监听器 监听加强炸弹
@@ -37,13 +42,13 @@ public class PlayerBomb : MonoBehaviour, TListener {
     private void SetBomb()
     {
         //创建炸弹
-        GameObject newBomb = Instantiate(Bomb, new Vector3((transform.position.x), -0.15f, (transform.position.z)), gameObject.transform.rotation);
-        BombAvaliable = false;
+        GameObject newBomb = Instantiate(bomb, new Vector3((transform.position.x), -0.15f, (transform.position.z)), gameObject.transform.rotation);
+        bombAvaliable = false;
         //发送炸弹设置事件
         //发送地图更新事件
         Dictionary<string, object> TempDic = new Dictionary<string, object>();
-        TempDic.Add("PlayerID", PlayerID);
-        TempDic.Add("BombArea", CurrentBombArea);
+        TempDic.Add("AttackerID", playerID);
+        TempDic.Add("BombArea", currentBombArea);
         TempDic.Add("MapCol", (int)(transform.position.x + 0.5));
         TempDic.Add("MapRow", (int)(transform.position.z + 0.5));
         TempDic.Add("MapType", 3);
@@ -55,33 +60,33 @@ public class PlayerBomb : MonoBehaviour, TListener {
     //计时器 包括炸弹放置和技能计时
     private void Timing()
     {
-        if (!BombAvaliable)//技能冷却时计时
+        if (!bombAvaliable)//技能冷却时计时
         {
-            SetBombTiming += Time.deltaTime;
+            setBombTiming += Time.deltaTime;
         }
-        if(SetBombTiming >= BombCD)//冷却时间到时 设置炸弹可用 并重置计时器
+        if(setBombTiming >= bombCD)//冷却时间到时 设置炸弹可用 并重置计时器
         {
-            BombAvaliable = true;
-            SetBombTiming = 0;
+            bombAvaliable = true;
+            setBombTiming = 0;
         }
 
-        if (IsBuffing)//如果存在加强炸弹 则进行计时
+        if (isBuffing)//如果存在加强炸弹 则进行计时
         {
-            BuffTiming += Time.deltaTime;
+            buffTiming += Time.deltaTime;
         }
-        if(BuffTiming >= BuffTime) //加强时间到 取消加强
+        if(buffTiming >= buffTime) //加强时间到 取消加强
         {
-            IsBuffing = false;
-            CurrentBombArea -= BuffValue;
-            BuffTiming = 0;
+            isBuffing = false;
+            currentBombArea -= buffValue;
+            buffTiming = 0;
         }
     }
 
     //加强技能 在OnEvent内调用
     public void IncreaseBombArea()
     {
-        IsBuffing = true;//设置处于加强状态
-        CurrentBombArea += BuffValue;
+        isBuffing = true;//设置处于加强状态
+        currentBombArea += buffValue;
     }
 
     public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param = null, Dictionary<string, object> value = null)
@@ -89,7 +94,7 @@ public class PlayerBomb : MonoBehaviour, TListener {
         switch (Event_Type)
         {
             case EVENT_TYPE.TURING_SET_BOMB: //选手操作：放置炸弹
-                if (BombAvaliable && !GetComponent<PlayerMovement>().IsMoving())//如果当前可放置炸弹
+                if (bombAvaliable && !GetComponent<PlayerMovement>().IsMoving())//如果当前可放置炸弹
                 {
                     SetBomb();
                     GetComponent<Animator>().SetTrigger("SetBomb");

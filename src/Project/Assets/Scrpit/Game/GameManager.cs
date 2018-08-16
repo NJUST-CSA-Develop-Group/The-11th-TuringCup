@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour, TListener {
     public float GameTime; //游戏总时间
 
     private static float RemainingTime; //游戏剩余时间
+    private static bool isGameRunning; //目前游戏是否在进行
 
     private GameObject[] Players; //获取角色引用 以对角色的脚本尽心操作
-    private bool isGameRunning; //目前游戏是否在进行
 
     //游戏剩余时间只读接口
     public static float GetRemainTime()

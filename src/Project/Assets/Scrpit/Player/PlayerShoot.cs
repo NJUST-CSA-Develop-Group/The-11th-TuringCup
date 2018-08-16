@@ -21,7 +21,7 @@ public class PlayerShoot : MonoBehaviour,TListener {
 
     bool ShootAvaliable;
     float ShootTiming;
-    bool IsBuffing;
+    bool isBuffing;
     float BuffTiming;
 
     //调试用效果
@@ -37,6 +37,10 @@ public class PlayerShoot : MonoBehaviour,TListener {
     ParticleSystem m_ps;// 粒子系统，用于火焰效果
     AudioSource m_audio;// 音频效果
 
+    public bool IsBuffing()
+    {
+        return isBuffing;
+    }
 
     // Use this for initialization
     void Start () {
@@ -44,7 +48,7 @@ public class PlayerShoot : MonoBehaviour,TListener {
         GunLine = GetComponent<LineRenderer>();
         ShootAvaliable = true;
         ShootTiming = 0;
-        IsBuffing = false;
+        isBuffing = false;
         BuffTiming = 0;
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_FIRE, this);
         EventManager.Instance.AddListener(EVENT_TYPE.SHOOT_BUFF, this);
@@ -98,7 +102,7 @@ public class PlayerShoot : MonoBehaviour,TListener {
             if (hit.transform.GetComponent<PlayerHealth>())//随意获取一定会在玩家上的脚本，用来确定命中的是玩家
             {
                 Dictionary<string, object> args = new Dictionary<string, object>();
-                args.Add("PlayerID", GetComponent<PlayerBomb>().PlayerID);
+                args.Add("AttackerID", GetComponent<PlayerScoreManager>().PlayerID);
                 args.Add("ShootPower", Damage);
                 EventManager.Instance.PostNotification(EVENT_TYPE.SHOOT_HIT_PLAYER, this, hit.transform.gameObject, args);
                 args.Clear();
@@ -122,13 +126,13 @@ public class PlayerShoot : MonoBehaviour,TListener {
             ShootTiming = 0;
         }
 
-        if (IsBuffing)//如果存在加强 则进行计时
+        if (isBuffing)//如果存在加强 则进行计时
         {
             BuffTiming += Time.deltaTime;
         }
         if (BuffTiming >= BuffTime) //加强时间到 取消加强
         {
-            IsBuffing = false;
+            isBuffing = false;
             Damage -= BuffValue;
             BuffTiming = 0;
         }
@@ -136,7 +140,7 @@ public class PlayerShoot : MonoBehaviour,TListener {
 
     public void IncreaseBulltDamage()
     {
-        IsBuffing = true;//设置处于加强状态
+        isBuffing = true;//设置处于加强状态
         Damage += BuffValue;
     }
 

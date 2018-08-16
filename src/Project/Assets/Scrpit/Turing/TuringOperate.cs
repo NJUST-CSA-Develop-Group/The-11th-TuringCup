@@ -100,6 +100,7 @@ public class TuringOperate : MonoBehaviour {
         BuffBomb();
         BuffHP();
         BuffShoot();
+        BuffSpeed();
     }
 
     /// <summary>
@@ -147,6 +148,22 @@ public class TuringOperate : MonoBehaviour {
         if (Input.GetKey(KeyCode.Alpha3))
         {
             isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_HP, this, gameObject);
+            return isSuccess;
+        }
+        else
+            return false;
+    }
+
+    /// <summary>
+    /// 扣除一定积分 增加角色移动速度 持续5秒
+    /// </summary>
+    /// <returns></returns>
+    private bool BuffSpeed()
+    {
+        bool isSuccess = false;
+        if (Input.GetKey(KeyCode.Alpha4))
+        {
+            isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_SPEED, this, gameObject);
             return isSuccess;
         }
         else

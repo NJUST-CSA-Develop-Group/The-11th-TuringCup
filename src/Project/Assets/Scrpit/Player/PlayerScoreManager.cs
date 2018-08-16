@@ -31,14 +31,16 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
          * 选手操作：回血 选手操作：加强射击
          */
         EventManager.Instance.AddListener(EVENT_TYPE.BOX_DESTROY, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.PLAYER_DEAD, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_BUFF_BOMB, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_BUFF_HP, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_BUFF_SHOOT, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.TURING_BUFF_SPEED, this);
         
     }
 
     //分数只读接口
-    public int getScore()
+    public int GetScore()
     {
         return CurrentScore;
     }
@@ -99,7 +101,7 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
         switch (Event_Type)
         {
             case EVENT_TYPE.BOX_DESTROY: //监测到方块摧毁事件
-                if (PlayerID == (int)value["PlayerID"]) //当摧毁方块的玩家和当前玩家相同时
+                if (PlayerID == (int)value["AttackerID"]) //当摧毁方块的玩家和当前玩家相同时
                 {
                     GainScore("BoxDestroy");//加分
                     return true;
@@ -107,6 +109,17 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
                 else
                     return false;
 
+            case EVENT_TYPE.PLAYER_DEAD:
+                if(PlayerID == (int)value["AttackerID"])
+                {
+                    GainScore("KillPlayer");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                
             case EVENT_TYPE.TURING_BUFF_SHOOT: //检测到加强射击事件
                 //当技能请求可用并且分数足够时
                 if (RequireAvaliable && (isSuccess = Upgrade()))
@@ -140,6 +153,15 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
                 }
                 return isSuccess;
 
+            //注释见上
+            case EVENT_TYPE.TURING_BUFF_SPEED:
+                isSuccess = false;
+                if (RequireAvaliable && (isSuccess = Upgrade()))
+                {
+                    isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.SPEED_BUFF, this, gameObject);
+                    RequireAvaliable = false;
+                }
+                return isSuccess;
             default: return false;
 
         }

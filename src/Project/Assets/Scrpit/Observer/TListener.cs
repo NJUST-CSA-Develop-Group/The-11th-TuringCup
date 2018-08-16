@@ -22,6 +22,9 @@ public enum EVENT_TYPE {
     TURING_BUFF_BOMB, //玩家操作：增强炸弹
     TURING_BUFF_SHOOT, //玩家操作：增强射击
     TURING_BUFF_HP, //玩家操作：回血
+    TURING_BUFF_SPEED, //玩家操作：加速
+    //--------------------
+    SPEED_BUFF, //角色加速（具体操作）
     //--------------------
     PLAYER_DEAD, //角色死亡
     PLAYER_INCREASE_HP, //角色回血（具体操作）

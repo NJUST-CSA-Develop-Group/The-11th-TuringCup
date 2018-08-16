@@ -104,7 +104,7 @@ public class BombManager : MonoBehaviour, TListener {
         spherecollider.enabled = false;
         GetComponent<MeshRenderer>().enabled = false;
         ExplosionSmoke.Play();
-        TempDic.Add("PlayerID", BombOwner);
+        TempDic.Add("AttackerID", BombOwner);
         TempDic.Add("BombPower", BombPower);
         TempDic.Add("MapCol", (int)(transform.position.x + 0.5));
         TempDic.Add("MapRow", (int)(transform.position.z + 0.5));
@@ -131,7 +131,7 @@ public class BombManager : MonoBehaviour, TListener {
         switch (Event_Type)
         {
             case (EVENT_TYPE.BOMB_SET_INFO): //设置信息事件
-                SetBombInfo((int)value["PlayerID"],(float)value["BombArea"]); //传参
+                SetBombInfo((int)value["AttackerID"],(float)value["BombArea"]); //传参
                 return true;
             default:return false;
         }
