@@ -4242,9 +4242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152859e4420c7834fac78a1d63570d16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boomCubePrefab: {fileID: 0}
-  unboomCubePrefab: {fileID: 0}
-  blockCube: {fileID: 0}
+  boomCubePrefab: {fileID: 1273266453685616, guid: 190126bd1eda5204ca3f56a17e837e24,
+    type: 2}
+  unboomCubePrefab: {fileID: 1831690970624404, guid: 11634b843f856af4f85acb1e7ca7cc61,
+    type: 2}
+  blockCube: {fileID: 1539557796849592, guid: 4ff68a34ebff4404a9e5f214baa59a20, type: 2}
   reduceGameAreaBeginTime: 0
   reduceGameAreaTime: 0
 --- !u!4 &1018399024
