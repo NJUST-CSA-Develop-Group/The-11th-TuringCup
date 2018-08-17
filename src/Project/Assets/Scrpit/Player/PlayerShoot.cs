@@ -13,6 +13,8 @@ public class PlayerShoot : MonoBehaviour,TListener {
 
     public float FixDistance = 0.5f;//用于防止计算时命中自己，与模型的尺寸有关
     public float ShootHeight = 0;//射击起点相对于模型中心的高度 //模型的碰撞箱略有问题，暂时请设为0
+    public GameObject GunRef;//绑定枪
+    public Vector3 MuzzleDis;//枪口的位移
 
     //Ray ShootRay;
     //RaycastHit ShootHit;
@@ -61,8 +63,8 @@ public class PlayerShoot : MonoBehaviour,TListener {
         EventManager.Instance.AddListener(EVENT_TYPE.SHOOT_BUFF, this);
 
         //调试阶段使用效果
-        prefabInstantiate = Instantiate(prefab, transform);
-        //prefabInstantiate.transform.position += new Vector3(0, 0.5f, 0);//修正高度
+        prefabInstantiate = Instantiate(prefab, GunRef.transform);
+        prefabInstantiate.transform.localPosition += MuzzleDis;//修正位置
         m_light = prefabInstantiate.transform.Find("Spot Light").GetComponent<Light>();
         m_line = prefabInstantiate.transform.Find("line");
         m_ps = prefabInstantiate.transform.Find("Particle System").GetComponent<ParticleSystem>();

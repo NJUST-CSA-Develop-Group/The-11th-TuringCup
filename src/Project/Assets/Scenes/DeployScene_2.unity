@@ -398,7 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerID: 2
   Player: {fileID: 1226476283}
-  Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
+  Prefab: {fileID: 1887150623812026, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
   OriginHealth: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerID: 1
   Player: {fileID: 53460841}
-  Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
+  Prefab: {fileID: 1887150623812026, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
   OriginHealth: 0
@@ -1210,6 +1210,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114214012757438946, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: ShootHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114214012757438946, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: ModelShootHeight
+      value: 1.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 114214012757438946, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: shootLineMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b7d17e9bc733de49a81df4d6dd49428, type: 2}
+    - target: {fileID: 114214012757438946, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b246eac790f18f34e9eb24018faa9a6f, type: 2}
+    - target: {fileID: 114214012757438946, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: MuzzleDis.y
+      value: 0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 114214012757438946, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: MuzzleDis.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114214012757438946, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: GunRef
+      value: 
+      objectReference: {fileID: 1748264153}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0f171168cb465a42b3ee2858ca0f9e1, type: 2}
   m_IsPrefabAsset: 0
@@ -1569,7 +1604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerID: 3
   Player: {fileID: 454671943}
-  Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
+  Prefab: {fileID: 1887150623812026, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
   OriginHealth: 0
@@ -1638,6 +1673,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &729304834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1947194165509912, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 1054826364}
 --- !u!1001 &744111320
 Prefab:
   m_ObjectHideFlags: 0
@@ -1795,6 +1835,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114865789956645658, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: ShootHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114865789956645658, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: ModelShootHeight
+      value: 1.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 114865789956645658, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: shootLineMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b7d17e9bc733de49a81df4d6dd49428, type: 2}
+    - target: {fileID: 114865789956645658, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b246eac790f18f34e9eb24018faa9a6f, type: 2}
+    - target: {fileID: 114865789956645658, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: MuzzleDis.y
+      value: 0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 114865789956645658, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: MuzzleDis.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114865789956645658, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: GunRef
+      value: 
+      objectReference: {fileID: 868267576}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cace774fa177c4f837959903009269, type: 2}
   m_IsPrefabAsset: 0
@@ -1841,6 +1916,46 @@ Prefab:
         type: 2}
       propertyPath: bombCD
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: ShootHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: ModelShootHeight
+      value: 1.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b246eac790f18f34e9eb24018faa9a6f, type: 2}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: shootLineMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b7d17e9bc733de49a81df4d6dd49428, type: 2}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: ModelPath
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: GunRef
+      value: 
+      objectReference: {fileID: 1548855489}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: MuzzleDis.y
+      value: 0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: MuzzleDis.z
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592, type: 2}
@@ -2128,6 +2243,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 409582, guid: 0449f136c209ba24c9b063d63c4d487f,
     type: 2}
   m_PrefabInternal: {fileID: 867064534}
+--- !u!1 &868267576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1887880500318284, guid: f3cace774fa177c4f837959903009269,
+    type: 2}
+  m_PrefabInternal: {fileID: 776075718}
 --- !u!1 &876201755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,6 +2607,108 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 943760036}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &957252485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957252486}
+  - component: {fileID: 957252489}
+  - component: {fileID: 957252488}
+  - component: {fileID: 957252487}
+  - component: {fileID: 957252490}
+  m_Layer: 5
+  m_Name: Time
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &957252486
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957252485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1933860887}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 256, y: 128}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &957252487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957252485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
+--- !u!114 &957252488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957252485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.84313726, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 48
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 48
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &957252489
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957252485}
+  m_CullTransparentMesh: 0
+--- !u!114 &957252490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957252485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23cb475e2baac4e479f5fbf843efef4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &958063334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,6 +3063,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114593473784351044, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: ShootHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593473784351044, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: ModelShootHeight
+      value: 1.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593473784351044, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: shootLineMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b7d17e9bc733de49a81df4d6dd49428, type: 2}
+    - target: {fileID: 114593473784351044, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: particleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b246eac790f18f34e9eb24018faa9a6f, type: 2}
+    - target: {fileID: 114593473784351044, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: MuzzleDis.y
+      value: 0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593473784351044, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: MuzzleDis.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593473784351044, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: GunRef
+      value: 
+      objectReference: {fileID: 729304834}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab257ce349f76a4a8c2ce7e337c41ee, type: 2}
   m_IsPrefabAsset: 0
@@ -3473,6 +3730,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0951a539665e17f4da3a20fda0f94ba5, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1548855489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1359999212996292, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+    type: 2}
+  m_PrefabInternal: {fileID: 785137567}
 --- !u!1001 &1585384359
 Prefab:
   m_ObjectHideFlags: 0
@@ -3956,6 +4218,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 409582, guid: 0449f136c209ba24c9b063d63c4d487f,
     type: 2}
   m_PrefabInternal: {fileID: 1743097751}
+--- !u!1 &1748264153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1961515895910346, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+    type: 2}
+  m_PrefabInternal: {fileID: 571583745}
 --- !u!1001 &1751882709
 Prefab:
   m_ObjectHideFlags: 0
@@ -4216,7 +4483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerID: 4
   Player: {fileID: 313680351}
-  Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
+  Prefab: {fileID: 1887150623812026, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
   OriginHealth: 0
@@ -4768,6 +5035,7 @@ RectTransform:
   - {fileID: 41578924}
   - {fileID: 692032323}
   - {fileID: 1840167572}
+  - {fileID: 957252486}
   m_Father: {fileID: 1819004564}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

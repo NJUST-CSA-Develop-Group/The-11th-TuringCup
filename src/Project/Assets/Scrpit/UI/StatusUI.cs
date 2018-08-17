@@ -18,6 +18,7 @@ public class StatusUI : MonoBehaviour, TListener
 
     private GameObject _instantiate;
     private RawImage _avatar;
+    private Material _avatarShader;
     private Text _teamName;
     private Text _hp;
     private Text _score;
@@ -30,6 +31,7 @@ public class StatusUI : MonoBehaviour, TListener
         _instantiate = Instantiate(Prefab, transform);//初始化UI
         _instantiate.transform.localScale = new Vector3(Screen.width / 1920f, Screen.width / 1920f, 1f);//按照屏幕尺寸进行缩放
         _avatar = _instantiate.transform.Find("Avatar").GetComponent<RawImage>();
+        _avatarShader = new Material(GreyShader);
         _teamName = _instantiate.transform.Find("TeamName").GetComponent<Text>();
         _hp = _instantiate.transform.Find("Health").GetComponent<Text>();
         _score = _instantiate.transform.Find("Score").GetComponent<Text>();
@@ -114,7 +116,7 @@ public class StatusUI : MonoBehaviour, TListener
 
     public void Die(bool die = true)
     {
-        _avatar.material.shader = die ? GreyShader : null;
+        _avatar.material = die ? _avatarShader : null;
     }
 
     public void SetHealth(string health)
