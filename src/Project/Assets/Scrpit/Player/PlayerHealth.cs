@@ -63,7 +63,6 @@ public class PlayerHealth : MonoBehaviour,TListener {
         isDead = true;
 
         GetComponent<Animator>().SetTrigger("Die");
-        GetComponent<TuringOperate>().enabled = false;
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<PlayerBomb>().enabled = false;
         GetComponent<PlayerShoot>().enabled = false;
@@ -72,8 +71,6 @@ public class PlayerHealth : MonoBehaviour,TListener {
         TempDic.Add("AttackerID", Attacker);
         EventManager.Instance.PostNotification(EVENT_TYPE.PLAYER_DEAD, this, null, TempDic);
         TempDic.Clear();
-
-        EventManager.Instance.PostNotification(EVENT_TYPE.PLAYER_DEAD, this);
         // TODO 角色死亡 设置动画 禁用脚本 传递分数
     }
 

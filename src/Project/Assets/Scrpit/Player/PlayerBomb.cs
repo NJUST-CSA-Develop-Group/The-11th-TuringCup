@@ -48,7 +48,7 @@ public class PlayerBomb : MonoBehaviour, TListener {
     private void SetBomb()
     {
         //创建炸弹
-        GameObject newBomb = Instantiate(bomb, new Vector3((transform.position.x), -0.15f, (transform.position.z)), gameObject.transform.rotation);
+        GameObject newBomb = Instantiate(bomb, new Vector3((transform.position.x), 0, (transform.position.z)), gameObject.transform.rotation);
         bombAvaliable = false;
         //发送炸弹设置事件
         //发送地图更新事件

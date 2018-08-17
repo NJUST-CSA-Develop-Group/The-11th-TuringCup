@@ -49,6 +49,9 @@ public class PlayerMovement : MonoBehaviour, TListener
         buffTiming = 0f;
 
         //注册四个移动方向的监听器
+        EventManager.Instance.AddListener(EVENT_TYPE.GAME_START, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
+
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_NORTH, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_SOUTH, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_WEST, this);
@@ -72,6 +75,7 @@ public class PlayerMovement : MonoBehaviour, TListener
 
     private void Move()
     {
+        
         if (transform.position == targetPosition)
         {
             isMoving = false;
@@ -81,18 +85,12 @@ public class PlayerMovement : MonoBehaviour, TListener
         if (map.GetBoxType((int)targetPosition.x, (int)targetPosition.z) != 0) //判断目标位置是否可用
         {
             
-            if(transform.position != startPosition)
-            {
-                targetPosition = startPosition;
-                //TODO 如果初始位置也被占用的情况
-            }
-            else
-            {
                 isMoving = false;
                 Anim.SetBool("isMoving", false);
                 return;
-            }
         }
+        Quaternion TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+        transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 15f);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
     }
 
@@ -116,8 +114,14 @@ public class PlayerMovement : MonoBehaviour, TListener
     {
         switch (Event_Type)
         {
+            case EVENT_TYPE.GAME_START:
+                enabled = true;
+                return true;
+            case EVENT_TYPE.GAME_OVER:
+                enabled = false;
+                return true;
             case EVENT_TYPE.TURING_MOVE_NORTH:
-                if (!isMoving && (int)(transform.position.z + 0.5) < 14)
+                if (!isMoving && (int)(transform.position.z + 0.5) < 13)
                 {
                     startPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
                     targetPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5) + 1);
@@ -156,7 +160,7 @@ public class PlayerMovement : MonoBehaviour, TListener
                     return false;
                 }
             case EVENT_TYPE.TURING_MOVE_EAST:
-                if (!isMoving && (int)(transform.position.z + 0.5) < 14)
+                if (!isMoving && ((int)(transform.position.x + 0.5) < 13))
                 {
                     startPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
                     targetPosition.Set((int)(transform.position.x + 0.5) + 1, 0f, (int)(transform.position.z + 0.5));

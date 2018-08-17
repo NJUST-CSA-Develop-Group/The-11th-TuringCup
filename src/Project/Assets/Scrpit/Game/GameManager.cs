@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour, TListener {
     private static float RemainingTime; //游戏剩余时间
     private static bool isGameRunning; //目前游戏是否在进行
 
-    private GameObject[] Players; //获取角色引用 以对角色的脚本尽心操作
+    private GameObject[] Players; //获取角色引用 以对角色的脚本进行操作
 
     //游戏剩余时间只读接口
     public static float GetRemainTime()
@@ -53,13 +53,30 @@ public class GameManager : MonoBehaviour, TListener {
     //开启所有角色操控脚本
     private void SetPlayerFunctionEnabled()
     {
+
         foreach (GameObject Player in Players)
         {
             Player.GetComponent<PlayerBomb>().enabled = true;
             Player.GetComponent<PlayerMovement>().enabled = true;
             Player.GetComponent<PlayerShoot>().enabled = true;
-            Player.GetComponent<TuringOperate>().enabled = true;
+            if (Player.GetComponent<TuringOperateOne>())
+            {
+                Player.GetComponent<TuringOperateOne>().enabled = true;
+            }
+            if (Player.GetComponent<TuringOperateTwo>())
+            {
+                Player.GetComponent<TuringOperateTwo>().enabled = true;
+            }
+            if (Player.GetComponent<TuringOperateThree>())
+            {
+                Player.GetComponent<TuringOperateThree>().enabled = true;
+            }
+            if (Player.GetComponent<TuringOperateFour>())
+            {
+                Player.GetComponent<TuringOperateFour>().enabled = true;
+            }
         }
+
     }
 
     //关闭所有角色操控脚本
@@ -70,7 +87,22 @@ public class GameManager : MonoBehaviour, TListener {
             Player.GetComponent<PlayerBomb>().enabled = false;
             Player.GetComponent<PlayerMovement>().enabled = false;
             Player.GetComponent<PlayerShoot>().enabled = false;
-            Player.GetComponent<TuringOperate>().enabled = false;
+            if (Player.GetComponent<TuringOperateOne>())
+            {
+                Player.GetComponent<TuringOperateOne>().enabled = false;
+            }
+            if (Player.GetComponent<TuringOperateTwo>())
+            {
+                Player.GetComponent<TuringOperateTwo>().enabled = false;
+            }
+            if (Player.GetComponent<TuringOperateThree>())
+            {
+                Player.GetComponent<TuringOperateThree>().enabled = false;
+            }
+            if (Player.GetComponent<TuringOperateFour>())
+            {
+                Player.GetComponent<TuringOperateFour>().enabled = false;
+            }
         }
     }
     public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param, Dictionary<string, object> value)
