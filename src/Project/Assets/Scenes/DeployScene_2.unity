@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerID: 2
-  Player: {fileID: 0}
+  Player: {fileID: 1226476283}
   Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
@@ -467,6 +467,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &53460841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1110687366823220, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+    type: 2}
+  m_PrefabInternal: {fileID: 785137567}
 --- !u!1 &83352949
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +772,11 @@ Transform:
   m_Father: {fileID: 578058437}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &313680351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1652673150394422, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 1054826364}
 --- !u!1 &345575756
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerID: 1
-  Player: {fileID: 0}
+  Player: {fileID: 53460841}
   Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
@@ -1100,6 +1110,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4433845634553900, guid: 0951a539665e17f4da3a20fda0f94ba5,
     type: 2}
   m_PrefabInternal: {fileID: 417052965}
+--- !u!1 &454671943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1176545520085568, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+    type: 2}
+  m_PrefabInternal: {fileID: 571583745}
 --- !u!1001 &466612509
 Prefab:
   m_ObjectHideFlags: 0
@@ -1553,7 +1568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerID: 3
-  Player: {fileID: 0}
+  Player: {fileID: 454671943}
   Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
@@ -3054,6 +3069,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 411534, guid: 256489c2afe5dd0458831dabe2246cd5,
     type: 2}
   m_PrefabInternal: {fileID: 1219821585}
+--- !u!1 &1226476283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1092940912315060, guid: f3cace774fa177c4f837959903009269,
+    type: 2}
+  m_PrefabInternal: {fileID: 776075718}
 --- !u!1001 &1276651392
 Prefab:
   m_ObjectHideFlags: 0
@@ -4195,7 +4215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerID: 4
-  Player: {fileID: 0}
+  Player: {fileID: 313680351}
   Prefab: {fileID: 1892776447065658, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
   Avatar: {fileID: 0}
   TeamName: 
