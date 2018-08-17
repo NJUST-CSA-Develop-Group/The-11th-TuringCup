@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour, TListener {
 
     private GameObject[] Players; //获取角色引用 以对角色的脚本进行操作
 
+    private int DeadPlayer;
+
     //游戏剩余时间只读接口
     public static float GetRemainTime()
     {
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour, TListener {
         Players = GameObject.FindGameObjectsWithTag("Player");
         RemainingTime = GameTime;
         isGameRunning = false;
+        DeadPlayer = 0;
         //注册监听器
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_START, this);
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
@@ -34,7 +37,7 @@ public class GameManager : MonoBehaviour, TListener {
         {
             Timing(); 
             //如果游戏时间到
-            if(RemainingTime <= 0)
+            if(RemainingTime <= 0 || DeadPlayer == 3)
             {
                 //发送GAME_OVER事件 结束游戏进行
                 EventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, this);
@@ -51,59 +54,19 @@ public class GameManager : MonoBehaviour, TListener {
     }
 
     //开启所有角色操控脚本
-    private void SetPlayerFunctionEnabled()
+    private void SetAIEnabled()
     {
 
         foreach (GameObject Player in Players)
         {
-            Player.GetComponent<PlayerBomb>().enabled = true;
-            Player.GetComponent<PlayerMovement>().enabled = true;
-            Player.GetComponent<PlayerShoot>().enabled = true;
-            if (Player.GetComponent<TuringOperateOne>())
-            {
-                Player.GetComponent<TuringOperateOne>().enabled = true;
-            }
-            if (Player.GetComponent<TuringOperateTwo>())
-            {
-                Player.GetComponent<TuringOperateTwo>().enabled = true;
-            }
-            if (Player.GetComponent<TuringOperateThree>())
-            {
-                Player.GetComponent<TuringOperateThree>().enabled = true;
-            }
-            if (Player.GetComponent<TuringOperateFour>())
-            {
-                Player.GetComponent<TuringOperateFour>().enabled = true;
-            }
-        }
 
+        }
     }
 
     //关闭所有角色操控脚本
-    private void SetPlayerFunctionDisabled()
+    private void SetAIDisabled()
     {
-        foreach (GameObject Player in Players)
-        {
-            Player.GetComponent<PlayerBomb>().enabled = false;
-            Player.GetComponent<PlayerMovement>().enabled = false;
-            Player.GetComponent<PlayerShoot>().enabled = false;
-            if (Player.GetComponent<TuringOperateOne>())
-            {
-                Player.GetComponent<TuringOperateOne>().enabled = false;
-            }
-            if (Player.GetComponent<TuringOperateTwo>())
-            {
-                Player.GetComponent<TuringOperateTwo>().enabled = false;
-            }
-            if (Player.GetComponent<TuringOperateThree>())
-            {
-                Player.GetComponent<TuringOperateThree>().enabled = false;
-            }
-            if (Player.GetComponent<TuringOperateFour>())
-            {
-                Player.GetComponent<TuringOperateFour>().enabled = false;
-            }
-        }
+
     }
     public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param, Dictionary<string, object> value)
     {
@@ -111,13 +74,16 @@ public class GameManager : MonoBehaviour, TListener {
         {
             //游戏开始时 开启脚本 开启游戏
             case EVENT_TYPE.GAME_START:
-                SetPlayerFunctionEnabled();
+                SetAIEnabled();
                 isGameRunning = true;
                 return true;
             //游戏结束时 关闭脚本 结束游戏
             case EVENT_TYPE.GAME_OVER:
-                SetPlayerFunctionDisabled();
+                SetAIDisabled();
                 isGameRunning = false;
+                return true;
+            case EVENT_TYPE.PLAYER_DEAD:
+                DeadPlayer++;
                 return true;
             default:return false;
         }
