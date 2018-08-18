@@ -45,7 +45,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y $(TargetDir)$(TargetName).dll "$(ProjectDir)../Unity Project/Assets/Plugins/$(TargetName).dll"
+    <PostBuildEvent>copy /Y $(TargetDir)$(TargetName).dll "$(ProjectDir)../Project/Assets/lib/$(TargetName).dll"
 copy /Y $(TargetDir)$(TargetName).dll "$(ProjectDir)../ControllerLib/ControllerLib/$(TargetName).dll"</PostBuildEvent>
   </PropertyGroup>
 </Project>

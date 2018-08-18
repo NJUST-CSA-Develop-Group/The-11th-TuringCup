@@ -472,6 +472,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1110687366823220, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
     type: 2}
   m_PrefabInternal: {fileID: 785137567}
+--- !u!114 &53460842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 53460841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598402117526d7844a49ad19f0a218f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
 --- !u!1 &83352949
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +789,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1652673150394422, guid: dab257ce349f76a4a8c2ce7e337c41ee,
     type: 2}
   m_PrefabInternal: {fileID: 1054826364}
+--- !u!114 &313680352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 313680351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598402117526d7844a49ad19f0a218f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
 --- !u!1 &345575756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,6 +1139,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1176545520085568, guid: e0f171168cb465a42b3ee2858ca0f9e1,
     type: 2}
   m_PrefabInternal: {fileID: 571583745}
+--- !u!114 &454671944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454671943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598402117526d7844a49ad19f0a218f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
 --- !u!1001 &466612509
 Prefab:
   m_ObjectHideFlags: 0
@@ -1245,6 +1281,21 @@ Prefab:
       propertyPath: GunRef
       value: 
       objectReference: {fileID: 1748264153}
+    - target: {fileID: 114942787159887694, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114214012757438946, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114186890714152006, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0f171168cb465a42b3ee2858ca0f9e1, type: 2}
   m_IsPrefabAsset: 0
@@ -1870,6 +1921,21 @@ Prefab:
       propertyPath: GunRef
       value: 
       objectReference: {fileID: 868267576}
+    - target: {fileID: 114108317160147354, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114379205447898660, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114865789956645658, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cace774fa177c4f837959903009269, type: 2}
   m_IsPrefabAsset: 0
@@ -1915,7 +1981,7 @@ Prefab:
     - target: {fileID: 114017628817637166, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
         type: 2}
       propertyPath: bombCD
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
         type: 2}
@@ -1956,6 +2022,21 @@ Prefab:
         type: 2}
       propertyPath: MuzzleDis.z
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114066550565781124, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114017628817637166, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592, type: 2}
@@ -2992,6 +3073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameTime: 600
+  AIConfFilePath: 
 --- !u!114 &1018399023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3098,6 +3180,21 @@ Prefab:
       propertyPath: GunRef
       value: 
       objectReference: {fileID: 729304834}
+    - target: {fileID: 114405294770496000, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593473784351044, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114729493442635406, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab257ce349f76a4a8c2ce7e337c41ee, type: 2}
   m_IsPrefabAsset: 0
@@ -3331,6 +3428,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1092940912315060, guid: f3cace774fa177c4f837959903009269,
     type: 2}
   m_PrefabInternal: {fileID: 776075718}
+--- !u!114 &1226476284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1226476283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598402117526d7844a49ad19f0a218f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
 --- !u!1001 &1276651392
 Prefab:
   m_ObjectHideFlags: 0

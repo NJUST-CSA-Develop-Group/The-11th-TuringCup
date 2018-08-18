@@ -111,7 +111,7 @@ public class PlayerShoot : MonoBehaviour,TListener {
             if (hit.transform.GetComponent<PlayerHealth>())//随意获取一定会在玩家上的脚本，用来确定命中的是玩家
             {
                 Dictionary<string, object> args = new Dictionary<string, object>();
-                args.Add("AttackerID", GetComponent<PlayerScoreManager>().playerID);
+                args.Add("AttackerID", (int)GetComponent<PlayerScoreManager>().playerID);
                 args.Add("ShootPower", Damage);
                 EventManager.Instance.PostNotification(EVENT_TYPE.SHOOT_HIT_PLAYER, this, hit.transform.gameObject, args);
                 args.Clear();

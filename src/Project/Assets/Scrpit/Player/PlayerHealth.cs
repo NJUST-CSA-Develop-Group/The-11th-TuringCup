@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour,TListener {
         currentHP = 100;
         //注册监听器 事件分别为 炸弹爆炸 角色回血（具体操作）
         EventManager.Instance.AddListener(EVENT_TYPE.BOMB_EXPLODE, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.SHOOT_HIT_PLAYER, this);
         EventManager.Instance.AddListener(EVENT_TYPE.PLAYER_INCREASE_HP, this);
     }
 
@@ -80,6 +81,9 @@ public class PlayerHealth : MonoBehaviour,TListener {
         {
             case EVENT_TYPE.BOMB_EXPLODE: //炸弹爆炸事件
                 TakeDamage((int)value["BombPower"], (int)value["AttackerID"]); //造成伤害并传递炸弹威力数值
+                return true;
+            case EVENT_TYPE.SHOOT_HIT_PLAYER: //子弹命中事件
+                TakeDamage((int)value["ShootPower"], (int)value["AttackerID"]); //造成伤害
                 return true;
             case EVENT_TYPE.PLAYER_INCREASE_HP: //角色回血（具体操作事件）
                 return IncreaseHP();
