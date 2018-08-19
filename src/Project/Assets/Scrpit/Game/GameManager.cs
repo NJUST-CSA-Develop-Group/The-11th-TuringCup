@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour, TListener
         //注册监听器
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_START, this);
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.PLAYER_DEAD, this);
 
     }
 

@@ -110,7 +110,7 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
                     return false;
 
             case EVENT_TYPE.PLAYER_DEAD:
-                if(playerID == (int)value["AttackerID"])
+                if(playerID == (int)value["AttackerID"] && GetComponent<PlayerHealth>().GetHP() != 0)
                 {
                     GainScore("KillPlayer");
                     return true;

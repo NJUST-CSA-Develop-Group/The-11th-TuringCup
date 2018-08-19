@@ -44,6 +44,10 @@ public class Rank : MonoBehaviour, TListener
         if (Event_Type == EVENT_TYPE.GAME_OVER)
         {
             // TODO: 在此处调用SetTramNameScore设置队名分数
+            for(int i = 0; i<= 3; i++)
+            {
+                SetTeamNameScore("123", 123, i);
+            }
             GameObject.Find("Main Camera").GetComponent<CameraEffect>().enabled = true;
             return true;
         }
