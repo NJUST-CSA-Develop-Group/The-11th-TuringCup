@@ -69,6 +69,10 @@ public class GameManager : MonoBehaviour, TListener
             System.IO.StreamReader sr = new System.IO.StreamReader(new System.IO.FileStream(AIConfFilePath, System.IO.FileMode.Open, System.IO.FileAccess.Read));
             while (!sr.EndOfStream)
             {
+                if (index >= 4)
+                {
+                    break;
+                }
                 string path = sr.ReadLine().Trim();
                 if (path == "")
                 {
