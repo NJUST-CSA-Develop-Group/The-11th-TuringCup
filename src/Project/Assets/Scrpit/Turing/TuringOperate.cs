@@ -132,7 +132,7 @@ public class TuringOperate : MonoBehaviour, IEntity, TListener
     public int[] GetPosition()
     {
         int[] position = { (int)(transform.position.x + 0.5), (int)(transform.position.z + 0.5) };
-        return position
+        return position;
     }
 
     public int GetIndex()
