@@ -4,3 +4,9 @@ E:\Projects\GitHub\The-11th-TuringCup\src\PlayerInterface\obj\Debug\PlayerInterf
 E:\Projects\GitHub\The-11th-TuringCup\src\PlayerInterface\obj\Debug\PlayerInterface.dll
 E:\Projects\GitHub\The-11th-TuringCup\src\PlayerInterface\obj\Debug\PlayerInterface.pdb
 E:\Projects\GitHub\The-11th-TuringCup\src\PlayerInterface\obj\Debug\PlayerInterface.csprojResolveAssemblyReference.cache
+D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\bin\Debug\PlayerInterface.dll
+D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\bin\Debug\PlayerInterface.pdb
+D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\obj\Debug\PlayerInterface.csproj.CoreCompileInputs.cache
+D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\obj\Debug\PlayerInterface.dll
+D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\obj\Debug\PlayerInterface.pdb
+D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\bin\Debug\PlayerInterface.xml

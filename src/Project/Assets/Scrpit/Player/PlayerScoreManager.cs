@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScoreManager : MonoBehaviour, TListener {
 
-    public float playerID; //当前玩家ID
+    public int playerID; //当前玩家ID
 
     public int skillScore; //一个技能所花费的分数
     public int boxDestroyScore; //摧毁盒子获得的分数
