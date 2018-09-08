@@ -1958,9 +1958,9 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4c3da101c750c684ead5953d58dc9991, type: 3}
   m_Controller: {fileID: 9100000, guid: 86299744ad7aec84fbe42cda203f7373, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 2
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -2025,7 +2025,7 @@ MonoBehaviour:
   BuffValue: 25
   FixDistance: 0.5
   ShootHeight: 0.5
-  GunRef: {fileID: 0}
+  GunRef: {fileID: 1934620602940270}
   MuzzleDis: {x: 0, y: 0.053, z: 0.8}
   prefab: {fileID: 1322563750595286, guid: f98e4d84bee42274eb93268f52f388f9, type: 2}
   shootAudio: {fileID: 0}

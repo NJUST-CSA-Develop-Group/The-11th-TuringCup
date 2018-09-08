@@ -56,6 +56,8 @@ public class PlayerMovement : MonoBehaviour, TListener
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_SOUTH, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_WEST, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_EAST, this);
+
+        
         EventManager.Instance.AddListener(EVENT_TYPE.SPEED_BUFF, this);
     }
 
@@ -82,6 +84,8 @@ public class PlayerMovement : MonoBehaviour, TListener
             Anim.SetBool("isMoving", false);
             return;
         }
+        Quaternion TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+        transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 15f);
         if (map.GetBoxType((int)targetPosition.x, (int)targetPosition.z) != 0) //判断目标位置是否可用
         {
             
@@ -89,9 +93,34 @@ public class PlayerMovement : MonoBehaviour, TListener
                 Anim.SetBool("isMoving", false);
                 return;
         }
-        Quaternion TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
-        transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 15f);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+    }
+
+    private void Turn(string Direction)
+    {
+        Quaternion TargetRotation = transform.rotation;
+        Vector3 tempLocation = transform.position;
+        switch (Direction)
+        {
+            case "NORTH":
+                tempLocation.z = tempLocation.z + 1;
+                TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+                break;
+            case "SOUTH":
+                tempLocation.z = tempLocation.z - 1;
+                TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+                break;
+            case "EAST":
+                tempLocation.z = tempLocation.x + 1;
+                TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+                break;
+            case "WEST":
+                tempLocation.z = tempLocation.x - 1;
+                TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+                break;
+            default: break;
+        }
+        transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 15f);
     }
 
     private bool BuffSpeed()
@@ -166,6 +195,49 @@ public class PlayerMovement : MonoBehaviour, TListener
                     targetPosition.Set((int)(transform.position.x + 0.5) + 1, 0f, (int)(transform.position.z + 0.5));
                     isMoving = true;
                     Anim.SetBool("isMoving", true);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case EVENT_TYPE.TURING_TURN_NORTH:
+                if (!isMoving)
+                {
+                    Turn("NORTH");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            case EVENT_TYPE.TURING_TURN_SOUTH:
+                if (!isMoving)
+                {
+                    Turn("SOUTH");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            case EVENT_TYPE.TURING_TURN_EAST:
+                if (!isMoving)
+                {
+                    Turn("EAST");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            case EVENT_TYPE.TURING_TURN_WEST:
+                if (!isMoving)
+                {
+                    Turn("WEST");
                     return true;
                 }
                 else

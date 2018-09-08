@@ -17,6 +17,10 @@ public enum EVENT_TYPE {
     TURING_MOVE_SOUTH, //玩家操作：向南移动
     TURING_MOVE_EAST, //玩家操作：向东移动
     TURING_MOVE_WEST, //玩家操作：向西移动
+    TURING_TURN_NORTH,//玩家操作：面向北
+    TURING_TURN_SOUTH,//玩家操作：面向南
+    TURING_TURN_EAST,//玩家操作：面向东
+    TURING_TURN_WEST,//玩家操作：面向西
     TURING_FIRE, //玩家操作：开火
     TURING_SET_BOMB, //玩家操作：设置炸弹
     TURING_BUFF_BOMB, //玩家操作：增强炸弹

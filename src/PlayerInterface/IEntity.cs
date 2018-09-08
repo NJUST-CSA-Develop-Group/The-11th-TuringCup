@@ -5,6 +5,9 @@ using System.Text;
 
 namespace PlayerInterface
 {
+    /// <summary>
+    /// 本处是选手书写代码的接口
+    /// </summary>
     public interface IEntity
     {
         // 这个接口用于提供对当前玩家的操作和对环境感知信息的获取
@@ -32,6 +35,30 @@ namespace PlayerInterface
         /// </summary>
         /// <returns>操作是否成功</returns>
         bool MoveEast();
+
+        /// <summary>
+        /// 向北转向
+        /// </summary>
+        /// <returns>操作是否成功</returns>
+        bool TurnNorth();
+
+        /// <summary>
+        /// 向南转向
+        /// </summary>
+        /// <returns>操作是否成功</returns>
+        bool TurnSouth();
+
+        /// <summary>
+        /// 向西转向
+        /// </summary>
+        /// <returns>操作是否成功</returns>
+        bool TurnWest();
+
+        /// <summary>
+        /// 向东转向
+        /// </summary>
+        /// <returns>操作是否成功</returns>
+        bool TurnEast();
 
         // 射击
         /// <summary>

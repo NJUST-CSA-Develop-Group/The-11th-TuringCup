@@ -149,8 +149,8 @@ GameObject:
   - component: {fileID: 114108317160147354}
   - component: {fileID: 114247947143289440}
   - component: {fileID: 114865789956645658}
-  - component: {fileID: 114024153867466544}
   - component: {fileID: 65451280559416762}
+  - component: {fileID: 114155649642378450}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: Player
@@ -1547,8 +1547,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887880500318284}
-  m_LocalRotation: {x: -0.522644, y: 0.47526872, z: -0.46872604, w: 0.53033847}
-  m_LocalPosition: {x: 8.5, y: 2.7, z: -1.4}
+  m_LocalRotation: {x: -0.47163895, y: 0.48027855, z: -0.51815194, w: 0.52764356}
+  m_LocalPosition: {x: 8.5, y: 2.7, z: -3.1}
   m_LocalScale: {x: 122.795, y: 122.795, z: 122.795}
   m_Children:
   - {fileID: 4357430812140558}
@@ -1558,7 +1558,7 @@ Transform:
   - {fileID: 4043517865849130}
   m_Father: {fileID: 4029755202294708}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -6.247, y: 89.889, z: -89.177}
+  m_LocalEulerAnglesHint: {x: 0, y: 84.619, z: -88.96}
 --- !u!4 &4357430812140558
 Transform:
   m_ObjectHideFlags: 1
@@ -3135,24 +3135,13 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114024153867466544
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1092940912315060}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b895ae0655d9f184ca5933efa43f7fa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114108317160147354
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092940912315060}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 420346f0e7787cc4eb1e9c6763323ef7, type: 3}
   m_Name: 
@@ -3160,6 +3149,18 @@ MonoBehaviour:
   moveSpeed: 3
   buffSpeed: 3
   buffTime: 5
+--- !u!114 &114155649642378450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1092940912315060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598402117526d7844a49ad19f0a218f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
 --- !u!114 &114247947143289440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3182,7 +3183,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092940912315060}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8238b8603f386e4a878df019fa74074, type: 3}
   m_Name: 
@@ -3211,7 +3212,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092940912315060}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd180c56c231f144ba28ee062ccf2be, type: 3}
   m_Name: 
@@ -3223,11 +3224,13 @@ MonoBehaviour:
   BuffTime: 5
   BuffValue: 25
   FixDistance: 0.5
-  ShootHeight: 0
+  ShootHeight: 0.5
+  GunRef: {fileID: 1887880500318284}
+  MuzzleDis: {x: 0, y: 0.053, z: 0.8}
   prefab: {fileID: 1322563750595286, guid: f98e4d84bee42274eb93268f52f388f9, type: 2}
   shootAudio: {fileID: 0}
-  shootLineMaterial: {fileID: 0}
-  particleMaterial: {fileID: 0}
+  shootLineMaterial: {fileID: 2100000, guid: 9b7d17e9bc733de49a81df4d6dd49428, type: 2}
+  particleMaterial: {fileID: 2100000, guid: b246eac790f18f34e9eb24018faa9a6f, type: 2}
 --- !u!137 &137643770300371444
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

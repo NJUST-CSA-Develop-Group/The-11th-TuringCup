@@ -26,7 +26,7 @@ public class CameraMovement : MonoBehaviour {
         if (tourCamera == null) tourCamera = gameObject.transform;
     }
 
-    void Update()
+    void LateUpdate()
     {
         GetDirection();
 

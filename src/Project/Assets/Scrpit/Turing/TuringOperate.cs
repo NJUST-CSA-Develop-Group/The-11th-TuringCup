@@ -47,64 +47,75 @@ public class TuringOperate : MonoBehaviour, IEntity, TListener
 
     public bool MoveNorth()
     {
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_MOVE_NORTH, this, gameObject);
-        return isSuccess;
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_MOVE_NORTH, this, gameObject);
     }
 
     public bool MoveSouth()
     {
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_MOVE_SOUTH, this, gameObject);
-        return isSuccess;
+
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_MOVE_SOUTH, this, gameObject);
     }
 
     public bool MoveWest()
     {
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_MOVE_WEST, this, gameObject);
-        return isSuccess;
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_MOVE_WEST, this, gameObject);
     }
 
     public bool MoveEast()
     {
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_MOVE_EAST, this, gameObject);
-        return isSuccess;
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_MOVE_EAST, this, gameObject);
+    }
+
+    public bool TurnNorth()
+    {
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_TURN_NORTH, this, gameObject);
+    }
+
+    public bool TurnSouth()
+    {
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_TURN_SOUTH, this, gameObject);
+    }
+
+    public bool TurnEast()
+    {
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_TURN_EAST, this, gameObject);
+    }
+
+    public bool TurnWest()
+    {
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_TURN_WEST, this, gameObject);
     }
 
     public bool Shoot()
     {
         //发送射击（指定了执行对象）
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_FIRE, this, gameObject);
-        return isSuccess;
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_FIRE, this, gameObject);
     }
 
     public bool SetBomb()
     {
         //发送放置炸弹（指定了执行对象）
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_SET_BOMB, this, gameObject);
-        return isSuccess;
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_SET_BOMB, this, gameObject);
     }
 
     public bool BuffSpeed()
     {
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_SPEED, this, gameObject);
-        return isSuccess;
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_SPEED, this, gameObject);
     }
 
     public bool BuffShoot()
     {
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_SHOOT, this, gameObject);
-        return isSuccess;
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_SHOOT, this, gameObject);
     }
 
     public bool BuffBomb()
     {
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_BOMB, this, gameObject);
-        return isSuccess;//返回操作结果
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_BOMB, this, gameObject);
     }
 
     public bool BuffHP()
     {
-        bool isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_HP, this, gameObject);
-        return isSuccess;
+        return EventManager.Instance.PostNotification(EVENT_TYPE.TURING_BUFF_HP, this, gameObject);
     }
 
     public float GetRemainingTime()
