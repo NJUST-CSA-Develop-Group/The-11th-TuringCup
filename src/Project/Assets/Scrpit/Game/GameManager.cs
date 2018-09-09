@@ -99,10 +99,16 @@ public class GameManager : MonoBehaviour, TListener
         if (path != "" && System.IO.File.Exists(path))
         {
             System.Type[] type = System.Reflection.Assembly.LoadFrom(path).GetTypes();
-            if (type.Length > 1)
+            if (type.Length > 0)
             {
-                AIscripts[i] = (PlayerInterface.IControl)System.Activator.CreateInstance(type[0]);//加载选手脚本
-                return;
+                foreach (var t in type)
+                {
+                    if (typeof(PlayerInterface.IControl).IsAssignableFrom(t))
+                    {
+                        AIscripts[i] = (PlayerInterface.IControl)System.Activator.CreateInstance(type[0]);//加载选手脚本
+                        return;
+                    }
+                }
             }
         }
         AIscripts[i] = new DefaultOperate(i);//加载默认脚本
