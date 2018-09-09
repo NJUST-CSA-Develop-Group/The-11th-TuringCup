@@ -147,6 +147,11 @@ public class GameManager : MonoBehaviour, TListener
                 isGameRunning = false;
                 return true;
             case EVENT_TYPE.PLAYER_DEAD:
+                //添加排名信息
+                var score = Sender.gameObject.GetComponent<PlayerScoreManager>();
+                float time = GetRemainTime();
+                RankInfo.info.deadlist.Add(new RankInfo.DeadInfo { index = score.playerID, time = time, score = score.GetScore() });
+                //
                 DeadPlayer++;
                 return true;
             default: return false;

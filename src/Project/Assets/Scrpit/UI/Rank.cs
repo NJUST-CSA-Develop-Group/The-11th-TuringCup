@@ -43,7 +43,13 @@ public class Rank : MonoBehaviour, TListener
     {
         if (Event_Type == EVENT_TYPE.GAME_OVER)
         {
-            // TODO: 在此处调用SetTramNameScore设置队名分数
+            //在此处调用SetTramNameScore设置队名分数
+            List<int> ranklist = RankInfo.info.Sort();
+            foreach (var it in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                int index = ranklist.FindIndex(c => c == it.GetComponent<PlayerScoreManager>().playerID);
+                SetTeamNameScore(it.GetComponent<TuringOperate>().AIScript.GetTeamName(), it.GetComponent<PlayerScoreManager>().GetScore(), index);
+            }
             GameObject.Find("Main Camera").GetComponent<CameraEffect>().enabled = true;
             return true;
         }
