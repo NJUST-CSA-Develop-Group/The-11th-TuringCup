@@ -40,6 +40,8 @@ public class StatusUI : MonoBehaviour, TListener
         _skill[1] = new Icon(_instantiate.transform.Find("skill/skill1"), Images[1], GreyShader);
         _skill[2] = new Icon(_instantiate.transform.Find("skill/skill2"), Images[2], GreyShader);
         _skill[3] = new Icon(_instantiate.transform.Find("skill/skill3"), Images[3], GreyShader, PartColorShader);
+        TeamName = Player.GetComponent<TuringOperate>().AIScript.GetTeamName();
+        SetupInfo();
 
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
         EventManager.Instance.AddListener(EVENT_TYPE.PLAYER_DEAD, this);

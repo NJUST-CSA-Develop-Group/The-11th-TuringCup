@@ -4,6 +4,11 @@
         <name>PlayerInterface</name>
     </assembly>
     <members>
+        <member name="T:PlayerInterface.IControl">
+            <summary>
+            本处是选手书写代码的接口
+            </summary>
+        </member>
         <member name="M:PlayerInterface.IControl.Update(PlayerInterface.IEntity)">
             <summary>
             每帧的更新调用
@@ -15,6 +20,11 @@
             提供队伍名称
             </summary>
             <returns>队伍名称</returns>
+        </member>
+        <member name="T:PlayerInterface.IEntity">
+            <summary>
+            本处是提供用户操作服务的接口
+            </summary>
         </member>
         <member name="M:PlayerInterface.IEntity.MoveNorth">
             <summary>
@@ -37,6 +47,30 @@
         <member name="M:PlayerInterface.IEntity.MoveEast">
             <summary>
             向东移动
+            </summary>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:PlayerInterface.IEntity.TurnNorth">
+            <summary>
+            向北转向
+            </summary>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:PlayerInterface.IEntity.TurnSouth">
+            <summary>
+            向南转向
+            </summary>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:PlayerInterface.IEntity.TurnWest">
+            <summary>
+            向西转向
+            </summary>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:PlayerInterface.IEntity.TurnEast">
+            <summary>
+            向东转向
             </summary>
             <returns>操作是否成功</returns>
         </member>

@@ -51,6 +51,11 @@ public class GameManager : MonoBehaviour, TListener
                 RemainingTime = 0;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     //游戏时间计时器

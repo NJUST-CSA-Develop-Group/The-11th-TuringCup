@@ -10,3 +10,4 @@ D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\obj\Deb
 D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\obj\Debug\PlayerInterface.dll
 D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\obj\Debug\PlayerInterface.pdb
 D:\SicongChen\UnShareFiles\Github\The-11th-TuringCup\src\PlayerInterface\bin\Debug\PlayerInterface.xml
+E:\Projects\GitHub\The-11th-TuringCup\src\PlayerInterface\bin\Debug\PlayerInterface.xml

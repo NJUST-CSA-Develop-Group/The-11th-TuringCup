@@ -6,7 +6,7 @@ using System.Text;
 namespace PlayerInterface
 {
     /// <summary>
-    /// 本处是选手书写代码的接口
+    /// 本处是提供用户操作服务的接口
     /// </summary>
     public interface IEntity
     {
