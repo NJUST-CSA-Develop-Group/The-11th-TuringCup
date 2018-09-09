@@ -43,7 +43,7 @@ public class PlayerShoot : MonoBehaviour,TListener {
     {
         if (isBuffing)
         {
-            return BuffTiming;
+            return BuffTime - BuffTiming;
         }
         else
         {

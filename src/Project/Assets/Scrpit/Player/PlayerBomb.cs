@@ -22,7 +22,7 @@ public class PlayerBomb : MonoBehaviour, TListener {
     {
         if (isBuffing)
         {
-            return buffTiming;
+            return buffTime - buffTiming;
         }
         else
         {

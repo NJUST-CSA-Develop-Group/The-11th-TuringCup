@@ -4422,7 +4422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameTime: 600
-  AIConfFilePath: 
+  AIConfFilePath: AIConf.txt
 --- !u!114 &1018399023
 MonoBehaviour:
   m_ObjectHideFlags: 0

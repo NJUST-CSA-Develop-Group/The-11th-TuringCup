@@ -36,6 +36,10 @@ public class PlayerHealth : MonoBehaviour,TListener {
     //伤害接口
     private void TakeDamage(int Damage, int Attacker)
     {
+        if (isDead)
+        {
+            return;
+        }
         currentHP -= Damage;
         if (currentHP <= 0 && !isDead)//角色血量小于0时死亡
         {
