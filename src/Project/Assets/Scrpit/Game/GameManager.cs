@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour, TListener
     {
         return RemainingTime;
     }
-
     void Start()
     {
         Players = GameObject.FindGameObjectsWithTag("Player");
@@ -43,7 +42,7 @@ public class GameManager : MonoBehaviour, TListener
         {
             Timing();
             //如果游戏时间到
-            if (RemainingTime <= 0 || DeadPlayer == 3)
+            if (RemainingTime <= 0 || DeadPlayer >= 3)
             {
                 //发送GAME_OVER事件 结束游戏进行
                 EventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, this);

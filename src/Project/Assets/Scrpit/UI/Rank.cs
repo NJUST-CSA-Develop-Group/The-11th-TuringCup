@@ -10,6 +10,10 @@ public class Rank : MonoBehaviour, TListener
 
     private Transform[] prizes;
 
+    void Awake()
+    {
+        EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
+    }
     // Use this for initialization
     void Start()
     {
@@ -24,7 +28,6 @@ public class Rank : MonoBehaviour, TListener
         }
         prizes[0].localScale = new Vector3(1.25f, 1.25f, 1);//第一名放大
 
-        EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
     }
 
     // Update is called once per frame
@@ -39,7 +42,7 @@ public class Rank : MonoBehaviour, TListener
         prizes[index].Find("score").GetComponent<Text>().text = "得分:" + score.ToString();
     }
 
-    private bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param = null, Dictionary<string, object> value = null)
+    public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param = null, Dictionary<string, object> value = null)
     {
         if (Event_Type == EVENT_TYPE.GAME_OVER)
         {
@@ -56,10 +59,6 @@ public class Rank : MonoBehaviour, TListener
         return false;
     }
 
-    bool TListener.OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param, Dictionary<string, object> value)
-    {
-        throw new System.NotImplementedException();
-    }
 
     public Object getGameObject()
     {

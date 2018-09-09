@@ -119,7 +119,7 @@ public class MapManager : MonoBehaviour, TListener {
     //缩圈
     private void ReduceGameArea()
     {
-        if(GameManager.GetRemainTime() <= reduceGameAreaBeginTime) //如果进入缩圈时间
+        if(GameManager.GetRemainTime() <= reduceGameAreaBeginTime && GameManager.GetRemainTime() > 0f ) //如果进入缩圈时间
         {
             reduceTiming += Time.deltaTime; 
             if (reduceTiming >= reduceGameAreaTime) //如果到达缩圈时刻
@@ -131,7 +131,12 @@ public class MapManager : MonoBehaviour, TListener {
                     colliders = Physics.OverlapSphere(boxPosition, 0.1f);
                     foreach (Collider collider in colliders)
                     {
-                        Destroy(collider.gameObject); //销毁原有的方块
+                        //不销毁人物模型
+                        if (!collider.gameObject.CompareTag("Player"))
+                        {
+                            Destroy(collider.gameObject); //销毁原有的方块
+                        }
+                        
                     }
                     Instantiate(blockCube, boxPosition, transform.rotation); //创建阻挡方块
                     MapUpdate(i, circle, -1); //更新地图信息
@@ -140,8 +145,11 @@ public class MapManager : MonoBehaviour, TListener {
                     colliders = Physics.OverlapSphere(boxPosition, 0.1f);
                     foreach (Collider collider in colliders)
                     {
-                        Destroy(collider.gameObject);
-                        
+                        if (!collider.gameObject.CompareTag("Player"))
+                        {
+                            Destroy(collider.gameObject); //销毁原有的方块
+                        }
+
                     }
                     Instantiate(blockCube, boxPosition, transform.rotation);
                     MapUpdate(13 - i, 13 - circle, -1);
@@ -150,7 +158,10 @@ public class MapManager : MonoBehaviour, TListener {
                     colliders = Physics.OverlapSphere(boxPosition, 0.1f);
                     foreach (Collider collider in colliders)
                     {
-                        Destroy(collider.gameObject);
+                        if (!collider.gameObject.CompareTag("Player"))
+                        {
+                            Destroy(collider.gameObject); //销毁原有的方块
+                        }
                     }
                     Instantiate(blockCube, new Vector3(circle, 0, i), transform.rotation);
                     MapUpdate(circle, i, -1);
@@ -159,7 +170,10 @@ public class MapManager : MonoBehaviour, TListener {
                     colliders = Physics.OverlapSphere(boxPosition, 0.1f);
                     foreach (Collider collider in colliders)
                     {
-                        Destroy(collider.gameObject);
+                        if (!collider.gameObject.CompareTag("Player"))
+                        {
+                            Destroy(collider.gameObject); //销毁原有的方块
+                        }
                     }
                     Instantiate(blockCube, boxPosition, transform.rotation);
                     MapUpdate(13 - circle, 13 - i, -1);

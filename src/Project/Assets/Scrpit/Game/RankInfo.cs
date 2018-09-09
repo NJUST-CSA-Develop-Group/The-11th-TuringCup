@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RankInfo
 {
-    public static RankInfo info;//单例的实现
+    public static RankInfo info = new RankInfo();//单例的实现
 
     public List<DeadInfo> deadlist = new List<DeadInfo>();
 

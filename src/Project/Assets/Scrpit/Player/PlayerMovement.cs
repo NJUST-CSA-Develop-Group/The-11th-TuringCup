@@ -57,7 +57,11 @@ public class PlayerMovement : MonoBehaviour, TListener
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_WEST, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_MOVE_EAST, this);
 
-        
+        EventManager.Instance.AddListener(EVENT_TYPE.TURING_TURN_NORTH, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.TURING_TURN_SOUTH, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.TURING_TURN_WEST, this);
+        EventManager.Instance.AddListener(EVENT_TYPE.TURING_TURN_EAST, this);
+
         EventManager.Instance.AddListener(EVENT_TYPE.SPEED_BUFF, this);
     }
 
