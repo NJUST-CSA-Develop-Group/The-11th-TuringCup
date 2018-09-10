@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour, TListener
                 {
                     if (typeof(PlayerInterface.IControl).IsAssignableFrom(t))
                     {
-                        AIscripts[i] = (PlayerInterface.IControl)System.Activator.CreateInstance(type[0]);//加载选手脚本
+                        AIscripts[i] = (PlayerInterface.IControl)System.Activator.CreateInstance(t);//加载选手脚本
                         return;
                     }
                 }
