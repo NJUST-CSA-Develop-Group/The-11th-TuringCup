@@ -31,9 +31,12 @@ class DefaultOperate : IControl
 
     public void Update(IEntity entity)
     {
+        //不再允许键盘操作
+        /*
         Move(entity);
         Attack(entity);
         Buff(entity);
+        */
         return;
     }
 
