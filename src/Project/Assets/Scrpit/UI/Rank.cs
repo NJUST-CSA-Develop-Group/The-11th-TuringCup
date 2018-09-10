@@ -10,10 +10,6 @@ public class Rank : MonoBehaviour, TListener
 
     private Transform[] prizes;
 
-    void Awake()
-    {
-        EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
-    }
     // Use this for initialization
     void Start()
     {
@@ -27,7 +23,12 @@ public class Rank : MonoBehaviour, TListener
             prizes[i].Find("image").GetComponent<RawImage>().texture = PrizeImages[i];
         }
         prizes[0].localScale = new Vector3(1.25f, 1.25f, 1);//第一名放大
+        for (int i = 0; i < 4; i++)//隐藏
+        {
+            prizes[i].gameObject.SetActive(false);
+        }
 
+        EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
     }
 
     // Update is called once per frame
@@ -54,6 +55,10 @@ public class Rank : MonoBehaviour, TListener
                 SetTeamNameScore(it.GetComponent<TuringOperate>().AIScript.GetTeamName(), it.GetComponent<PlayerScoreManager>().GetScore(), index);
             }
             GameObject.Find("Main Camera").GetComponent<CameraEffect>().enabled = true;
+            for(int i = 0; i < 4; i++)
+            {
+                prizes[i].gameObject.SetActive(true);
+            }
             return true;
         }
         return false;
