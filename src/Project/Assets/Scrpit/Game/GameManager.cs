@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour, TListener
     {
         if (path != "" && System.IO.File.Exists(path))
         {
-            System.Type[] type = System.Reflection.Assembly.LoadFrom(path).GetTypes();
+            System.Type[] type = System.Reflection.Assembly.LoadFile(path).GetTypes();
             if (type.Length > 0)
             {
                 foreach (var t in type)
