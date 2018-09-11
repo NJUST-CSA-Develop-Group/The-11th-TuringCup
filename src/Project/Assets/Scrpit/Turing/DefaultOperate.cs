@@ -21,7 +21,7 @@ class DefaultOperate : IControl
 
     internal DefaultOperate(int i)
     {
-        _index = i;
+        _index = (i + 1) % 4;
     }
 
     public string GetTeamName()
@@ -32,11 +32,13 @@ class DefaultOperate : IControl
     public void Update(IEntity entity)
     {
         //不再允许键盘操作
-        /*
+        if (_index != 1)
+        {
+            return;
+        }
         Move(entity);
         Attack(entity);
         Buff(entity);
-        */
         return;
     }
 

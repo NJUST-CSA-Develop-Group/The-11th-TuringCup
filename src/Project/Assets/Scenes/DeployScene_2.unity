@@ -1320,7 +1320,7 @@ MonoBehaviour:
   PlayerID: 1
   Player: {fileID: 53460841}
   Prefab: {fileID: 1887150623812026, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
-  Avatar: {fileID: 2800000, guid: 3b99b718fe441fd4a98d0f592a4bde6d, type: 3}
+  Avatar: {fileID: 2800000, guid: 22d4faa164ecd72438517e5f41c6769c, type: 3}
   TeamName: 
   OriginHealth: 0
   Images:
@@ -2821,7 +2821,7 @@ MonoBehaviour:
   PlayerID: 3
   Player: {fileID: 224026232}
   Prefab: {fileID: 1887150623812026, guid: 1928c5dff0501bc43b08d7227024b84f, type: 2}
-  Avatar: {fileID: 2800000, guid: 22d4faa164ecd72438517e5f41c6769c, type: 3}
+  Avatar: {fileID: 2800000, guid: 3b99b718fe441fd4a98d0f592a4bde6d, type: 3}
   TeamName: 
   OriginHealth: 0
   Images:
@@ -8247,10 +8247,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1096136712666954, guid: 0941f73448d453448ad1dba8e8a9b870, type: 2}
   PrizeImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 22d4faa164ecd72438517e5f41c6769c, type: 3}
+  - {fileID: 2800000, guid: 6ce5a41eaea62134d824fb38b345eb2a, type: 3}
+  - {fileID: 2800000, guid: 3b99b718fe441fd4a98d0f592a4bde6d, type: 3}
+  - {fileID: 2800000, guid: f41b1d8d348b69b4fb680486db1ae47a, type: 3}
 --- !u!114 &1905718587
 MonoBehaviour:
   m_ObjectHideFlags: 0

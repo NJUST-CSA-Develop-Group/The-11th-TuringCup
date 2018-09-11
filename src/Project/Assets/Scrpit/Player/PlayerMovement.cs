@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour, TListener
     public float buffTime;
 
     private bool isMoving; //角色目前是否在移动
+    private bool lastMoving;
     private Vector3 startPosition; //角色移动的初始位置
     private Vector3 targetPosition; //角色移动的目标位置
 
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour, TListener
         map = global.GetComponent<MapManager>(); //获取MapManager的引用
 
         isMoving = false;
+        lastMoving = false;
         startPosition = new Vector3();
         targetPosition = new Vector3();
 
@@ -76,6 +78,11 @@ public class PlayerMovement : MonoBehaviour, TListener
         {
             BuffTiming();
         }
+        if (!lastMoving && !isMoving)
+        {
+            Anim.SetBool("isMoving", false);
+        }
+        lastMoving = isMoving;
     }
 
 
@@ -85,7 +92,7 @@ public class PlayerMovement : MonoBehaviour, TListener
         if (transform.position == targetPosition)
         {
             isMoving = false;
-            Anim.SetBool("isMoving", false);
+            //Anim.SetBool("isMoving", false);
             return;
         }
         Quaternion TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
@@ -94,7 +101,7 @@ public class PlayerMovement : MonoBehaviour, TListener
         {
             
                 isMoving = false;
-                Anim.SetBool("isMoving", false);
+                //Anim.SetBool("isMoving", false);
                 return;
         }
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
@@ -159,7 +166,7 @@ public class PlayerMovement : MonoBehaviour, TListener
                     startPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
                     targetPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5) + 1);
                     isMoving = true;
-                    Anim.SetBool("isMoving", true);
+                    if (!lastMoving) Anim.SetBool("isMoving", true);
                     return true;
                 }
                 else
@@ -172,7 +179,7 @@ public class PlayerMovement : MonoBehaviour, TListener
                     startPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
                     targetPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5) - 1);
                     isMoving = true;
-                    Anim.SetBool("isMoving", true);
+                    if (!lastMoving) Anim.SetBool("isMoving", true);
                     return true;
                 }
                 else
@@ -185,7 +192,7 @@ public class PlayerMovement : MonoBehaviour, TListener
                     startPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
                     targetPosition.Set((int)(transform.position.x + 0.5) - 1, 0f, (int)(transform.position.z + 0.5));
                     isMoving = true;
-                    Anim.SetBool("isMoving", true);
+                    if (!lastMoving) Anim.SetBool("isMoving", true);
                     return true;
                 }
                 else
@@ -198,7 +205,7 @@ public class PlayerMovement : MonoBehaviour, TListener
                     startPosition.Set((int)(transform.position.x + 0.5), 0f, (int)(transform.position.z + 0.5));
                     targetPosition.Set((int)(transform.position.x + 0.5) + 1, 0f, (int)(transform.position.z + 0.5));
                     isMoving = true;
-                    Anim.SetBool("isMoving", true);
+                    if (!lastMoving) Anim.SetBool("isMoving", true);
                     return true;
                 }
                 else

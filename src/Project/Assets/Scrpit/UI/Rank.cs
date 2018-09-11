@@ -53,6 +53,7 @@ public class Rank : MonoBehaviour, TListener
             {
                 int index = ranklist.FindIndex(c => c == it.GetComponent<PlayerScoreManager>().playerID);
                 SetTeamNameScore(it.GetComponent<TuringOperate>().AIScript.GetTeamName(), it.GetComponent<PlayerScoreManager>().GetScore(), index);
+                prizes[index].Find("image").GetComponent<RawImage>().texture = PrizeImages[it.GetComponent<PlayerScoreManager>().playerID - 1];
             }
             GameObject.Find("Main Camera").GetComponent<CameraEffect>().enabled = true;
             for(int i = 0; i < 4; i++)
