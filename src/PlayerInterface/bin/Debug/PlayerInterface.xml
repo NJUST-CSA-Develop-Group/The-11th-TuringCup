@@ -149,6 +149,18 @@
             </summary>
             <returns>积分</returns>
         </member>
+        <member name="M:PlayerInterface.IEntity.CanShoot">
+            <summary>
+            获取是否可以射击
+            </summary>
+            <returns>是否可以射击</returns>
+        </member>
+        <member name="M:PlayerInterface.IEntity.CanBomb">
+            <summary>
+            获取是否可以放置炸弹
+            </summary>
+            <returns>是否可以放置炸弹</returns>
+        </member>
         <member name="M:PlayerInterface.IEntity.PlayerPosition(System.Int32)">
             <summary>
             获取指定角色位置

@@ -145,6 +145,18 @@ namespace PlayerInterface
         int GetScore();
 
         /// <summary>
+        /// 获取是否可以射击
+        /// </summary>
+        /// <returns>是否可以射击</returns>
+        bool CanShoot();
+
+        /// <summary>
+        /// 获取是否可以放置炸弹
+        /// </summary>
+        /// <returns>是否可以放置炸弹</returns>
+        bool CanBomb();
+
+        /// <summary>
         /// 获取指定角色位置
         /// </summary>
         /// <param name="PlayerIndex">指定玩家序号 范围1-4</param>

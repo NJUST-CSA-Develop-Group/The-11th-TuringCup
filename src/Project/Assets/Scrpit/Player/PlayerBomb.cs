@@ -95,6 +95,11 @@ public class PlayerBomb : MonoBehaviour, TListener {
         currentBombArea += buffValue;
     }
 
+    public bool CanBomb()
+    {
+        return bombAvaliable && !GetComponent<PlayerMovement>().IsMoving();
+    }
+
     public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param = null, Dictionary<string, object> value = null)
     {
         switch (Event_Type)
