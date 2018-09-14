@@ -167,13 +167,13 @@ public class TuringOperate : MonoBehaviour, IEntity, TListener
         return GetComponent<PlayerBomb>().CanBomb();
     }
 
-    public int?[] PlayerPosition(int PlayerIndex)
+    public int[] PlayerPosition(int PlayerIndex)
     {
         foreach(GameObject player in players)
         {
             if (PlayerIndex == player.GetComponent<PlayerScoreManager>().playerID)
             {
-                int?[] position = { (int)(player.transform.position.x + 0.5), (int)(player.transform.position.z + 0.5) }; //四舍五入处理
+                int[] position = { (int)(player.transform.position.x + 0.5), (int)(player.transform.position.z + 0.5) }; //四舍五入处理
                 return position;
             }
         }

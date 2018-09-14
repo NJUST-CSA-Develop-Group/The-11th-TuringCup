@@ -160,21 +160,21 @@ namespace PlayerInterface
         /// 获取指定角色位置
         /// </summary>
         /// <param name="PlayerIndex">指定玩家序号 范围1-4</param>
-        /// <returns>以[0]为行、[1]为列的一位数组座标</returns>
-        int?[] PlayerPosition(int PlayerIndex);
+        /// <returns>以[0]为行、[1]为列的一位数组座标，若未找到，返回null</returns>
+        int[] PlayerPosition(int PlayerIndex);
 
         /// <summary>
         /// 获取指定角色血量
         /// </summary>
         /// <param name="PlayerIndex">指定玩家序号 范围1-4</param>
-        /// <returns>指定角色血量</returns>
+        /// <returns>指定角色血量，若未找到，返回null</returns>
         int? PlayerHealth(int PlayerIndex);
 
         /// <summary>
         /// 获取指定玩家分数
         /// </summary>
         /// <param name="PlayerIndex">指定玩家序号 范围1-4</param>
-        /// <returns></returns>
+        /// <returns>指定角色分数，若未找到，返回null</returns>
         int? PlayerScore(int PlayerIndex);
 
 
