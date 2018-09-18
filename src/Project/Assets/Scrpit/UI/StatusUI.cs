@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StatusUI : MonoBehaviour, TListener
+public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
 {
     public int PlayerID;//1-4
     public GameObject Player;//对玩家的引用
@@ -16,14 +16,14 @@ public class StatusUI : MonoBehaviour, TListener
     public Shader PartColorShader;//部分彩色效果
     public int TreatEffectTicks = 60;
 
-    private GameObject _instantiate;
-    private RawImage _avatar;
-    private Material _avatarShader;
-    private Text _teamName;
+    private GameObject _instantiate;//实例化的prefab
+    private RawImage _avatar;//头像的RawImage组件
+    private Material _avatarShader;//头像的材质
+    private Text _teamName;//队名的Text组件
     private Text _hp;
     private Text _score;
-    private Icon[] _skill;
-    private int _treatTick = -1;
+    private Icon[] _skill;//skill管理结构
+    private int _treatTick = -1;//治疗显示计时
     // Use this for initialization
     void Start()
     {
@@ -41,7 +41,7 @@ public class StatusUI : MonoBehaviour, TListener
         _skill[2] = new Icon(_instantiate.transform.Find("skill/skill2"), Images[2], GreyShader);
         _skill[3] = new Icon(_instantiate.transform.Find("skill/skill3"), Images[3], GreyShader, PartColorShader);
         TeamName = Player.GetComponent<TuringOperate>().AIScript.GetTeamName();
-        SetupInfo();
+        SetupInfo();//设置玩家信息
 
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
         EventManager.Instance.AddListener(EVENT_TYPE.PLAYER_DEAD, this);
@@ -59,6 +59,7 @@ public class StatusUI : MonoBehaviour, TListener
         {
             return;
         }
+        //更新玩家状态显示
         SetHealth(Player.GetComponent<PlayerHealth>().GetHP().ToString());
         SetScore(Player.GetComponent<PlayerScoreManager>().GetScore());
         SetSkillCD(0, Player.GetComponent<PlayerMovement>().getBuffing());
@@ -71,7 +72,7 @@ public class StatusUI : MonoBehaviour, TListener
         if (_treatTick >= 0)
         {
             _treatTick++;
-            _skill[_skill.Length - 1].SetMaterialAttr("_Part", 1.0f - _treatTick / (float)TreatEffectTicks);
+            _skill[_skill.Length - 1].SetMaterialAttr("_Part", 1.0f - _treatTick / (float)TreatEffectTicks);//渐渐变灰
             _skill[_skill.Length - 1].SetGrey(false);
         }
         else
@@ -170,7 +171,7 @@ public class StatusUI : MonoBehaviour, TListener
             _image.GetComponent<RawImage>().texture = img;
         }
 
-        public void SetCD(float? cd)
+        public void SetCD(float? cd)//设置CD显示
         {
             if (cd == null)
             {
@@ -183,12 +184,12 @@ public class StatusUI : MonoBehaviour, TListener
             }
         }
 
-        public void SetGrey(bool grey = true)
+        public void SetGrey(bool grey = true)//设置shader
         {
             _image.GetComponent<RawImage>().material = grey ? _shader : _defaultShader;
         }
 
-        public void SetMaterialAttr(string name, float value)
+        public void SetMaterialAttr(string name, float value)//设置shader参数
         {
             Debug.Log(value);
             _image.GetComponent<RawImage>().material.SetFloat(name, value);

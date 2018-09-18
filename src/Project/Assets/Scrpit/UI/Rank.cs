@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Rank : MonoBehaviour, TListener
+public class Rank : MonoBehaviour, TListener//显示排名UI的管理类
 {
     public GameObject prefab;//prize预制
     public Texture2D[] PrizeImages;//prize图
 
-    private Transform[] prizes;
+    private Transform[] prizes;//全部的排名UI
 
     // Use this for initialization
     void Start()
@@ -52,7 +52,7 @@ public class Rank : MonoBehaviour, TListener
             foreach (var it in GameObject.FindGameObjectsWithTag("Player"))
             {
                 int index = ranklist.FindIndex(c => c == it.GetComponent<PlayerScoreManager>().playerID);
-                SetTeamNameScore(it.GetComponent<TuringOperate>().AIScript.GetTeamName(), it.GetComponent<PlayerScoreManager>().GetScore(), index);
+                SetTeamNameScore(it.GetComponent<TuringOperate>().AIScript.GetTeamName(), it.GetComponent<PlayerScoreManager>().GetScore(), index);//设置队伍信息
                 prizes[index].Find("image").GetComponent<RawImage>().texture = PrizeImages[it.GetComponent<PlayerScoreManager>().playerID - 1];
             }
             GameObject.Find("Main Camera").GetComponent<CameraEffect>().enabled = true;
