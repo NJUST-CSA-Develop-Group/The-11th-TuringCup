@@ -17,13 +17,13 @@ public class TimesStartButton : MonoBehaviour {
 
     void Click()
     {
-        transform.parent.GetComponent<Animator>().SetBool("fade", true);
-        Invoke("OutFinish", 1);
+        transform.parent.GetComponent<Animator>().SetBool("fade", true);//退出场次信息UI
+        Invoke("OutFinish", 1);//动画之后启动游戏
     }
 
     void OutFinish()
     {
-        // 获取状态UI
+        // 启动状态UI，上帝视角
         Transform status = transform.parent.parent.Find("Status");
         status.Find("GameTimes").GetComponent<Animator>().SetBool("start", true);
         status.Find("GodMode").GetComponent<Animator>().SetBool("visible", true);

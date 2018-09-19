@@ -40,9 +40,10 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
         _skill[1] = new Icon(_instantiate.transform.Find("skill/skill1"), Images[1], GreyShader);
         _skill[2] = new Icon(_instantiate.transform.Find("skill/skill2"), Images[2], GreyShader);
         _skill[3] = new Icon(_instantiate.transform.Find("skill/skill3"), Images[3], GreyShader, PartColorShader);
-        TeamName = Player.GetComponent<TuringOperate>().AIScript.GetTeamName();
-        SetupInfo();//设置玩家信息
+        //TeamName = Player.GetComponent<TuringOperate>().AIScript.GetTeamName();
+        //SetupInfo();//设置玩家信息
 
+        EventManager.Instance.AddListener(EVENT_TYPE.GAME_START, this);
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
         EventManager.Instance.AddListener(EVENT_TYPE.PLAYER_DEAD, this);
     }
@@ -89,6 +90,11 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
     {
         switch (Event_Type)
         {
+            case EVENT_TYPE.GAME_START:
+                PlayerInterface.IControl p = Player.GetComponent<TuringOperate>().AIScript;
+                TeamName = Player.GetComponent<TuringOperate>().AIScript.GetTeamName();
+                SetupInfo();
+                return true;
             case EVENT_TYPE.GAME_OVER:
                 transform.parent.gameObject.SetActive(false);// 游戏结束时，隐藏Status的list
                 return true;

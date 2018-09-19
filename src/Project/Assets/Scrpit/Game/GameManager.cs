@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour, TListener
 
     public float GameTime; //游戏总时间
     public string AIConfFilePath;//AI脚本配置文件的路径
+    public int current = 0;
 
     private static float RemainingTime; //游戏剩余时间
     private static bool isGameRunning; //目前游戏是否在进行
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour, TListener
         isGameRunning = false;
         DeadPlayer = 0;
         LoadAIs();//加载控制脚本
+        SetAI();
         //注册监听器
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_START, this);
         EventManager.Instance.AddListener(EVENT_TYPE.GAME_OVER, this);
@@ -138,7 +140,7 @@ public class GameManager : MonoBehaviour, TListener
     {
         foreach (GameObject Player in Players)
         {
-            Player.GetComponent<TuringOperate>().active = true;
+            Player.GetComponent<TuringOperate>().active = false;
         }
     }
     public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param, Dictionary<string, object> value)
@@ -147,7 +149,6 @@ public class GameManager : MonoBehaviour, TListener
         {
             //游戏开始时 开启脚本 开启游戏
             case EVENT_TYPE.GAME_START:
-                SetAI();
                 SetAIEnabled();
                 isGameRunning = true;
                 return true;
