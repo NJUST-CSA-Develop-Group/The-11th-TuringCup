@@ -60,9 +60,20 @@ public class Rank : MonoBehaviour, TListener//显示排名UI的管理类
             {
                 prizes[i].gameObject.SetActive(true);
             }
+            {
+                Transform status = transform.parent.parent.Find("Status");
+                status.Find("GodMode").GetComponent<Animator>().SetBool("visible", false);
+                status.Find("ThirdPersonUI").GetComponent<Animator>().SetBool("visible", false);
+            }
+            Invoke("Show", 1);
             return true;
         }
         return false;
+    }
+
+    void Show()
+    {
+        transform.parent.GetComponent<Animator>().SetBool("visible", true);
     }
 
 

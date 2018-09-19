@@ -28,7 +28,7 @@ public class EventManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         //如果存在 则销毁自身
         else
