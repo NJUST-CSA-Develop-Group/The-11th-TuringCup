@@ -18,6 +18,7 @@ public class ContinueButton : MonoBehaviour {
 
     void Click()
     {
-        SceneManager.LoadScene("DeployScene_2");
+        MatchManager.man.Next();
+        SceneManager.LoadScene("StartScene");
     }
 }

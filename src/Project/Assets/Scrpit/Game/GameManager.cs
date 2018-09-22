@@ -70,6 +70,12 @@ public class GameManager : MonoBehaviour, TListener
     {
         AIscripts = new PlayerInterface.IControl[4];
         int index = 0;
+        foreach (string s in MatchManager.man.AI)
+        {
+            LoadAI(index, s);
+            index++;
+        }
+        /*
         if (System.IO.File.Exists(AIConfFilePath))
         {
             System.IO.StreamReader sr = new System.IO.StreamReader(new System.IO.FileStream(AIConfFilePath, System.IO.FileMode.Open, System.IO.FileAccess.Read));
@@ -93,6 +99,7 @@ public class GameManager : MonoBehaviour, TListener
         {
             LoadAI(index, "");
         }
+        */
     }
 
     private void LoadAI(int i, string path)
