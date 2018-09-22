@@ -11,6 +11,15 @@ public class StartScene_TabButton : MonoBehaviour
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(Click);
+        if (MatchManager.man != null)
+        {
+            if ((MatchManager.man.type == MatchManager.Type.Test && TriggerName == "Test") ||
+                (MatchManager.man.type == MatchManager.Type.Machine && TriggerName == "Machine") ||
+                (MatchManager.man.type == MatchManager.Type.Match && TriggerName == "Match"))
+            {
+                Invoke("Click", 1f);
+            }
+        }
     }
 
     // Update is called once per frame
