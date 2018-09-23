@@ -5,18 +5,39 @@ using UnityEngine.UI;
 
 public class TPUI : MonoBehaviour
 {
-    RawImage _avatar;
-    Text _name;
-    GameObject _player;
+    public Texture2D[] Images;//按需存放技能贴图
+    public Shader GreyShader;//灰度效果
+    public Shader PartColorShader;//部分彩色效果
+    public int TreatEffectTicks = 60;
+
+    private RawImage _avatar;
+    private Text _name;
+    private GameObject _player;
+    private Text _hp;
+    private Text _score;
+    private StatusUI.Icon[] _skill;//skill管理结构
+    private int _treatTick = -1;//治疗显示计时
     // Use this for initialization
     void Start()
     {
         _avatar = transform.Find("TeamInfo/Avatar").GetComponent<RawImage>();
         _name = transform.Find("TeamInfo/Name").GetComponent<Text>();
+        _hp = transform.Find("TeamStatus/HP").GetComponent<Text>();
+        _score= transform.Find("TeamStatus/Score").GetComponent<Text>();
+        _skill = new StatusUI.Icon[Images.Length];
+        _skill[0] = new StatusUI.Icon(transform.Find("TeamStatus/skill/skill0"), Images[0], GreyShader);
+        _skill[1] = new StatusUI.Icon(transform.Find("TeamStatus/skill/skill1"), Images[1], GreyShader);
+        _skill[2] = new StatusUI.Icon(transform.Find("TeamStatus/skill/skill2"), Images[2], GreyShader);
+        _skill[3] = new StatusUI.Icon(transform.Find("TeamStatus/skill/skill3"), Images[3], GreyShader, PartColorShader);
     }
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    private void LateUpdate()
     {
         UpdateStatus();
     }
@@ -70,6 +91,49 @@ public class TPUI : MonoBehaviour
         {
             return;
         }
-        // TODO: 显示单独的状态信息
+        SetHealth(_player.GetComponent<PlayerHealth>().GetHP().ToString());
+        SetScore(_player.GetComponent<PlayerScoreManager>().GetScore());
+        SetSkillCD(0, _player.GetComponent<PlayerMovement>().getBuffing());
+        SetSkillCD(1, _player.GetComponent<PlayerShoot>().getBuffing());
+        SetSkillCD(2, _player.GetComponent<PlayerBomb>().getBuffing());
+        if (_player.GetComponent<PlayerHealth>().HadTreat())
+        {
+            _treatTick = 0;
+        }
+        if (_treatTick >= 0)
+        {
+            _treatTick++;
+            _skill[_skill.Length - 1].SetMaterialAttr("_Part", 1.0f - _treatTick / (float)TreatEffectTicks);//渐渐变灰
+            _skill[_skill.Length - 1].SetGrey(false);
+        }
+        else
+        {
+            _skill[_skill.Length - 1].SetGrey(true);
+        }
+        if (_treatTick >= TreatEffectTicks)
+        {
+            _treatTick = -1;
+        }
+    }
+
+    public void SetHealth(string health)
+    {
+        _hp.text = "HP: " + health;
+    }
+
+    public void SetScore(int score)
+    {
+        _score.text = "得分: " + score;
+    }
+
+    public void SetSkillCD(int index, float? cd)
+    {
+        if (index < 0 || index > _skill.Length - 1)
+        {
+            Debug.Log("error skill index");
+            return;
+        }
+        _skill[index].SetGrey(cd == null);
+        _skill[index].SetCD(cd);
     }
 }

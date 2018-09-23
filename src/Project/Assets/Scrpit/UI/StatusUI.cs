@@ -154,7 +154,7 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
         return gameObject;
     }
 
-    private class Icon//对技能图标进行控制，内部类
+    public class Icon//对技能图标进行控制，内部类
     {
         private Transform _image;
         private Transform _cd;
