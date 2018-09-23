@@ -37,7 +37,7 @@ public class MapManager : MonoBehaviour, TListener {
         map = new List<string[]>();
 
         //TODO 多地图加载
-        LoadFile(Application.dataPath + "/Maps", "01.csv");
+        LoadFile(Application.dataPath + "/Maps", MatchManager.man.map_id.ToString() + ".csv");
         Debug.Log("MapFile loaded");
 
         LoadMap(map);

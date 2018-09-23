@@ -724,7 +724,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6ee661496faafc54c87d4fbb265bd0b2, type: 3}
   - {fileID: 2800000, guid: 687f2223ff8865049ade9adbe122ecb2, type: 3}
   - {fileID: 2800000, guid: b2070ee1f92e20341a4b909d07a1dcc4, type: 3}
-  Indexes: 000000000100000002000000
+  Indexes: 010000000100000001000000
   Selector: {fileID: 2800000, guid: 93346fc68db495c449f2718943de79d8, type: 3}
 --- !u!1 &421960107
 GameObject:
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   prefab: {fileID: 1470078912060158, guid: 928d7226829dc174fb2bc68997ac2655, type: 2}
   Images:
   - {fileID: 2800000, guid: 4a47dae2f9773bf41998d3cde8b9b3bb, type: 3}
-  Indexes: 03000000
+  Indexes: 01000000
   Selector: {fileID: 2800000, guid: 93346fc68db495c449f2718943de79d8, type: 3}
 --- !u!1 &796958827
 GameObject:
@@ -2430,7 +2430,7 @@ MonoBehaviour:
   prefab: {fileID: 1470078912060158, guid: 928d7226829dc174fb2bc68997ac2655, type: 2}
   Images:
   - {fileID: 2800000, guid: 4a47dae2f9773bf41998d3cde8b9b3bb, type: 3}
-  Indexes: 03000000
+  Indexes: 01000000
   Selector: {fileID: 2800000, guid: 93346fc68db495c449f2718943de79d8, type: 3}
 --- !u!1 &1788083750
 GameObject:
