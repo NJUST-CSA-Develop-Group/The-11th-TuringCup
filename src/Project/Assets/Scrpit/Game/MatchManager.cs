@@ -6,11 +6,13 @@ public class MatchManager
 {
     public static MatchManager man = new MatchManager();
     public Type type = Type.Machine;
+    public int times;
     public int map_id;
     public string[] AI;
 
     public MatchManager()
     {
+        times = 0;
         AI = new string[]
         {
             "AI/AI1.dll",
@@ -42,6 +44,7 @@ public class MatchManager
         {
             return;
         }
+        times++;
         // TODO: calc next AI
     }
 

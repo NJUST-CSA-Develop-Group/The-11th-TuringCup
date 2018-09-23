@@ -37,9 +37,11 @@ public class Rank : MonoBehaviour, TListener//显示排名UI的管理类
 
     }
 
-    private void SetTeamNameScore(string name, int score, int index)
+    private void SetTeamNameScore(string name, int health, int score, int id, int index)
     {
+        RankInfo.info.prize[index] = new RankInfo.Prize { id = id, name = name, health = health, score = score };
         prizes[index].Find("TeamName").GetComponent<Text>().text = name;
+        prizes[index].Find("health").GetComponent<Text>().text = "血量:" + health.ToString();
         prizes[index].Find("score").GetComponent<Text>().text = "得分:" + score.ToString();
     }
 
@@ -52,7 +54,7 @@ public class Rank : MonoBehaviour, TListener//显示排名UI的管理类
             foreach (var it in GameObject.FindGameObjectsWithTag("Player"))
             {
                 int index = ranklist.FindIndex(c => c == it.GetComponent<PlayerScoreManager>().playerID);
-                SetTeamNameScore(it.GetComponent<TuringOperate>().AIScript.GetTeamName(), it.GetComponent<PlayerScoreManager>().GetScore(), index);//设置队伍信息
+                SetTeamNameScore(it.GetComponent<TuringOperate>().AIScript.GetTeamName(), it.GetComponent<PlayerHealth>().GetHP(), it.GetComponent<PlayerScoreManager>().GetScore(), it.GetComponent<PlayerScoreManager>().playerID, index);//设置队伍信息
                 prizes[index].Find("image").GetComponent<RawImage>().texture = PrizeImages[it.GetComponent<PlayerScoreManager>().playerID - 1];
             }
             GameObject.Find("Main Camera").GetComponent<CameraEffect>().enabled = true;

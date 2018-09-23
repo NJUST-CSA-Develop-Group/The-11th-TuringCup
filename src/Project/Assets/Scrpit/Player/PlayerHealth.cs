@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour,TListener {
             GetBoxType((int)(transform.position.x + 0.5), (int)(transform.position.z + 0.5)) == -1 && !isDead
             )
         {
+            currentHP = 0;//保证0血
             PlayerDeath(-1);
         }
     }

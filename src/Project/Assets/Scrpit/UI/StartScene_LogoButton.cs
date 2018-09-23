@@ -27,6 +27,7 @@ public class StartScene_LogoButton : MonoBehaviour
     void Click()
     {
         transform.parent.gameObject.SetActive(false);
+        transform.parent.parent.Find("dark").gameObject.SetActive(true);
         transform.parent.parent.Find("ModeUI/Start").gameObject.SetActive(true);
         transform.parent.parent.Find("ModeUI/ModeTab").gameObject.SetActive(true);
         transform.parent.parent.Find("ModeUI/TestTab").GetComponent<StartScene_Tab>().SetVisible();

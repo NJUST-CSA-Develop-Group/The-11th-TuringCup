@@ -7,6 +7,7 @@ public class SelectMap : MonoBehaviour
 {
     public GameObject prefab;//MapOption选项
     public Texture2D[] Images;//地图缩略列表
+    public int[] Indexes;//地图编号
     public Texture2D Selector;//selector的纹理
 
     private Transform[] options;
@@ -23,6 +24,7 @@ public class SelectMap : MonoBehaviour
             options[i] = gameObject.transform;
             options[i].Find("image").GetComponent<RawImage>().texture = Images[i];//加载缩略图
             options[i].Find("selector").GetComponent<RawImage>().texture = Selector;//加载selector
+            //options[i].Find("Text").GetComponent<Text>().text= 添加地图介绍
             options[i].Find("image").GetComponent<Button>().onClick.AddListener(delegate { Click(index); });
         }
     }

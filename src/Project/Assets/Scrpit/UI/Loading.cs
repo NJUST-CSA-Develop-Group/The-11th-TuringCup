@@ -7,6 +7,7 @@ public class Loading : MonoBehaviour
 {
     public GameObject infoPrefab;
     public Texture2D[] Avatars;
+    public Texture2D[] MapImages;
     bool loaded = false;
     Transform[] _transform;
 
@@ -14,6 +15,7 @@ public class Loading : MonoBehaviour
     void Start()
     {
         Invoke("StartGame", 5.0f);
+        transform.Find("MapInfo/MapImage").GetComponent<RawImage>().texture = MapImages[MatchManager.man.map_id];
     }
 
     // Update is called once per frame

@@ -8,8 +8,11 @@ public class RankInfo
 
     public List<DeadInfo> deadlist = new List<DeadInfo>();
 
+    public Prize[] prize;
+
     public List<int> Sort()
     {
+        prize = new Prize[4];
         List<AliveInfo> alivelist = new List<AliveInfo>();
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (var it in players)
@@ -51,6 +54,14 @@ public class RankInfo
     private class AliveInfo
     {
         public int index;
+        public int health;
+        public int score;
+    }
+
+    public class Prize
+    {
+        public int id;
+        public string name;
         public int health;
         public int score;
     }

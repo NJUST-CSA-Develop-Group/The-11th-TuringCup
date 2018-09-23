@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ContinueButton : MonoBehaviour {
+    public bool next = false;
+    public bool record = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +20,21 @@ public class ContinueButton : MonoBehaviour {
 
     void Click()
     {
-        MatchManager.man.Next();
+        if (record)
+        {
+            Record();
+        }
+        if (next)
+        {
+            MatchManager.man.Next();
+        }
         SceneManager.LoadScene("StartScene");
+    }
+
+    void Record()
+    {
+        // RankInfo.info.prize
+        //
+        // TODO: record
     }
 }
