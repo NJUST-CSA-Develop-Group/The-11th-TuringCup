@@ -20,7 +20,7 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
     private RawImage _avatar;//头像的RawImage组件
     private Material _avatarShader;//头像的材质
     private Text _teamName;//队名的Text组件
-    private Text _hp;
+    private Transform _hp;
     private Text _score;
     private Icon[] _skill;//skill管理结构
     private int _treatTick = -1;//治疗显示计时
@@ -33,7 +33,7 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
         _avatar = _instantiate.transform.Find("Avatar").GetComponent<RawImage>();
         _avatarShader = new Material(GreyShader);
         _teamName = _instantiate.transform.Find("TeamName").GetComponent<Text>();
-        _hp = _instantiate.transform.Find("Health").GetComponent<Text>();
+        _hp = _instantiate.transform.Find("Health/Health");//.GetComponent<RawImage>();
         _score = _instantiate.transform.Find("Score").GetComponent<Text>();
         _skill = new Icon[Images.Length];
         _skill[0] = new Icon(_instantiate.transform.Find("skill/skill0"), Images[0], GreyShader);
@@ -61,7 +61,7 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
             return;
         }
         //更新玩家状态显示
-        SetHealth(Player.GetComponent<PlayerHealth>().GetHP().ToString());
+        SetHealth(Player.GetComponent<PlayerHealth>().GetHP());
         SetScore(Player.GetComponent<PlayerScoreManager>().GetScore());
         SetSkillCD(0, Player.GetComponent<PlayerMovement>().getBuffing());
         SetSkillCD(1, Player.GetComponent<PlayerShoot>().getBuffing());
@@ -115,7 +115,7 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
     {
         _avatar.texture = Avatar;
         _teamName.text = TeamName;
-        SetHealth(OriginHealth.ToString());
+        SetHealth(OriginHealth);
         SetScore(0);
         for (int i = 0; i < _skill.Length; i++)
         {
@@ -128,9 +128,10 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
         _avatar.material = die ? _avatarShader : null;
     }
 
-    public void SetHealth(string health)
+    public void SetHealth(int health)
     {
-        _hp.text = "HP: " + health;
+        _hp.localScale = new Vector3(health / 100f, 1f, 1f);
+        //_hp.text = "HP: " + health;
     }
 
     public void SetScore(int score)

@@ -15,7 +15,9 @@ public class Loading : MonoBehaviour
     void Start()
     {
         Invoke("StartGame", 5.0f);
-        transform.Find("MapInfo/MapImage").GetComponent<RawImage>().texture = MapImages[MatchManager.man.map_id];
+        transform.Find("Inside/MapInfo/MapImage").GetComponent<RawImage>().texture = MapImages[MatchManager.man.map_id];
+        float scale = Mathf.Min(Screen.width / 1920f, Screen.height / 1080f);
+        transform.Find("Inside").localScale = new Vector3(scale, scale, 1f);
     }
 
     // Update is called once per frame
