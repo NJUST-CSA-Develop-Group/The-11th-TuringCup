@@ -39,6 +39,21 @@ public class MatchManager
         }
     }
 
+    public bool TypeIs(string t)
+    {
+        switch (t)
+        {
+            case "Test":
+                return type == Type.Test;
+            case "Machine":
+                return type == Type.Machine;
+            case "Match":
+                return type == Type.Match;
+            default:
+                return false;
+        }
+    }
+
     public void Next()
     {
         if (type != Type.Match)
