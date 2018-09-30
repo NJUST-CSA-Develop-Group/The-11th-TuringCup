@@ -10764,7 +10764,6 @@ GameObject:
   - component: {fileID: 1018399023}
   - component: {fileID: 1018399022}
   - component: {fileID: 1018399021}
-  - component: {fileID: 1018399025}
   m_Layer: 9
   m_Name: Floor
   m_TagString: Global
@@ -10829,18 +10828,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1018399025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1018399020}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16541cc1159a1c647995af7cf16409ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  status: {fileID: 1933860886}
 --- !u!1 &1029520147
 GameObject:
   m_ObjectHideFlags: 0
@@ -15371,6 +15358,7 @@ GameObject:
   - component: {fileID: 1707147334}
   - component: {fileID: 1707147333}
   - component: {fileID: 1707147337}
+  - component: {fileID: 1707147338}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -15467,6 +15455,19 @@ MonoBehaviour:
   iterations: 3
   blurSpread: 0.6
   blurShader: {fileID: 4800000, guid: 3f44c837d01429d48aced09cb5e6af1c, type: 3}
+--- !u!114 &1707147338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1707147332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16541cc1159a1c647995af7cf16409ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimTick: 20
+  TPCRelativeVector: {x: 0, y: 2, z: -2}
 --- !u!1001 &1712934287
 Prefab:
   m_ObjectHideFlags: 0

@@ -63,6 +63,10 @@ public class CameraMovement : MonoBehaviour {
         if (Input.GetKey(KeyCode.E)) moveY = Vector3.down;
 
         direction = moveZ + moveX + moveY; //整合最终移动方向
+        if (GetComponent<CameraControl>().Aim != null) //仅可在全局视角下移动
+        {
+            direction = new Vector3(0, 0, 0);
+        }
         #endregion
 
         #region 鼠标旋转
