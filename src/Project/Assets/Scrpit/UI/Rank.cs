@@ -61,7 +61,7 @@ public class Rank : MonoBehaviour, TListener//显示排名UI的管理类
                     GameObject.Find("Main Camera").GetComponent<CameraControl>().SetAim(it);
                 }
             }
-            GameObject.Find("Main Camera").GetComponent<CameraEffect>().enabled = true;
+            GameObject.Find("Main Camera/Camera").GetComponent<CameraEffect>().enabled = true;
             for(int i = 0; i < 4; i++)
             {
                 prizes[i].gameObject.SetActive(true);

@@ -14089,6 +14089,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 472570, guid: 7e7263da75009a841a3c5b28985f7040,
     type: 2}
   m_PrefabInternal: {fileID: 1446066659}
+--- !u!1 &1461374011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461374014}
+  - component: {fileID: 1461374013}
+  - component: {fileID: 1461374012}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1461374012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1461374011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16541cc1159a1c647995af7cf16409ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimTick: 20
+  TPCRelativeVector: {x: 0, y: 1, z: -2}
+--- !u!114 &1461374013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1461374011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8713abf763bf19a43b53b1299a986631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  rotateSpeed: 90
+  shiftRate: 3
+  minDistance: 0.5
+--- !u!4 &1461374014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1461374011}
+  m_LocalRotation: {x: 0.15750314, y: 0, z: 0, w: 0.9875185}
+  m_LocalPosition: {x: 2.472514, y: 3.58, z: -5.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1707147336}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 18.124, y: 0, z: 0}
 --- !u!4 &1465383891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 451604, guid: f8760df281b555f42bd74e5d6368bba6,
@@ -15356,31 +15415,14 @@ GameObject:
   - component: {fileID: 1707147336}
   - component: {fileID: 1707147335}
   - component: {fileID: 1707147334}
-  - component: {fileID: 1707147333}
   - component: {fileID: 1707147337}
-  - component: {fileID: 1707147338}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1707147333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1707147332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8713abf763bf19a43b53b1299a986631, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  rotateSpeed: 90
-  shiftRate: 3
-  minDistance: 0.5
 --- !u!81 &1707147334
 AudioListener:
   m_ObjectHideFlags: 0
@@ -15434,13 +15476,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1707147332}
-  m_LocalRotation: {x: 0.15750472, y: -0, z: -0, w: 0.98751825}
-  m_LocalPosition: {x: 2.472514, y: 3.58, z: -5.88}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 18.124, y: 0, z: 0}
+  m_Father: {fileID: 1461374014}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1707147337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15455,19 +15497,6 @@ MonoBehaviour:
   iterations: 3
   blurSpread: 0.6
   blurShader: {fileID: 4800000, guid: 3f44c837d01429d48aced09cb5e6af1c, type: 3}
---- !u!114 &1707147338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1707147332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16541cc1159a1c647995af7cf16409ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimTick: 20
-  TPCRelativeVector: {x: 0, y: 2, z: -2}
 --- !u!1001 &1712934287
 Prefab:
   m_ObjectHideFlags: 0

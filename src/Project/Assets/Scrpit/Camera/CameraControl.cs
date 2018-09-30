@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     public int AnimTick = 20;//切换动画帧数
-    public Vector3 TPCRelativeVector = new Vector3(0, 2f, -2f);//第三人称相机相对向量
+    public Vector3 TPCRelativeVector = new Vector3(0, 1f, -2f);//第三人称相机相对向量
     Vector3 mainPos;
     public GameObject Aim { get; private set; }
     int tick = -1;
@@ -23,12 +23,17 @@ public class CameraControl : MonoBehaviour
             Vector3 aimPos = mainPos;
             if (Aim != null)
             {
-                aimPos = Aim.transform.position + TPCRelativeVector;
+                aimPos = Aim.transform.position + transform.rotation * TPCRelativeVector;
             }
             if (tick == AnimTick)
             {
                 tick = -1;
                 transform.position = aimPos;
+                if (Aim != null)
+                {
+                    transform.position -= transform.rotation * TPCRelativeVector;
+                    transform.Find("Camera").localPosition = TPCRelativeVector;
+                }
                 return;
             }
             transform.position += (aimPos - transform.position) / (AnimTick - tick);
@@ -38,7 +43,7 @@ public class CameraControl : MonoBehaviour
         {
             if (Aim != null)
             {
-                transform.position = Aim.transform.position + TPCRelativeVector;
+                transform.position = Aim.transform.position;// + TPCRelativeVector;
             }
         }
         if (Input.GetKeyDown(KeyCode.F8))
@@ -46,6 +51,8 @@ public class CameraControl : MonoBehaviour
             if (Aim == null) return;
             Aim = null;
             tick = 0;
+            transform.Find("Camera").localPosition = new Vector3(0, 0, 0);
+            transform.position += transform.rotation * TPCRelativeVector;
         }
         else
         {
@@ -77,9 +84,14 @@ public class CameraControl : MonoBehaviour
                     mainPos = transform.position;
                 }
             }
-            else if (Aim.GetComponent<PlayerScoreManager>().playerID == current)
+            else
             {
-                return;
+                if (Aim.GetComponent<PlayerScoreManager>().playerID == current)
+                {
+                    return;
+                }
+                transform.Find("Camera").localPosition = new Vector3(0, 0, 0);
+                transform.position += transform.rotation * TPCRelativeVector;
             }
             foreach (var p in GameObject.FindGameObjectsWithTag("Player"))
             {
@@ -95,6 +107,11 @@ public class CameraControl : MonoBehaviour
 
     public void SetAim(GameObject player)
     {
+        if (Aim != null)
+        {
+            transform.Find("Camera").localPosition = new Vector3(0, 0, 0);
+            transform.position += transform.rotation * TPCRelativeVector;
+        }
         Aim = player;
         tick = 0;
         //transform.position = aim.transform.position + TPCRelativeVector;
