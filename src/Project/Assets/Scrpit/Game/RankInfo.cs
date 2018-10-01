@@ -25,18 +25,36 @@ public class RankInfo
                 alivelist.Add(new AliveInfo { index = id, health = health, score = score });
             }
         }
+        /*
         deadlist.Sort((a, b) => a.index - b.index);//index小优先
         deadlist.Sort((a, b) => b.score - a.score);//score大优先
         deadlist.Sort((a, b) => (int)(a.time - b.time));//后死优先
         alivelist.Sort((a, b) => a.index - b.index);
         alivelist.Sort((a, b) => b.score - a.score);
         alivelist.Sort((a, b) => b.health - a.health);
+        */
+        deadlist.Sort((a, b) =>
+        {
+            int retVal = (int)((a.time - b.time) * 1000);
+            if (retVal != 0) return retVal;
+            retVal = b.score - a.score;
+            if (retVal != 0) return retVal;
+            return a.index - b.index;
+        });
+        alivelist.Sort((a, b) =>
+        {
+            int retVal = b.health - a.health;
+            if (retVal != 0) return retVal;
+            retVal = b.score - a.score;
+            if (retVal != 0) return retVal;
+            return a.index - b.index;
+        });
         List<int> ret = new List<int>();
         foreach (var it in alivelist)
         {
             ret.Add(it.index);
         }
-        foreach(var it in deadlist)
+        foreach (var it in deadlist)
         {
             ret.Add(it.index);
         }

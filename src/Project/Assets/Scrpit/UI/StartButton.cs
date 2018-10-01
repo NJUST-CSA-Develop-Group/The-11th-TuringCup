@@ -12,7 +12,6 @@ public class StartButton : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(Click);
         if (!first)
         {
-            Debug.Log(first);
             Click();
         }
     }

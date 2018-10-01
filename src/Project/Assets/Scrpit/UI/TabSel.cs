@@ -10,7 +10,7 @@ public class TabSel : MonoBehaviour
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(Click);
-        if (!StartButton.first && MatchManager.man.TypeIs(TabType))
+        if (!StartButton.first && MatchManager.man.type == MatchManager.Type.Match && MatchManager.man.TypeIs(TabType))
         {
             Click();
         }

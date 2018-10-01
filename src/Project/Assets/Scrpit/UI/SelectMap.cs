@@ -14,13 +14,12 @@ public class SelectMap : MonoBehaviour
     public string TabType;
 
     private Transform[] options;
-    private static int _curindex;
+    private static int _curindex = -1;
 
     bool auto = false;
 
     void Start()
     {
-        _curindex = -1;
         options = new Transform[Images.Length];
         for (int i = 0; i < Images.Length; i++)
         {
