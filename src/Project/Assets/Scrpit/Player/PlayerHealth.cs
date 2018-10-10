@@ -53,6 +53,7 @@ public class PlayerHealth : MonoBehaviour,TListener {
     private bool IncreaseHP()
     {
         currentHP += increaseHPValue;
+        currentHP = Mathf.Min(100, currentHP);
         hadTreat = true;
         return true;
     }

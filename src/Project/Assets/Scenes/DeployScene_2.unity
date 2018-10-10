@@ -3005,6 +3005,11 @@ Prefab:
       propertyPath: TimeBetweenBullets
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114457026781109202, guid: e0f171168cb465a42b3ee2858ca0f9e1,
+        type: 2}
+      propertyPath: BuffValue
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0f171168cb465a42b3ee2858ca0f9e1, type: 2}
   m_IsPrefabAsset: 0
@@ -7494,6 +7499,11 @@ Prefab:
       propertyPath: TimeBetweenBullets
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114865789956645658, guid: f3cace774fa177c4f837959903009269,
+        type: 2}
+      propertyPath: BuffValue
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cace774fa177c4f837959903009269, type: 2}
   m_IsPrefabAsset: 0
@@ -8764,6 +8774,11 @@ Prefab:
         type: 2}
       propertyPath: TimeBetweenBullets
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114318928625124556, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592,
+        type: 2}
+      propertyPath: BuffValue
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7718bfa99d3c77c46a0c6fd0f9b4e592, type: 2}
@@ -12219,6 +12234,11 @@ Prefab:
       propertyPath: TimeBetweenBullets
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114593473784351044, guid: dab257ce349f76a4a8c2ce7e337c41ee,
+        type: 2}
+      propertyPath: BuffValue
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab257ce349f76a4a8c2ce7e337c41ee, type: 2}
   m_IsPrefabAsset: 0
@@ -14447,6 +14467,7 @@ MonoBehaviour:
   rotateSpeed: 90
   shiftRate: 3
   minDistance: 0.5
+  AllowMouse: 0
 --- !u!4 &1461374014
 Transform:
   m_ObjectHideFlags: 0
