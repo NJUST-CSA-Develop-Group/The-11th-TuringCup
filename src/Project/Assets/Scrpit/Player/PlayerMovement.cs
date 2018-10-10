@@ -134,7 +134,7 @@ public class PlayerMovement : MonoBehaviour, TListener
                 break;
             default: break;
         }
-        transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 15f);
+        transform.rotation = TargetRotation;//Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 15f);
     }
 
     private bool BuffSpeed()

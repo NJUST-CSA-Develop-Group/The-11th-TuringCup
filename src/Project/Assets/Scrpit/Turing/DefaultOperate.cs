@@ -6,22 +6,22 @@ using PlayerInterface;
 class DefaultOperate : IControl
 {
     private int _index;
-    private static KeyCode[] _up = { KeyCode.W, KeyCode.T, KeyCode.I, KeyCode.UpArrow };
-    private static KeyCode[] _dwon = { KeyCode.S, KeyCode.G, KeyCode.K, KeyCode.DownArrow };
-    private static KeyCode[] _left = { KeyCode.A, KeyCode.F, KeyCode.J, KeyCode.LeftArrow };
-    private static KeyCode[] _right = { KeyCode.D, KeyCode.H, KeyCode.L, KeyCode.RightArrow };
+    private static KeyCode[] _up = { KeyCode.UpArrow, KeyCode.W, KeyCode.T, KeyCode.I };
+    private static KeyCode[] _dwon = { KeyCode.DownArrow, KeyCode.S, KeyCode.G, KeyCode.K };
+    private static KeyCode[] _left = { KeyCode.LeftArrow, KeyCode.A, KeyCode.F, KeyCode.J };
+    private static KeyCode[] _right = { KeyCode.RightArrow, KeyCode.D, KeyCode.H, KeyCode.L };
 
-    private static KeyCode[] _shoot = { KeyCode.E, KeyCode.Y, KeyCode.O, KeyCode.End };
-    private static KeyCode[] _bomb = { KeyCode.Q, KeyCode.R, KeyCode.U, KeyCode.Home };
+    private static KeyCode[] _shoot = { KeyCode.LeftControl, KeyCode.E, KeyCode.Y, KeyCode.O };
+    private static KeyCode[] _bomb = { KeyCode.Space, KeyCode.Q, KeyCode.R, KeyCode.U };
 
-    private static KeyCode[] _buffSpeed = { KeyCode.Alpha4, KeyCode.Alpha8, KeyCode.F8, KeyCode.Keypad4 };
+    private static KeyCode[] _buffSpeed = { KeyCode.Alpha1, KeyCode.Alpha8, KeyCode.F8, KeyCode.Keypad4 };
     private static KeyCode[] _buffShoot = { KeyCode.Alpha2, KeyCode.Alpha6, KeyCode.F6, KeyCode.Keypad2 };
-    private static KeyCode[] _buffBomb = { KeyCode.Alpha1, KeyCode.Alpha5, KeyCode.F5, KeyCode.Keypad1 };
-    private static KeyCode[] _buffHP = { KeyCode.Alpha3, KeyCode.Alpha7, KeyCode.F7, KeyCode.Keypad3 };
+    private static KeyCode[] _buffBomb = { KeyCode.Alpha3, KeyCode.Alpha5, KeyCode.F5, KeyCode.Keypad1 };
+    private static KeyCode[] _buffHP = { KeyCode.Alpha4, KeyCode.Alpha7, KeyCode.F7, KeyCode.Keypad3 };
 
     internal DefaultOperate(int i)
     {
-        _index = (i + 1) % 4;
+        _index = i % 4;
     }
 
     public string GetTeamName()
@@ -32,7 +32,7 @@ class DefaultOperate : IControl
     public void Update(IEntity entity)
     {
         //不再允许键盘操作
-        if (_index != 1)
+        if (_index != 0)
         {
             return;
         }

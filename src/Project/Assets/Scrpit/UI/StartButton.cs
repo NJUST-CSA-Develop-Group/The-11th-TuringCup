@@ -10,7 +10,7 @@ public class StartButton : MonoBehaviour
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(Click);
-        if (!first)
+        if (!first && MatchManager.man.type == MatchManager.Type.Match)
         {
             Click();
         }
