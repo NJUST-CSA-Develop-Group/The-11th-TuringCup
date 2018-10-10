@@ -203,4 +203,9 @@ public class TuringOperate : MonoBehaviour, IEntity, TListener
         }
         return null;
     }
+
+    public int GetCircle()
+    {
+        return GameObject.FindGameObjectWithTag("Global").GetComponent<MapManager>().circle;
+    }
 }

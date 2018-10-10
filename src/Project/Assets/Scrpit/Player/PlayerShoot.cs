@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShoot : MonoBehaviour,TListener {
+public class PlayerShoot : MonoBehaviour, TListener
+{
 
     public int Damage = 15;// 可调节伤害
     public float TimeBetweenBullets = 0.5f;  //射击间隔
@@ -52,7 +53,8 @@ public class PlayerShoot : MonoBehaviour,TListener {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         ShootableMask = LayerMask.GetMask("Attackable");
         GunLine = GetComponent<LineRenderer>();
         ShootAvaliable = true;
@@ -73,9 +75,10 @@ public class PlayerShoot : MonoBehaviour,TListener {
         m_line.Find("Cylinder").GetComponent<Renderer>().material = shootLineMaterial;
         m_ps.GetComponent<Renderer>().material = particleMaterial;
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
         Timing();
 
         //调试用效果
@@ -105,7 +108,7 @@ public class PlayerShoot : MonoBehaviour,TListener {
         Ray ray = new Ray(transform.position + transform.forward * FixDistance + transform.up * ShootHeight, transform.forward);
         RaycastHit hit;
         float length = 100;
-        if (Physics.Raycast(ray, out hit, range))
+        if (Physics.Raycast(ray, out hit, range, 1 << LayerMask.NameToLayer("Attackable")))
         {
             length = (hit.transform.position - transform.position).magnitude;
             if (hit.transform.GetComponent<PlayerHealth>())//随意获取一定会在玩家上的脚本，用来确定命中的是玩家

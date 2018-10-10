@@ -177,7 +177,11 @@ namespace PlayerInterface
         /// <returns>指定角色分数，若未找到，返回null</returns>
         int? PlayerScore(int PlayerIndex);
 
-
+        /// <summary>
+        /// 获取外围缩圈的圈数
+        /// </summary>
+        /// <returns>缩圈的圈数</returns>
+        int GetCircle();
 
     }
 

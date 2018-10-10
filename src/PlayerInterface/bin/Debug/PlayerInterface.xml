@@ -182,6 +182,12 @@
             <param name="PlayerIndex">指定玩家序号 范围1-4</param>
             <returns>指定角色分数，若未找到，返回null</returns>
         </member>
+        <member name="M:PlayerInterface.IEntity.GetCircle">
+            <summary>
+            获取外围缩圈的圈数
+            </summary>
+            <returns>缩圈的圈数</returns>
+        </member>
         <member name="T:PlayerInterface.PlayerData">
             <summary>
             用于收集角色信息

@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour, TListener
 
     private bool isMoving; //角色目前是否在移动
     private bool lastMoving;
+    private bool check;
     private Vector3 startPosition; //角色移动的初始位置
     private Vector3 targetPosition; //角色移动的目标位置
 
@@ -91,19 +92,21 @@ public class PlayerMovement : MonoBehaviour, TListener
         
         if (transform.position == targetPosition)
         {
+            check = false;
             isMoving = false;
             //Anim.SetBool("isMoving", false);
             return;
         }
         Quaternion TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
         transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 15f);
-        if (map.GetBoxType((int)targetPosition.x, (int)targetPosition.z) != 0) //判断目标位置是否可用
+        if (!check && map.GetBoxType((int)targetPosition.x, (int)targetPosition.z) != 0) //判断目标位置是否可用
         {
-            
-                isMoving = false;
-                //Anim.SetBool("isMoving", false);
-                return;
+            check = false;
+            isMoving = false;
+            //Anim.SetBool("isMoving", false);
+            return;
         }
+        check = true;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
     }
 

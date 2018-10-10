@@ -21,7 +21,7 @@ public class MapManager : MonoBehaviour, TListener {
 
     private List<string[]> map; //地图信息作为string数组存储在List内（变相二维数组）
     private float reduceTiming; //缩圈计时器
-    private int circle; //缩圈序号
+    public int circle; //缩圈序号
 
     Collider[] colliders;
     Vector3 boxPosition;
