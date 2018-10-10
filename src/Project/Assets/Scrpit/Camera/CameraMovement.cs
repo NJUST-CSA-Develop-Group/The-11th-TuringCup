@@ -21,6 +21,8 @@ public class CameraMovement : MonoBehaviour {
 
     private RaycastHit objectHit;
 
+    public bool AllowMouse = false;
+
     void Start()
     {
         if (tourCamera == null) tourCamera = gameObject.transform;
@@ -70,7 +72,7 @@ public class CameraMovement : MonoBehaviour {
         #endregion
 
         #region 鼠标旋转
-        if (Input.GetMouseButton(1))
+        if (AllowMouse)//(Input.GetMouseButton(1))
         {
             //相机朝向转动
             tourCamera.RotateAround(tourCamera.position, Vector3.up, Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime);

@@ -51,5 +51,6 @@ public class Loading : MonoBehaviour
         transform.parent.Find("Status/GameTimes").GetComponent<Animator>().SetBool("start", true);
         transform.parent.Find("Status/GodMode").GetComponent<Animator>().SetBool("visible", true);
         EventManager.Instance.PostNotification(EVENT_TYPE.GAME_START, this);
+        GameObject.FindGameObjectWithTag("MainCamera").transform.parent.GetComponent<CameraMovement>().AllowMouse = true;
     }
 }

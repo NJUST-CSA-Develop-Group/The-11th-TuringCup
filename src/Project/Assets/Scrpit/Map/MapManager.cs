@@ -122,7 +122,7 @@ public class MapManager : MonoBehaviour, TListener {
         if(GameManager.GetRemainTime() <= reduceGameAreaBeginTime && GameManager.GetRemainTime() > 0f ) //如果进入缩圈时间
         {
             reduceTiming += Time.deltaTime; 
-            if (reduceTiming >= reduceGameAreaTime) //如果到达缩圈时刻
+            if (reduceTiming >= reduceGameAreaTime && circle < 5) //如果到达缩圈时刻
             {
                 reduceTiming = 0;
                 for(int i = circle; i <= 13 - circle; i++) //正方形边框区域进行处理

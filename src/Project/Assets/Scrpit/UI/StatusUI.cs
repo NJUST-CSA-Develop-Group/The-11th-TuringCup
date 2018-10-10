@@ -13,6 +13,7 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
     public int OriginHealth;//初始血量
     public Texture2D[] Images;//按需存放技能贴图
     public Shader GreyShader;//灰度效果
+    public Shader DeadShader;//死亡效果
     public Shader PartColorShader;//部分彩色效果
     public int TreatEffectTicks = 60;
 
@@ -31,7 +32,7 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
         _instantiate = Instantiate(Prefab, transform);//初始化UI
         _instantiate.transform.localScale = new Vector3(Screen.width / 1920f, Screen.width / 1920f, 1f);//按照屏幕尺寸进行缩放
         _avatar = _instantiate.transform.Find("Avatar").GetComponent<RawImage>();
-        _avatarShader = new Material(GreyShader);
+        _avatarShader = new Material(DeadShader);
         _teamName = _instantiate.transform.Find("TeamName").GetComponent<Text>();
         _hp = _instantiate.transform.Find("Health/Health");//.GetComponent<RawImage>();
         _score = _instantiate.transform.Find("Score").GetComponent<Text>();

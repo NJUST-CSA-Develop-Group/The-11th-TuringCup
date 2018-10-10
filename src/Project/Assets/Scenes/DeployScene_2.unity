@@ -694,6 +694,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 769a1b3f7df7dcd4ca3149a3a09286c2, type: 3}
   - {fileID: 2800000, guid: d0d8e2764cde741488407df2e52d319d, type: 3}
   GreyShader: {fileID: 4800000, guid: c4f5b446e9442404886c9ae159262454, type: 3}
+  DeadShader: {fileID: 4800000, guid: 89d3b062f1d82f74eb8700c911363170, type: 3}
   PartColorShader: {fileID: 4800000, guid: 17073de14fa35ca428ccc4fc5339e00e, type: 3}
   TreatEffectTicks: 60
 --- !u!114 &41578926
@@ -3521,6 +3522,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 769a1b3f7df7dcd4ca3149a3a09286c2, type: 3}
   - {fileID: 2800000, guid: d0d8e2764cde741488407df2e52d319d, type: 3}
   GreyShader: {fileID: 4800000, guid: c4f5b446e9442404886c9ae159262454, type: 3}
+  DeadShader: {fileID: 4800000, guid: 89d3b062f1d82f74eb8700c911363170, type: 3}
   PartColorShader: {fileID: 4800000, guid: 17073de14fa35ca428ccc4fc5339e00e, type: 3}
   TreatEffectTicks: 60
 --- !u!114 &345575759
@@ -5664,7 +5666,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 769a1b3f7df7dcd4ca3149a3a09286c2, type: 3}
   - {fileID: 2800000, guid: d0d8e2764cde741488407df2e52d319d, type: 3}
   GreyShader: {fileID: 4800000, guid: c4f5b446e9442404886c9ae159262454, type: 3}
-  PartColorShader: {fileID: 0}
+  DeadShader: {fileID: 4800000, guid: 89d3b062f1d82f74eb8700c911363170, type: 3}
+  PartColorShader: {fileID: 4800000, guid: 17073de14fa35ca428ccc4fc5339e00e, type: 3}
   TreatEffectTicks: 60
 --- !u!114 &692032325
 MonoBehaviour:
@@ -10971,6 +10974,7 @@ MonoBehaviour:
   blockCube: {fileID: 1539557796849592, guid: 4ff68a34ebff4404a9e5f214baa59a20, type: 2}
   reduceGameAreaBeginTime: 40
   reduceGameAreaTime: 5
+  circle: 0
 --- !u!4 &1018399024
 Transform:
   m_ObjectHideFlags: 0
@@ -14450,7 +14454,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1461374011}
   m_LocalRotation: {x: 0.15750314, y: 0, z: 0, w: 0.9875185}
-  m_LocalPosition: {x: 2.472514, y: 3.58, z: -5.88}
+  m_LocalPosition: {x: 7, y: 6, z: -5.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1707147336}
@@ -16406,7 +16410,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 769a1b3f7df7dcd4ca3149a3a09286c2, type: 3}
   - {fileID: 2800000, guid: d0d8e2764cde741488407df2e52d319d, type: 3}
   GreyShader: {fileID: 4800000, guid: c4f5b446e9442404886c9ae159262454, type: 3}
-  PartColorShader: {fileID: 0}
+  DeadShader: {fileID: 4800000, guid: 89d3b062f1d82f74eb8700c911363170, type: 3}
+  PartColorShader: {fileID: 4800000, guid: 17073de14fa35ca428ccc4fc5339e00e, type: 3}
   TreatEffectTicks: 60
 --- !u!114 &1840167574
 MonoBehaviour:
