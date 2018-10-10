@@ -13,7 +13,7 @@ public class MatchManager
     public MatchManager()
     {
         times = 0;
-        map_id = 0;
+        map_id = 1;
         AI = new string[]
         {
             "AI/AI1.dll",
