@@ -114,11 +114,11 @@ namespace PlayerInterface
         /// <summary>
         /// 获取指定座标的属性
         /// </summary>
-        /// <param name="row">指定行</param>
-        /// <param name="col">指定列</param>
+        /// <param name="x">指定x坐标</param>
+        /// <param name="z">指定z坐标</param>
         /// <returns>座标的属性 -1 = 不可用  0 = 可用  1 = 可炸方块  2 = 不可炸方块  3 = 炸弹
         /// 查询非法 返回Null</returns>
-        int? GetMapType(int row, int col);
+        int? GetMapType(int x, int z);
 
         /// <summary>
         /// 获取当前角色血量

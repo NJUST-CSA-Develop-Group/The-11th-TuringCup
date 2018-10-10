@@ -123,11 +123,11 @@ public class TuringOperate : MonoBehaviour, IEntity, TListener
         return GameManager.GetRemainTime();
     }
 
-    public int? GetMapType(int row, int col)
+    public int? GetMapType(int x, int z)
     {
-        if(0 <= row && 13 >= row && 0 <= col && 13 >= col) //检查请求是否合法
+        if(0 <= x && 13 >= x && 0 <= z && 13 >= z) //检查请求是否合法
         {
-            return map.GetBoxType(row, col);
+            return map.GetBoxType(x, z);
         }
         else
         {

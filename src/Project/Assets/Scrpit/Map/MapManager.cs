@@ -103,11 +103,11 @@ public class MapManager : MonoBehaviour, TListener {
 
 
     //更新地图数组信息（不更新地图 更新地图工作交由事件驱动的实现类）
-    private bool MapUpdate(int row, int col, int type)
+    private bool MapUpdate(int x, int z, int type)
     {
-        if(map[row][col] != null)
+        if(map[x][z] != null)
         {
-            map[row][col] = type.ToString();
+            map[x][z] = type.ToString();
             return true;
         }
         else
