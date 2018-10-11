@@ -167,6 +167,11 @@ public class TuringOperate : MonoBehaviour, IEntity, TListener
         return GetComponent<PlayerBomb>().CanBomb();
     }
 
+    public bool CanUpgrade()
+    {
+        return GetComponent<PlayerScoreManager>().CanUpgrade();
+    }
+
     public int[] PlayerPosition(int PlayerIndex)
     {
         foreach(GameObject player in players)

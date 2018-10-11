@@ -14291,13 +14291,9 @@ MonoBehaviour:
   - {fileID: 2800000, guid: f41b1d8d348b69b4fb680486db1ae47a, type: 3}
   MapImages:
   - {fileID: 2800000, guid: 6ee661496faafc54c87d4fbb265bd0b2, type: 3}
-  - {fileID: 2800000, guid: 687f2223ff8865049ade9adbe122ecb2, type: 3}
-  - {fileID: 2800000, guid: b2070ee1f92e20341a4b909d07a1dcc4, type: 3}
-  - {fileID: 2800000, guid: 4a47dae2f9773bf41998d3cde8b9b3bb, type: 3}
-  - {fileID: 2800000, guid: 4a47dae2f9773bf41998d3cde8b9b3bb, type: 3}
-  - {fileID: 2800000, guid: b2070ee1f92e20341a4b909d07a1dcc4, type: 3}
-  - {fileID: 2800000, guid: 687f2223ff8865049ade9adbe122ecb2, type: 3}
-  - {fileID: 2800000, guid: 6ee661496faafc54c87d4fbb265bd0b2, type: 3}
+  - {fileID: 2800000, guid: 4bb6fdb79f536d74d9b0fb8ac6041cbb, type: 3}
+  - {fileID: 2800000, guid: 210cec8504ca0304395a9a7d4e654a9c, type: 3}
+  - {fileID: 2800000, guid: 8b0306e4f1fc33d49ab9f5444a8c5c30, type: 3}
 --- !u!114 &1438032162
 MonoBehaviour:
   m_ObjectHideFlags: 0

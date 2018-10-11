@@ -29,7 +29,7 @@ public class SelectMap : MonoBehaviour
             options[i].Find("image").GetComponent<RawImage>().texture = Images[i];//加载缩略图
             options[i].Find("back").GetComponent<RawImage>().texture = BackImage;
             options[i].Find("selector").GetComponent<RawImage>().texture = Selector;//加载selector
-            //options[i].Find("Text").GetComponent<Text>().text= 添加地图介绍
+            options[i].Find("Text").GetComponent<Text>().text = MapDesp.Desp[Indexes[i]];//添加地图介绍
             options[i].GetComponent<Button>().onClick.AddListener(delegate { Click(index); });
         }
         if (MatchManager.man.type == MatchManager.Type.Match && TabType == "Match")

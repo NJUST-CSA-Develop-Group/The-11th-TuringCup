@@ -39,6 +39,11 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
         
     }
 
+    public bool CanUpgrade()
+    {
+        return requireAvaliable;
+    }
+
     //分数只读接口
     public int GetScore()
     {

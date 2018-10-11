@@ -157,6 +157,12 @@ namespace PlayerInterface
         bool CanBomb();
 
         /// <summary>
+        /// 获取是否可以升级（仅检查冷却）
+        /// </summary>
+        /// <returns>是否可以升级</returns>
+        bool CanUpgrade();
+
+        /// <summary>
         /// 获取指定角色位置
         /// </summary>
         /// <param name="PlayerIndex">指定玩家序号 范围1-4</param>
