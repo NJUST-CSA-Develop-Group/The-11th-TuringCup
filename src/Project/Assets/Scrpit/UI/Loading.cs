@@ -14,6 +14,7 @@ public class Loading : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Cursor.visible = false;
         Invoke("StartGame", 5.0f);
         transform.Find("Inside/MapInfo/MapImage").GetComponent<RawImage>().texture = MapImages[MatchManager.man.map_id];
         transform.Find("Inside/MapInfo/Text").GetComponent<Text>().text = MapDesp.Desp[MatchManager.man.map_id];

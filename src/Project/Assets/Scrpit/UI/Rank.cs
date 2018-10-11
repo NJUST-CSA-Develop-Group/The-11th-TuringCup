@@ -52,6 +52,7 @@ public class Rank : MonoBehaviour, TListener//显示排名UI的管理类
     {
         if (Event_Type == EVENT_TYPE.GAME_OVER)
         {
+            Cursor.visible = true;
             //在此处调用SetTramNameScore设置队名分数
             List<int> ranklist = RankInfo.info.Sort();
             foreach (var it in GameObject.FindGameObjectsWithTag("Player"))
@@ -65,6 +66,7 @@ public class Rank : MonoBehaviour, TListener//显示排名UI的管理类
                 }
             }
             GameObject.Find("Main Camera/Camera").GetComponent<CameraEffect>().enabled = true;
+            GameObject.Find("Main Camera").GetComponent<CameraMovement>().AllowMouse = false;
             transform.parent.Find("shade").gameObject.SetActive(true);
             for(int i = 0; i < 4; i++)
             {
