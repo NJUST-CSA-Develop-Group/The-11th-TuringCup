@@ -56,6 +56,14 @@ public class MatchManager
 
     public void Next()
     {
+        if (type == Type.Test)
+        {
+            AI[0] = "AI/AI1.dll";
+        }
+        else if (type == Type.Machine)
+        {
+            AI[0] = "";
+        }
         if (type != Type.Match)
         {
             return;
