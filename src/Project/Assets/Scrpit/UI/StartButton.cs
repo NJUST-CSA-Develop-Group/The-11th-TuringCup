@@ -26,6 +26,6 @@ public class StartButton : MonoBehaviour
     {
         transform.parent.GetComponent<Animator>().SetInteger("pos", 2);
         transform.parent.parent.Find("buttonGroup1").GetComponent<Animator>().SetInteger("pos", 1);
-        transform.parent.parent.Find("Return").gameObject.SetActive(true);
+        transform.parent.parent.Find("Return").GetComponent<Animator>().SetBool("show", true);
     }
 }

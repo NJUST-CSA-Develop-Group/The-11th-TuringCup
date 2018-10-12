@@ -167,12 +167,6 @@
             </summary>
             <returns>是否可以升级</returns>
         </member>
-        <member name="M:PlayerInterface.IEntity.IsMoving">
-            <summary>
-            获取玩家当前是否正在移动
-            </summary>
-            <returns>当前是否正在移动</returns>
-        </member>
         <member name="M:PlayerInterface.IEntity.PlayerPosition(System.Int32)">
             <summary>
             获取指定角色位置

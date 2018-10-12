@@ -163,6 +163,12 @@ namespace PlayerInterface
         bool CanUpgrade();
 
         /// <summary>
+        /// 获取玩家当前是否正在移动
+        /// </summary>
+        /// <returns>当前是否正在移动</returns>
+        bool IsMoving();
+
+        /// <summary>
         /// 获取指定角色位置
         /// </summary>
         /// <param name="PlayerIndex">指定玩家序号 范围1-4</param>
