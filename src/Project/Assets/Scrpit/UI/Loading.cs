@@ -20,6 +20,8 @@ public class Loading : MonoBehaviour
         transform.Find("Inside/MapInfo/Text").GetComponent<Text>().text = MapDesp.Desp[MatchManager.man.map_id];
         float scale = Mathf.Min(Screen.width / 1920f, Screen.height / 1080f);
         transform.Find("Inside").localScale = new Vector3(scale, scale, 1f);
+        transform.parent.Find("RankUI/Rank").localScale = new Vector3(scale, scale, 1f);
+        transform.parent.Find("RankUI/Buttons").localScale = new Vector3(scale, scale, 1f);
     }
 
     // Update is called once per frame

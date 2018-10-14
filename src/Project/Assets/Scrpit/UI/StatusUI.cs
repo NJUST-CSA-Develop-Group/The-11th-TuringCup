@@ -30,7 +30,8 @@ public class StatusUI : MonoBehaviour, TListener//玩家状态UI管理类
     {
         transform.localPosition += new Vector3((PlayerID - 1) * Screen.width / 4, 0, 0);//自动调整位置
         _instantiate = Instantiate(Prefab, transform);//初始化UI
-        _instantiate.transform.localScale = new Vector3(Screen.width / 1920f, Screen.width / 1920f, 1f);//按照屏幕尺寸进行缩放
+        float scale = Mathf.Min(Screen.width / 1920f, Screen.height / 1080.0f);
+        _instantiate.transform.localScale = new Vector3(scale, scale, 1f);//按照屏幕尺寸进行缩放
         _avatar = _instantiate.transform.Find("Avatar").GetComponent<RawImage>();
         _avatarShader = new Material(DeadShader);
         _teamName = _instantiate.transform.Find("TeamName").GetComponent<Text>();
