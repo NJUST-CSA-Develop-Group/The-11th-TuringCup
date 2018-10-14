@@ -190,6 +190,14 @@ namespace PlayerInterface
         int? PlayerScore(int PlayerIndex);
 
         /// <summary>
+        /// 获取指定玩家指定buff的状态
+        /// </summary>
+        /// <param name="PlayerIndex">指定玩家序号 范围1-4</param>
+        /// <param name="BuffIndex">1:速度 2:炸弹 3:射击</param>
+        /// <returns>返回buff状态，若未找到，返回null</returns>
+        bool? PlayerBuffing(int PlayerIndex, int BuffIndex);
+
+        /// <summary>
         /// 获取外围缩圈的圈数
         /// </summary>
         /// <returns>缩圈的圈数</returns>

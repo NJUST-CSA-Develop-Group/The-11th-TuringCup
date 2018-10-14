@@ -29,6 +29,12 @@ public class PlayerBomb : MonoBehaviour, TListener {
             return null;
         }
     }
+
+    public bool IsBuffing()
+    {
+        return isBuffing;
+    }
+
     void Start () {
         bombAvaliable = true;
         isBuffing = false;

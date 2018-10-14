@@ -52,6 +52,11 @@ public class PlayerShoot : MonoBehaviour, TListener
         }
     }
 
+    public bool IsBuffing()
+    {
+        return isBuffing;
+    }
+
     // Use this for initialization
     void Start()
     {

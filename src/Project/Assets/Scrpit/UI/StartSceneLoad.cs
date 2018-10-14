@@ -6,11 +6,9 @@ public class StartSceneLoad : MonoBehaviour
 {
     private string[] _childs =
     {
-        "background",
         "logo",
         "buttonGroup0",
         "buttonGroup1",
-        "over",
         "Return"
     };
     private string[] _mapchilds =
@@ -23,6 +21,7 @@ public class StartSceneLoad : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        float scale;
         transform.Find("buttonGroup0").GetComponent<Animator>().SetInteger("pos", 1);
         foreach (string name in _childs)
         {
@@ -30,9 +29,12 @@ public class StartSceneLoad : MonoBehaviour
         }
         foreach (string name in _mapchilds)
         {
-            float scale = Mathf.Min(Screen.height / 1080.0f, Screen.width / 1920.0f);
+            scale = Mathf.Min(Screen.height / 1080.0f, Screen.width / 1920.0f);
             transform.Find(name).localScale = new Vector3(scale, scale, 1);
         }
+        scale =Mathf.Max(Screen.height / 1080.0f, Screen.width / 1920.0f);
+        transform.Find("background").localScale = new Vector3(scale, scale, 1);
+        transform.Find("over").localScale = new Vector3(scale, scale, 1);
     }
 
     // Update is called once per frame

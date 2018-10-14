@@ -37,6 +37,12 @@ public class PlayerMovement : MonoBehaviour, TListener
             return null;
         }
     }
+
+    public bool IsBuffing()
+    {
+        return isBuffing;
+    }
+
     private void Start()
     {
         Anim = GetComponent<Animator>();

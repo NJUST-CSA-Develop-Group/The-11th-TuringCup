@@ -214,6 +214,28 @@ public class TuringOperate : MonoBehaviour, IEntity, TListener
         return null;
     }
 
+    public bool? PlayerBuffing(int PlayerIndex, int BuffIndex)
+    {
+        foreach (GameObject player in players)
+        {
+            if (PlayerIndex == player.GetComponent<PlayerScoreManager>().playerID)
+            {
+                switch (BuffIndex)
+                {
+                    case 1:
+                        return player.GetComponent<PlayerMovement>().IsBuffing();
+                    case 2:
+                        return player.GetComponent<PlayerBomb>().IsBuffing();
+                    case 3:
+                        return player.GetComponent<PlayerShoot>().IsBuffing();
+                    default:
+                        return null;
+                }
+            }
+        }
+        return null;
+    }
+
     public int GetCircle()
     {
         return GameObject.FindGameObjectWithTag("Global").GetComponent<MapManager>().circle;
