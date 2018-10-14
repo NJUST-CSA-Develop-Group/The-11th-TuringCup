@@ -106,18 +106,23 @@ public class PlayerShoot : MonoBehaviour, TListener
     {
         ShootAvaliable = false;
         Ray ray = new Ray(transform.position + transform.forward * FixDistance + transform.up * ShootHeight, transform.forward);
-        RaycastHit hit;
         float length = 100;
-        if (Physics.Raycast(ray, out hit, range, 1 << LayerMask.NameToLayer("Attackable")))
+        RaycastHit[] hitArr = Physics.RaycastAll(ray, range, 1 << LayerMask.NameToLayer("Attackable"));
+        List<RaycastHit> hits = new List<RaycastHit>(hitArr);
+        hits.Sort((RaycastHit a, RaycastHit b) => { return (int)((a.distance - b.distance) * 1000); });
+        if (hits.Count > 0)
         {
-            length = (hit.transform.position - transform.position).magnitude;
-            if (hit.transform.GetComponent<PlayerHealth>())//随意获取一定会在玩家上的脚本，用来确定命中的是玩家
+            length = (hits[0].transform.position - transform.position).magnitude;
+            foreach(RaycastHit hit in hits)
             {
-                Dictionary<string, object> args = new Dictionary<string, object>();
-                args.Add("AttackerID", (int)GetComponent<PlayerScoreManager>().playerID);
-                args.Add("ShootPower", Damage);
-                EventManager.Instance.PostNotification(EVENT_TYPE.SHOOT_HIT_PLAYER, this, hit.transform.gameObject, args);
-                args.Clear();
+                if(hit.transform.GetComponent<PlayerHealth>() && hit.distance == hits[0].distance)//随意获取一定会在玩家上的脚本，用来确定命中的是玩家
+                {
+                    Dictionary<string, object> args = new Dictionary<string, object>();
+                    args.Add("AttackerID", (int)GetComponent<PlayerScoreManager>().playerID);
+                    args.Add("ShootPower", Damage);
+                    EventManager.Instance.PostNotification(EVENT_TYPE.SHOOT_HIT_PLAYER, this, hit.transform.gameObject, args);
+                    args.Clear();
+                }
             }
         }
 

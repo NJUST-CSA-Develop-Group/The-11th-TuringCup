@@ -44,18 +44,36 @@ public class GameManager : MonoBehaviour, TListener
         {
             Timing();
             //如果游戏时间到
-            if (RemainingTime <= 0 || DeadPlayer >= 3)
+            if (RemainingTime <= 0)
             {
                 //发送GAME_OVER事件 结束游戏进行
                 EventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, this);
                 isGameRunning = false;
                 RemainingTime = 0;
             }
+            StartCoroutine(AfterFixedUpdate());
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+    }
+
+    private IEnumerator AfterFixedUpdate()
+    {
+        yield return new WaitForFixedUpdate();
+        // 统一结算
+        foreach(GameObject g in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            g.transform.GetComponent<PlayerHealth>().Settlement();
+        }
+        //
+        if(DeadPlayer >= 3)//因死亡过多结束
+        {
+            EventManager.Instance.PostNotification(EVENT_TYPE.GAME_OVER, this);
+            isGameRunning = false;
+            RemainingTime = 0;
         }
     }
 
