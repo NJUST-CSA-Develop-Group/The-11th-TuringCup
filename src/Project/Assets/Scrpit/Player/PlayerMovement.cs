@@ -124,19 +124,19 @@ public class PlayerMovement : MonoBehaviour, TListener
         {
             case "NORTH":
                 tempLocation.z = tempLocation.z + 1;
-                TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+                TargetRotation = Quaternion.LookRotation(tempLocation - transform.position, Vector3.up);
                 break;
             case "SOUTH":
                 tempLocation.z = tempLocation.z - 1;
-                TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+                TargetRotation = Quaternion.LookRotation(tempLocation - transform.position, Vector3.up);
                 break;
             case "EAST":
-                tempLocation.z = tempLocation.x + 1;
-                TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+                tempLocation.x = tempLocation.x + 1;
+                TargetRotation = Quaternion.LookRotation(tempLocation - transform.position, Vector3.up);
                 break;
             case "WEST":
-                tempLocation.z = tempLocation.x - 1;
-                TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
+                tempLocation.x = tempLocation.x - 1;
+                TargetRotation = Quaternion.LookRotation(tempLocation - transform.position, Vector3.up);
                 break;
             default: break;
         }
