@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour, TListener
             return;
         }
         Quaternion TargetRotation = Quaternion.LookRotation(targetPosition - transform.position, Vector3.up);
-        transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 15f);
+        transform.rotation = TargetRotation;//Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 15f);
         if (!check && map.GetBoxType((int)targetPosition.x, (int)targetPosition.z) != 0) //判断目标位置是否可用
         {
             check = false;

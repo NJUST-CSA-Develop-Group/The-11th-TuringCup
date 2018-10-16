@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23418546347214262}
   - component: {fileID: 65439906652918550}
   - component: {fileID: 114769959866706362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_CannotDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
