@@ -111,6 +111,10 @@ public class PlayerBomb : MonoBehaviour, TListener {
         switch (Event_Type)
         {
             case EVENT_TYPE.TURING_SET_BOMB: //选手操作：放置炸弹
+                if (GameObject.FindGameObjectWithTag("Global").GetComponent<MapManager>().GetBoxType((int)(transform.position.x + 0.5), (int)(transform.position.z + 0.5)) != 0)
+                {
+                    return false;
+                }
                 if (bombAvaliable && !GetComponent<PlayerMovement>().IsMoving())//如果当前可放置炸弹
                 {
                     SetBomb();
