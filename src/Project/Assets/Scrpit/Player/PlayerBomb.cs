@@ -35,6 +35,16 @@ public class PlayerBomb : MonoBehaviour, TListener {
         return isBuffing;
     }
 
+    public float GetCD()
+    {
+        float delta = Mathf.Max(bombCD - setBombTiming, 0);
+        if (bombAvaliable)
+        {
+            delta = 0;
+        }
+        return delta;
+    }
+
     void Start () {
         bombAvaliable = true;
         isBuffing = false;

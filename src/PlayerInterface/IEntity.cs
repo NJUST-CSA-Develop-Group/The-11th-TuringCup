@@ -198,6 +198,20 @@ namespace PlayerInterface
         bool? PlayerBuffing(int PlayerIndex, int BuffIndex);
 
         /// <summary>
+        /// 获取指定玩家的射击CD
+        /// </summary>
+        /// <param name="playerIndex">指定玩家序号 范围1-4</param>
+        /// <returns>返回剩余CD，若未找到返回null</returns>
+        float? PlayerShootCD(int playerIndex);
+
+        /// <summary>
+        /// 获取指定玩家的放置炸弹CD
+        /// </summary>
+        /// <param name="playerIndex">指定玩家序号 范围1-4</param>
+        /// <returns>返回剩余CD，若未找到返回null</returns>
+        float? PlayerBombCD(int playerIndex);
+
+        /// <summary>
         /// 获取外围缩圈的圈数
         /// </summary>
         /// <returns>缩圈的圈数</returns>

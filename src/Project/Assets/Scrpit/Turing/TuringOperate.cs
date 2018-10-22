@@ -236,6 +236,30 @@ public class TuringOperate : MonoBehaviour, IEntity, TListener
         return null;
     }
 
+    public float? PlayerShootCD(int playerIndex)
+    {
+        foreach (GameObject player in players)
+        {
+            if (playerIndex == player.GetComponent<PlayerScoreManager>().playerID)
+            {
+                return player.GetComponent<PlayerShoot>().GetCD();
+            }
+        }
+        return null;
+    }
+
+    public float? PlayerBombCD(int playerIndex)
+    {
+        foreach (GameObject player in players)
+        {
+            if (playerIndex == player.GetComponent<PlayerScoreManager>().playerID)
+            {
+                return player.GetComponent<PlayerBomb>().GetCD();
+            }
+        }
+        return null;
+    }
+
     public int GetCircle()
     {
         return GameObject.FindGameObjectWithTag("Global").GetComponent<MapManager>().circle;

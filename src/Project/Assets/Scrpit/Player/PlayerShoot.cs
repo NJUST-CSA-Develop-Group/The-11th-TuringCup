@@ -57,6 +57,16 @@ public class PlayerShoot : MonoBehaviour, TListener
         return isBuffing;
     }
 
+    public float GetCD()
+    {
+        float delta = Mathf.Max(TimeBetweenBullets - ShootTiming, 0);
+        if (ShootAvaliable)
+        {
+            delta = 0;
+        }
+        return delta;
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -70,8 +80,8 @@ public class PlayerShoot : MonoBehaviour, TListener
         EventManager.Instance.AddListener(EVENT_TYPE.SHOOT_BUFF, this);
 
         //调试阶段使用效果
-        prefabInstantiate = Instantiate(prefab, GunRef.transform);
-        prefabInstantiate.transform.localPosition += MuzzleDis;//修正位置
+        prefabInstantiate = Instantiate(prefab/*, GunRef.transform*/);
+        //prefabInstantiate.transform.localPosition += MuzzleDis;//修正位置
         m_light = prefabInstantiate.transform.Find("Spot Light").GetComponent<Light>();
         m_line = prefabInstantiate.transform.Find("line");
         m_ps = prefabInstantiate.transform.Find("Particle System").GetComponent<ParticleSystem>();
@@ -117,8 +127,9 @@ public class PlayerShoot : MonoBehaviour, TListener
         hits.Sort((RaycastHit a, RaycastHit b) => { return (int)((a.distance - b.distance) * 1000); });
         if (hits.Count > 0)
         {
-            length = (hits[0].transform.position - transform.position).magnitude;
-            foreach(RaycastHit hit in hits)
+            Debug.Log(hits[0].transform.position);
+            length = hits[0].distance + 0.375f;//(hits[0].transform.position - GunRef.transform.position).magnitude;
+            foreach (RaycastHit hit in hits)
             {
                 if(hit.transform.GetComponent<PlayerHealth>() && hit.distance == hits[0].distance)//随意获取一定会在玩家上的脚本，用来确定命中的是玩家
                 {
@@ -133,7 +144,9 @@ public class PlayerShoot : MonoBehaviour, TListener
 
         //调试用效果
         tick = 0;// 启动射击动画
-        m_line.localScale = new Vector3(0.01f, 0.01f, length);// 调整射击线长度
+        m_line.localScale = new Vector3(0.05f, 0.05f, length);// 调整射击线长度
+        prefabInstantiate.transform.rotation = transform.rotation;
+        prefabInstantiate.transform.position = GunRef.transform.position + Vector3.Scale(transform.localScale, transform.rotation * MuzzleDis);
     }
 
     private void Timing()
