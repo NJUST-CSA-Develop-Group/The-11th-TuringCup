@@ -21,6 +21,9 @@ public class MatchManager
             "AI/AI3.dll",
             "AI/AI4.dll"
         };
+#if UNITY_ANDROID
+        MapOutput.Output();
+#endif
     }
 
     public void SetType(string t)

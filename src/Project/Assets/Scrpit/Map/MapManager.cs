@@ -37,7 +37,11 @@ public class MapManager : MonoBehaviour, TListener {
         map = new List<string[]>();
 
         //TODO 多地图加载
+#if UNITY_ANDROID
+        LoadFile(Application.persistentDataPath + "/Maps", MatchManager.man.map_id.ToString() + ".csv");
+#else
         LoadFile(Application.dataPath + "/Maps", MatchManager.man.map_id.ToString() + ".csv");
+#endif
         Debug.Log("MapFile loaded");
 
         LoadMap(map);
