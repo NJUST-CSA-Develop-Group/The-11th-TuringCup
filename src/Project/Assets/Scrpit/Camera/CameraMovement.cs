@@ -30,7 +30,9 @@ public class CameraMovement : MonoBehaviour {
 
     void LateUpdate()
     {
+#if !UNITY_ANDROID
         GetDirection();
+#endif
 
         // 防止穿透物体
         while(Physics.Raycast(tourCamera.position, direction, out objectHit, minDistance))
@@ -45,12 +47,12 @@ public class CameraMovement : MonoBehaviour {
 
     private void GetDirection()
     {
-        #region 加速移动 按下shift时加速
+#region 加速移动 按下shift时加速
         if (Input.GetKeyDown(KeyCode.LeftShift)) moveSpeed *= shiftRate;
         if (Input.GetKeyUp(KeyCode.LeftShift)) moveSpeed /= shiftRate;
-        #endregion
+#endregion
 
-        #region 键盘移动
+#region 键盘移动
         //复位 消除上一帧状态
         moveZ = Vector3.zero;
         moveX = Vector3.zero;
@@ -69,16 +71,16 @@ public class CameraMovement : MonoBehaviour {
         {
             direction = new Vector3(0, 0, 0);
         }
-        #endregion
+#endregion
 
-        #region 鼠标旋转
+#region 鼠标旋转
         if (AllowMouse)//(Input.GetMouseButton(1))
         {
             //相机朝向转动
             tourCamera.RotateAround(tourCamera.position, Vector3.up, Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime);
             tourCamera.RotateAround(tourCamera.position, tourCamera.right, -Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime);
         }
-        #endregion
+#endregion
     }
 
     /// <summary>

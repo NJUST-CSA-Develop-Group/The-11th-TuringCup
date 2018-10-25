@@ -51,6 +51,9 @@ public class Loading : MonoBehaviour
 
     void StartGame()
     {
+#if UNITY_ANDROID
+        transform.parent.Find("handle").gameObject.SetActive(true);
+#endif
         gameObject.SetActive(false);
         transform.parent.Find("Status/GameTimes").GetComponent<Animator>().SetBool("start", true);
         transform.parent.Find("Status/GodMode").GetComponent<Animator>().SetBool("visible", true);

@@ -52,6 +52,9 @@ public class Rank : MonoBehaviour, TListener//显示排名UI的管理类
     {
         if (Event_Type == EVENT_TYPE.GAME_OVER)
         {
+#if UNITY_ANDROID
+            GameObject.Find("handle").SetActive(false);
+#endif
             Cursor.visible = true;
             //在此处调用SetTramNameScore设置队名分数
             List<int> ranklist = RankInfo.info.Sort();
