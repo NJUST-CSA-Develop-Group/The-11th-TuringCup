@@ -90,7 +90,11 @@ public class GameManager : MonoBehaviour, TListener
         int index = 0;
         foreach (string s in MatchManager.man.AI)
         {
+#if UNITY_ANDROID
+            LoadAI(index, Application.persistentDataPath + "/" + s);
+#else
             LoadAI(index, s);
+#endif
             index++;
         }
         /*
