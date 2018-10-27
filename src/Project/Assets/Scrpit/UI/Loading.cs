@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#define EasterEgg
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +23,12 @@ public class Loading : MonoBehaviour
         transform.Find("Inside").localScale = new Vector3(scale, scale, 1f);
         transform.parent.Find("RankUI/Rank").localScale = new Vector3(scale, scale, 1f);
         transform.parent.Find("RankUI/Buttons").localScale = new Vector3(scale, scale, 1f);
+#if EasterEgg
+        if (MatchManager.man.type == MatchManager.Type.Machine)
+        {
+            gameObject.AddComponent<EasterEgg>();
+        }
+#endif
     }
 
     // Update is called once per frame
@@ -59,5 +66,8 @@ public class Loading : MonoBehaviour
         transform.parent.Find("Status/GodMode").GetComponent<Animator>().SetBool("visible", true);
         EventManager.Instance.PostNotification(EVENT_TYPE.GAME_START, this);
         GameObject.FindGameObjectWithTag("MainCamera").transform.parent.GetComponent<CameraMovement>().AllowMouse = true;
+#if EasterEgg
+        Destroy(GetComponent<EasterEgg>());
+#endif
     }
 }
