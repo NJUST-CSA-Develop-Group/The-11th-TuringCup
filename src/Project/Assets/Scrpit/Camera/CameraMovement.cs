@@ -22,6 +22,8 @@ public class CameraMovement : MonoBehaviour {
     private RaycastHit objectHit;
 
     public bool AllowMouse = false;
+    private bool toggle = true;
+    private bool toggleMode = false;
 
     void Start()
     {
@@ -35,14 +37,18 @@ public class CameraMovement : MonoBehaviour {
 #endif
 
         // 防止穿透物体
-        while(Physics.Raycast(tourCamera.position, direction, out objectHit, minDistance))
+        /*while (Physics.Raycast(tourCamera.position, direction, out objectHit, minDistance))
         {
             float angle = Vector3.Angle(direction, objectHit.normal);
             float magnitude = Vector3.Magnitude(direction) * Mathf.Cos(Mathf.Deg2Rad * (180 - angle));
             direction += objectHit.normal * magnitude;
-        }
-
-        tourCamera.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
+        }*/
+        Vector3 aim = tourCamera.position + direction * moveSpeed * Time.deltaTime;
+        aim.x = Mathf.Max(6.5f - 10, Mathf.Min(6.5f + 10, aim.x));
+        aim.z = Mathf.Max(6.5f - 10, Mathf.Min(6.5f + 10, aim.z));
+        aim.y = Mathf.Max(2f, Mathf.Min(15f, aim.y));
+        tourCamera.position = aim;
+        //tourCamera.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
     }
 
     private void GetDirection()
@@ -71,10 +77,20 @@ public class CameraMovement : MonoBehaviour {
         {
             direction = new Vector3(0, 0, 0);
         }
-#endregion
+        #endregion
 
-#region 鼠标旋转
-        if (AllowMouse)//(Input.GetMouseButton(1))
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            toggleMode = true;
+        }
+        if (toggleMode && Input.GetKeyUp(KeyCode.Tab))
+        {
+            toggleMode = false;
+            toggle = !toggle;
+        }
+
+        #region 鼠标旋转
+        if (AllowMouse && toggle)//(Input.GetMouseButton(1))
         {
             //相机朝向转动
             tourCamera.RotateAround(tourCamera.position, Vector3.up, Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime);
