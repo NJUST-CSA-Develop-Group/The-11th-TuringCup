@@ -9,6 +9,7 @@ public class MatchManager
     public int times;
     public int map_id;
     public string[] AI;
+    public delegate void NextCallback();
 
     public MatchManager()
     {
@@ -57,7 +58,7 @@ public class MatchManager
         }
     }
 
-    public void Next()
+    public void Next(NextCallback callback)
     {
         if (type == Type.Test)
         {

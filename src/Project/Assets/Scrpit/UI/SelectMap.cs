@@ -45,8 +45,14 @@ public class SelectMap : MonoBehaviour
         MatchManager.man.map_id = Indexes[index];
         if (!auto)//手动点开始时，要加载一次AI信息
         {
-            MatchManager.man.Next();
+            MatchManager.man.Next(() =>
+            {
+                SceneManager.LoadScene("DeployScene_2");
+            });
         }
-        SceneManager.LoadScene("DeployScene_2");
+        else
+        {
+            SceneManager.LoadScene("DeployScene_2");
+        }
     }
 }

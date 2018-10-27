@@ -4,19 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ContinueButton : MonoBehaviour {
+public class ContinueButton : MonoBehaviour
+{
     public bool next = false;
     public bool record = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         GetComponent<Button>().onClick.AddListener(Click);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     void Click()
     {
@@ -26,9 +29,16 @@ public class ContinueButton : MonoBehaviour {
         }
         if (next)
         {
-            MatchManager.man.Next();
+            MatchManager.man.Next(() =>
+            {
+
+                SceneManager.LoadScene("StartScene");
+            });
         }
-        SceneManager.LoadScene("StartScene");
+        else
+        {
+            SceneManager.LoadScene("StartScene");
+        }
     }
 
     void Record()
