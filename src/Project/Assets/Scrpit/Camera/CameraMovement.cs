@@ -44,9 +44,11 @@ public class CameraMovement : MonoBehaviour {
             direction += objectHit.normal * magnitude;
         }*/
         Vector3 aim = tourCamera.position + direction * moveSpeed * Time.deltaTime;
+#if !UNITY_ANDROID
         aim.x = Mathf.Max(6.5f - 10, Mathf.Min(6.5f + 10, aim.x));
         aim.z = Mathf.Max(6.5f - 10, Mathf.Min(6.5f + 10, aim.z));
         aim.y = Mathf.Max(2f, Mathf.Min(15f, aim.y));
+#endif
         tourCamera.position = aim;
         //tourCamera.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
     }
@@ -77,7 +79,7 @@ public class CameraMovement : MonoBehaviour {
         {
             direction = new Vector3(0, 0, 0);
         }
-        #endregion
+#endregion
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -90,7 +92,7 @@ public class CameraMovement : MonoBehaviour {
             Cursor.visible = !toggle;
         }
 
-        #region 鼠标旋转
+#region 鼠标旋转
         if (AllowMouse && toggle)//(Input.GetMouseButton(1))
         {
             //相机朝向转动

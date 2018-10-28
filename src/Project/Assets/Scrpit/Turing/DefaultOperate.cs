@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PlayerInterface;
-using UnityStandardAssets.CrossPlatformInput;
 
 class DefaultOperate : IControl
 {
@@ -46,32 +45,21 @@ class DefaultOperate : IControl
     private void Move(IEntity entity)
     {
 #if UNITY_ANDROID
-        float x = CrossPlatformInputManager.GetAxis("Horizontal");
-        float z = CrossPlatformInputManager.GetAxis("Vertical");
-        if (Mathf.Abs(x) < 0.3) { x = 0; }
-        if (Mathf.Abs(z) < 0.3) { z = 0; }
-        Debug.Log("x:" + x.ToString() + ",z:" + z.ToString());
-        if (Mathf.Abs(x) > Mathf.Abs(z))
+        if (VirtualKeyManager.IsKeyDown("up"))
         {
-            if (x > 0)
-            {
-                entity.MoveEast();
-            }
-            else if (x < 0)
-            {
-                entity.MoveWest();
-            }
+            entity.MoveNorth();
         }
-        else
+        if (VirtualKeyManager.IsKeyDown("down"))
         {
-            if (z > 0)
-            {
-                entity.MoveNorth();
-            }
-            else if (z < 0)
-            {
-                entity.MoveSouth();
-            }
+            entity.MoveSouth();
+        }
+        if (VirtualKeyManager.IsKeyDown("left"))
+        {
+            entity.MoveWest();
+        }
+        if (VirtualKeyManager.IsKeyDown("right"))
+        {
+            entity.MoveEast();
         }
 #else
         if (Input.GetKey(_up[_index]))
@@ -96,11 +84,11 @@ class DefaultOperate : IControl
     private void Attack(IEntity entity)
     {
 #if UNITY_ANDROID
-        if (CrossPlatformInputManager.GetButtonDown("shoot"))
+        if (VirtualKeyManager.IsKeyDown("shoot"))
         {
             entity.Shoot();
         }
-        if (CrossPlatformInputManager.GetButtonDown("bomb"))
+        if (VirtualKeyManager.IsKeyDown("bomb"))
         {
             entity.SetBomb();
         }

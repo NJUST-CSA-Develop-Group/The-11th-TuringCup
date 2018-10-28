@@ -1,22 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
 public class MobileKeyBtn : MonoBehaviour
 {
     public string KeyName;
-    private CrossPlatformInputManager.VirtualButton virtualButton;
+    private VirtualKeyManager.VirtualKey virtualKey;
 
     void OnEnable()
     {
-        virtualButton = new CrossPlatformInputManager.VirtualButton(KeyName);
-        CrossPlatformInputManager.RegisterVirtualButton(virtualButton);
+        virtualKey = VirtualKeyManager.Register(KeyName);
     }
 
     void OnDisable()
     {
-        virtualButton.Remove();
+        virtualKey.Remove();
     }
 
     // Use this for initialization
@@ -33,11 +31,11 @@ public class MobileKeyBtn : MonoBehaviour
 
     public void SetKeyDown()
     {
-        virtualButton.Pressed();
+        virtualKey.Press();
     }
 
     public void SetKeyUp()
     {
-        virtualButton.Released();
+        virtualKey.Release();
     }
 }
