@@ -23,17 +23,23 @@ public class ContinueButton : MonoBehaviour
 
     void Click()
     {
+        int[] rec = null;
         if (record)
         {
-            Record();
+            rec = new int[4];
+            for(int i = 0; i < 4; i++)
+            {
+                rec[i] = RankInfo.curRank.IndexOf(i + 1);
+            }
+            //Record();
         }
         if (next)
         {
-            MatchManager.man.Next(() =>
-            {
+            MatchManager.man.Next(StartCoroutine, () =>
+             {
 
-                SceneManager.LoadScene("StartScene");
-            });
+                 SceneManager.LoadScene("StartScene");
+             }, rec);
         }
         else
         {
@@ -41,10 +47,10 @@ public class ContinueButton : MonoBehaviour
         }
     }
 
-    void Record()
+    /*void Record()
     {
         // RankInfo.info.prize
         //
         // TODO: record
-    }
+    }*/
 }

@@ -5,11 +5,14 @@ using UnityEngine;
 public class MatchManager
 {
     public static MatchManager man = new MatchManager();
+    public static bool first = true;
     public Type type = Type.Machine;
     public int times;
     public int map_id;
     public string[] AI;
     public delegate void NextCallback();
+    public delegate Coroutine StartCo(IEnumerator co);
+
 
     public MatchManager()
     {
@@ -58,7 +61,7 @@ public class MatchManager
         }
     }
 
-    public void Next(NextCallback callback)
+    public void Next(StartCo startCo, NextCallback callback, int[] rank)
     {
         if (type == Type.Test)
         {
@@ -70,10 +73,18 @@ public class MatchManager
         }
         if (type != Type.Match)
         {
+            callback();
             return;
         }
         times++;
         // TODO: calc next AI
+        startCo(DoNext(callback, rank));
+    }
+
+    public IEnumerator DoNext(NextCallback callback, int[] rank)
+    {
+        yield return null;
+        callback();
     }
 
     public enum Type

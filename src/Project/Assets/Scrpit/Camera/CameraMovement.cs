@@ -87,6 +87,7 @@ public class CameraMovement : MonoBehaviour {
         {
             toggleMode = false;
             toggle = !toggle;
+            Cursor.visible = !toggle;
         }
 
         #region 鼠标旋转

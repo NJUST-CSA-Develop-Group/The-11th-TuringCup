@@ -128,7 +128,7 @@ public class PlayerShoot : MonoBehaviour, TListener
         if (hits.Count > 0)
         {
             Debug.Log(hits[0].transform.position);
-            length = hits[0].distance + 0.375f;//(hits[0].transform.position - GunRef.transform.position).magnitude;
+            length = hits[0].distance + 0.375f - 0.5f;//(hits[0].transform.position - GunRef.transform.position).magnitude;
             foreach (RaycastHit hit in hits)
             {
                 if(hit.transform.GetComponent<PlayerHealth>() && hit.distance == hits[0].distance)//随意获取一定会在玩家上的脚本，用来确定命中的是玩家
