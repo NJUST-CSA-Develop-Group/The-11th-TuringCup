@@ -1,4 +1,5 @@
-﻿using System;
+﻿//#define MATCH
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using PlayerInterface;
@@ -36,9 +37,11 @@ class DefaultOperate : IControl
         {
             return;
         }
+#if !MATCH
         Move(entity);
         Attack(entity);
         Buff(entity);
+#endif
         return;
     }
 

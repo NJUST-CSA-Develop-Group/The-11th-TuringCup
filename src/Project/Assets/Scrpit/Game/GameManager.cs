@@ -187,6 +187,8 @@ public class GameManager : MonoBehaviour, TListener
                 isGameRunning = false;
                 return true;
             case EVENT_TYPE.PLAYER_DEAD:
+                //关闭尸体碰撞箱
+                Sender.gameObject.GetComponent<BoxCollider>().enabled = false;
                 //添加排名信息
                 var score = Sender.gameObject.GetComponent<PlayerScoreManager>();
                 float time = GetRemainTime();

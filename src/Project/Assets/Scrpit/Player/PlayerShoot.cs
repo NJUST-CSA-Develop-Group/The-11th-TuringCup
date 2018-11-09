@@ -127,7 +127,7 @@ public class PlayerShoot : MonoBehaviour, TListener
         hits.Sort((RaycastHit a, RaycastHit b) => { return (int)((a.distance - b.distance) * 1000); });
         if (hits.Count > 0)
         {
-            Debug.Log(hits[0].transform.position);
+            //Debug.Log(hits[0].transform.position);
             length = hits[0].distance + 0.375f - 0.5f;//(hits[0].transform.position - GunRef.transform.position).magnitude;
             foreach (RaycastHit hit in hits)
             {
