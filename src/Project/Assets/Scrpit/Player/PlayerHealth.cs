@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour,TListener {
         if (currentHP == 0)
         {
             isDead = true;
-
+            transform.Find("DeathAudio").GetComponent<AudioSource>().Play();
             GetComponent<Animator>().SetTrigger("Die");
             GetComponent<PlayerMovement>().enabled = false;
             GetComponent<PlayerBomb>().enabled = false;

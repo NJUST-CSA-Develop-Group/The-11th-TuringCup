@@ -21,7 +21,7 @@ public class GameTimes : MonoBehaviour, TListener
     {
         if (Event_Type == EVENT_TYPE.GAME_START)
         {
-            GetComponentInChildren<UnityEngine.UI.Text>().text = "第" + MatchManager.man.times.ToString() + "场";
+            GetComponentInChildren<UnityEngine.UI.Text>().text = "第" + (MatchManager.man.current + 1).ToString() + "场";
             return true;
         }
         return false;

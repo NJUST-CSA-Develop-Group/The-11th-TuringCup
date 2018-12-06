@@ -19,6 +19,8 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
     private bool requireAvaliable;//当前是否可以请求升级
     private float requireTiming;//技能请求计时器
 
+    private AudioSource m_audio;
+
     private void Start()
     {
         currentScore = 0;
@@ -36,7 +38,7 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_BUFF_HP, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_BUFF_SHOOT, this);
         EventManager.Instance.AddListener(EVENT_TYPE.TURING_BUFF_SPEED, this);
-        
+        m_audio = GetComponent<AudioSource>();
     }
 
     public bool CanUpgrade()
@@ -133,6 +135,7 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
                     isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.SHOOT_BUFF, this, gameObject);
                     requireAvaliable = false; //置请求不可用
                 }
+                if (isSuccess) m_audio.Play();
                 return isSuccess;
 
             //注释见上
@@ -146,6 +149,7 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
                         requireAvaliable = false;
                     }
                 }
+                if (isSuccess) m_audio.Play();
                 return isSuccess;
 
             //注释见上
@@ -156,6 +160,7 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
                     isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.BOMB_BUFF, this, gameObject);
                     requireAvaliable = false;
                 }
+                if (isSuccess) m_audio.Play();
                 return isSuccess;
 
             //注释见上
@@ -166,6 +171,7 @@ public class PlayerScoreManager : MonoBehaviour, TListener {
                     isSuccess = EventManager.Instance.PostNotification(EVENT_TYPE.SPEED_BUFF, this, gameObject);
                     requireAvaliable = false;
                 }
+                if (isSuccess) m_audio.Play();
                 return isSuccess;
             default: return false;
 
