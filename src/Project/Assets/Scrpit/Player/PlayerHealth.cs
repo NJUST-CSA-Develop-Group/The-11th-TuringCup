@@ -57,6 +57,7 @@ public class PlayerHealth : MonoBehaviour,TListener {
             TempDic.Add("AttackerID", _dealthFrom);
             EventManager.Instance.PostNotification(EVENT_TYPE.PLAYER_DEAD, this, null, TempDic);
             TempDic.Clear();
+            GetComponent<PlayerShoot>().prefabInstantiate.SetActive(false);//trick
         }
     }
 

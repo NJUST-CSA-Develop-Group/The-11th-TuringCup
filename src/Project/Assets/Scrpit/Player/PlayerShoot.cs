@@ -32,7 +32,7 @@ public class PlayerShoot : MonoBehaviour, TListener
     public AudioClip shootAudio;// 音频源
     public Material shootLineMaterial;// 射击线材质
     public Material particleMaterial;// 粒子材质
-    GameObject prefabInstantiate;// 射击模型实例
+    public GameObject prefabInstantiate;// 射击模型实例//trick
     int tick = -1;// 射击动画的时序
     const int ALL_TICKS = 5;// 射击动画总tick数
     Light m_light;// Sopt Lgiht的Light组件
@@ -112,7 +112,10 @@ public class PlayerShoot : MonoBehaviour, TListener
             {
                 m_ps.Play();
             }
-            m_audio.Play();// 播放音频
+            if (tick == 0)
+            {
+                m_audio.Play();// 播放音频
+            }
             tick++;
         }
     }

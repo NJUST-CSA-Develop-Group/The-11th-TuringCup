@@ -117,7 +117,7 @@ public class BombManager : MonoBehaviour, TListener {
         }
         TempDic.Clear();
         Destroy(gameObject, 1.5f);//延迟销毁 播放动画
-
+        GetComponent<AudioSource>().Play();
     }
 
     //仅用于调试（在Scene中画出爆炸范围）
