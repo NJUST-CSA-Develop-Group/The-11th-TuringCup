@@ -12,7 +12,7 @@ public class MatchManager
     public string[] AI;
     public delegate void NextCallback();
     public delegate Coroutine StartCo(IEnumerator co);
-
+    public int current = 0;
 
     public MatchManager()
     {
