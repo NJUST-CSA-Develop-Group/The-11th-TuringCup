@@ -38,7 +38,7 @@ public class RankInfo
         deadlist.Sort((a, b) =>
         {
             int retVal = (int)((a.time - b.time) * 1000);
-            if (retVal != 0) return retVal;
+            if (Mathf.Abs(retVal) > 40) return retVal;
             retVal = b.score - a.score;
             if (retVal != 0) return retVal;
             return a.index - b.index;

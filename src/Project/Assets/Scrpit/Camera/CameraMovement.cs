@@ -47,7 +47,7 @@ public class CameraMovement : MonoBehaviour {
 #if !UNITY_ANDROID
         aim.x = Mathf.Max(6.5f - 10, Mathf.Min(6.5f + 10, aim.x));
         aim.z = Mathf.Max(6.5f - 10, Mathf.Min(6.5f + 10, aim.z));
-        aim.y = Mathf.Max(2f, Mathf.Min(15f, aim.y));
+        aim.y = Mathf.Min(15f, aim.y);
 #endif
         tourCamera.position = aim;
         //tourCamera.Translate(direction * moveSpeed * Time.deltaTime, Space.World);

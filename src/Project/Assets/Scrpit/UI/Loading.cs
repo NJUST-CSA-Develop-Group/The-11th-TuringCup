@@ -16,7 +16,7 @@ public class Loading : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
-        Invoke("StartGame", 5.0f);
+        Invoke("StartGame", 2.0f);
         transform.Find("Inside/MapInfo/MapImage").GetComponent<RawImage>().texture = MapImages[MatchManager.man.map_id];
         transform.Find("Inside/MapInfo/Text").GetComponent<Text>().text = MapDesp.Desp[MatchManager.man.map_id];
         float scale = Mathf.Min(Screen.width / 1920f, Screen.height / 1080f);
