@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour, TListener
 
     private GameObject[] Players; //获取角色引用 以对角色的脚本进行操作
     private PlayerInterface.IControl[] AIscripts;//控制脚本实体
+    private System.AppDomain domain;
 
     private int DeadPlayer;
 

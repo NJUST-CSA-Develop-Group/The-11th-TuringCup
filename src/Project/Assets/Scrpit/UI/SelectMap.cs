@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#define MATCH
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,11 +33,14 @@ public class SelectMap : MonoBehaviour
             options[i].Find("Text").GetComponent<Text>().text = MapDesp.Desp[Indexes[i]];//添加地图介绍
             options[i].GetComponent<Button>().onClick.AddListener(delegate { Click(index); });
         }
-        if (MatchManager.man.type == MatchManager.Type.Match && TabType == "Match")
+#if MATCH
+        if (TabType == "Match")//for match//(MatchManager.man.type == MatchManager.Type.Match && TabType == "Match")
         {
-            auto = true;
-            Click(_curindex);
+            MatchManager.man.type = MatchManager.Type.Match;//for match
+            auto = false;//for match
+            Click(0); //for match Click(_curindex);
         }
+#endif
     }
 
     private void Click(int index)

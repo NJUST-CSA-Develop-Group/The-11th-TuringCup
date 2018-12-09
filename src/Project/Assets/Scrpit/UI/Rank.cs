@@ -60,6 +60,7 @@ public class Rank : MonoBehaviour, TListener//显示排名UI的管理类
             List<int> ranklist = RankInfo.info.Sort();
             foreach (var it in GameObject.FindGameObjectsWithTag("Player"))
             {
+                it.GetComponent<TuringOperate>().closeFile();
                 int index = ranklist.FindIndex(c => c == it.GetComponent<PlayerScoreManager>().playerID);
                 SetTeamNameScore(it.GetComponent<TuringOperate>().AIScript.GetTeamName(), it.GetComponent<PlayerHealth>().GetHP(), it.GetComponent<PlayerScoreManager>().GetScore(), it.GetComponent<PlayerScoreManager>().playerID, index);//设置队伍信息
                 prizes[index].Find("image").GetComponent<RawImage>().texture = PrizeImages[it.GetComponent<PlayerScoreManager>().playerID - 1];

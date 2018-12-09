@@ -8,6 +8,7 @@ public class ContinueButton : MonoBehaviour
 {
     public bool next = false;
     public bool record = false;
+    public static bool hasClicked = false;
 
     // Use this for initialization
     void Start()
@@ -35,10 +36,19 @@ public class ContinueButton : MonoBehaviour
         }
         if (next)
         {
+            if (hasClicked)
+            {
+                return;
+            }
+            hasClicked = true;
             MatchManager.man.Next(StartCoroutine, () =>
              {
-
-                 SceneManager.LoadScene("StartScene");
+                 if (!System.IO.File.Exists(".tc.continue"))
+                 {
+                     System.IO.File.Create(".tc.continue");
+                 }
+                 Application.Quit();
+                 //SceneManager.LoadScene("StartScene");
              }, rec);
         }
         else

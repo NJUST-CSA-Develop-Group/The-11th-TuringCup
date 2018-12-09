@@ -1,4 +1,4 @@
-﻿//#define MATCH
+﻿#define MATCH
 using System;
 using System.Collections.Generic;
 using UnityEngine;

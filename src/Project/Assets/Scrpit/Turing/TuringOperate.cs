@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PlayerInterface;
+using System.IO;
 
 public class TuringOperate : MonoBehaviour, IEntity, TListener
 {
@@ -10,24 +11,39 @@ public class TuringOperate : MonoBehaviour, IEntity, TListener
 
     private MapManager map;
     private GameObject[] players;
+    private FileStream logfs;
+    private StreamWriter sw;
     void Start()
     {
         map = GameObject.FindGameObjectWithTag("Global").GetComponent<MapManager>();
         players = GameObject.FindGameObjectsWithTag("Player");
         EventManager.Instance.AddListener(EVENT_TYPE.PLAYER_DEAD, this);
+        logfs = new FileStream(GetComponent<PlayerScoreManager>().playerID.ToString() + ".log", FileMode.OpenOrCreate, FileAccess.Write);
+        sw = new StreamWriter(logfs, System.Text.Encoding.UTF8);
     }
 
     void FixedUpdate()
     {
+        logfs.Seek(0, SeekOrigin.Begin);
+        sw.WriteLine(System.DateTime.Now.ToString("o"));
+        sw.Flush();
         if (active)
         {
             AIScript.Update(this);
         }
+        sw.WriteLine(System.DateTime.Now.ToString("o"));
+        sw.Flush();
     }
 
     void Update()
     {
 
+    }
+
+    public void closeFile()
+    {
+        sw.Close();
+        logfs.Close();
     }
 
     public bool OnEvent(EVENT_TYPE Event_Type, Component Sender, Object param = null, Dictionary<string, object> value = null)
