@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PlayerInterface.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PlayerInterface.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -43,9 +50,13 @@
     <Compile Include="IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="PlayerInterface.snk" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y $(TargetDir)$(TargetName).dll "$(ProjectDir)../Unity Project/Assets/Plugins/$(TargetName).dll"
-copy /Y $(TargetDir)$(TargetName).dll "$(ProjectDir)../ControllerLib/ControllerLib/$(TargetName).dll"</PostBuildEvent>
+    <PostBuildEvent>copy /Y $(TargetDir)$(TargetName).dll "$(ProjectDir)../Project/Assets/lib/$(TargetName).dll"
+copy /Y $(TargetDir)$(TargetName).dll "$(ProjectDir)../ControllerLib/ControllerLib/$(TargetName).dll"
+copy /Y $(TargetDir)$(TargetName).xml "$(ProjectDir)../ControllerLib/ControllerLib/$(TargetName).xml"</PostBuildEvent>
   </PropertyGroup>
 </Project>
