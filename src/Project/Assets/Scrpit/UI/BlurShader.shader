@@ -1,4 +1,7 @@
-﻿Shader "Hidden/BlurShader"
+﻿// Copyright (c) CSA, NJUST. All rights reserved.
+// Licensed under the Mozilla license. See LICENSE file in the project root for full license information.
+
+Shader "Hidden/BlurShader"
 {
 	Properties
 	{

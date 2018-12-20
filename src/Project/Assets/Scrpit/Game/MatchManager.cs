@@ -1,4 +1,7 @@
-﻿#define MATCH
+﻿// Copyright (c) CSA, NJUST. All rights reserved.
+// Licensed under the Mozilla license. See LICENSE file in the project root for full license information.
+
+#define MATCH
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;

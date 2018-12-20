@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿// Copyright (c) CSA, NJUST. All rights reserved.
+// Licensed under the Mozilla license. See LICENSE file in the project root for full license information.
+
+using System.Collections;
 using System.Collections.Generic;//访问附加的Mono类 同时还包括Dictionary类
 using UnityEngine;
 
