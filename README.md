@@ -4,4 +4,4 @@
 
 ## license
 
-本项目采用[LICENSE.md](Mozilaa协议)
+本项目采用[Mozilla协议](LICENSE)
