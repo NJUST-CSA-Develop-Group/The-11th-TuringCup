@@ -17,12 +17,12 @@
 
 ### 项目结构
 
-  ├── Readme.md                   // help
-  ├── src                         // 配置
-  │   ├── Project                 // unity3D工程目录
-  │   ├── PlayerInterface         // 观察者模式下的用户类接口
-  │   └── ControllerLib           // 提供给选手的接口封装
-  └── docs                        // 文档
+      ├── Readme.md                   // help
+      ├── src                         // 配置
+      │   ├── Project                 // unity3D工程目录
+      │   ├── PlayerInterface         // 观察者模式下的用户类接口
+      │   └── ControllerLib           // 提供给选手的接口封装
+      └── docs                        // 文档
 
 ## license
 
