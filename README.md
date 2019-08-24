@@ -27,6 +27,7 @@
 ### 参赛代码编写参考
 
 - [中兴·图灵杯实例教程](https://mp.weixin.qq.com/s/XIrCyWjtt96K0V4CqXEtRQ)
+- [接口说明文档（选手）](https://github.com/NJUST-CSA-Develop-Group/The-11th-TuringCup/blob/master/docs/%E5%9B%BE%E7%81%B5%E6%9D%AF%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E(%E9%80%89%E6%89%8B).pdf)
 
 ## license
 
