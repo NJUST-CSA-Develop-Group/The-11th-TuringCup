@@ -24,6 +24,10 @@
       │   └── ControllerLib           // 提供给选手的接口封装
       └── docs                        // 文档
 
+### 参赛代码编写参考
+
+- [中兴·图灵杯实例教程](https://mp.weixin.qq.com/s/XIrCyWjtt96K0V4CqXEtRQ)
+
 ## license
 
 本项目采用[Mozilla协议](LICENSE)
